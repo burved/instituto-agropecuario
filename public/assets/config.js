@@ -33,6 +33,43 @@ window.IA_CONFIG = {
   cupos_cohorte: "50",
   fecha_inicio_cohorte: "",        // ej: "Lunes 15 de septiembre"
 
+  /* =========================================================
+     VERTICAL CAFE  (seccion /cafe/  --  ver docs/BRIEF-CAFE.md)
+     Si se deja vacio, sale "POR DEFINIR" en amarillo igual que arriba.
+     ========================================================= */
+
+  /* ---- Cafe: webinar ----
+     Si Eduard hace UN solo webinar "Finca con Cobertura" para cafe y gallinas,
+     deja estos vacios y reutiliza fecha_webinar / hora_webinar / fecha_iso_webinar. */
+  cafe_fecha_webinar: "",
+  cafe_hora_webinar: "",
+  cafe_duracion_webinar: "90 minutos",
+  cafe_fecha_iso_webinar: "",       // "2026-09-11T19:00:00-05:00" (cuenta regresiva)
+  cafe_url_sala: "",
+
+  /* ---- Cafe: WhatsApp ---- */
+  cafe_wa_grupo_webinar: "",         // https://chat.whatsapp.com/XXXX
+  cafe_wa_grupo_cohorte: "",         // https://chat.whatsapp.com/XXXX
+  cafe_wa_diagnostico: "",           // SOLO DIGITOS del numero de WhatsApp Cloud API que da Meta,
+                                     // con indicativo y sin +  (ej: "573001234567").
+                                     // Es el numero al que el cafetero manda el bloque #DIAG.
+                                     // Ver docs/WHATSAPP-CLOUD-API-SETUP.md
+
+  /* ---- Cafe: diagnostico de fertilizacion (FertiCafe) ---- */
+  cafe_precio_nivel2_cop: "",        // [REVISAR] sugerido 30.000-40.000
+  cafe_precio_nivel3_cop: "",        // [REVISAR] sugerido 60.000-90.000
+  cafe_url_endpoint_diagnostico: "", // URL publica del servicio ferticafe-service ya desplegado,
+                                     // SIN barra final (ej: "https://ferticafe-service.onrender.com").
+                                     // La landing le agrega "/registro" para guardar el lead.
+                                     // Ver docs/DESPLIEGUE-SERVICIO.md
+
+  /* ---- Cafe: oferta / cohorte ---- */
+  cafe_url_checkout_cohorte: "",
+  cafe_precio_cohorte: "",
+  cafe_precio_cohorte_regular: "",
+  cafe_cupos_cohorte: "",
+  cafe_fecha_inicio_cohorte: "",
+
   /* ---- Legal / marca ---- */
   marca: "Instituto Agropecuario",
   dominio: "institutoagropecuario.com",

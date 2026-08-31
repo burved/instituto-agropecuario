@@ -196,6 +196,42 @@
     });
   }
 
+  /* ---------- Enlace de WhatsApp con el intake del diagnostico ----------
+     Uso (solo en /cafe/gracias/):
+       <a class="btn btn-wa" data-wa-intake data-wa-destino="cafe_wa_diagnostico" href="#">ENVIAR MIS DATOS</a>
+     Reconstruye el mensaje "#DIAG ..." con el lead guardado y arma el wa.me.
+     NO toca la logica del formulario (el contrato pide no tocarla): la landing
+     redirige a /gracias/ como siempre, y aqui se ofrece el envio por WhatsApp. */
+  var CAMPOS_DIAG = ["nombre", "whatsapp", "correo", "variedad", "edad", "hectareas",
+                     "matas", "sombra", "estado", "humedad", "analisis"];
+
+  function textoDiag(lead) {
+    var lineas = ["Hola, quiero mi diagnostico de fertilizacion FertiCafe.", "", "#DIAG"];
+    CAMPOS_DIAG.forEach(function (k) {
+      if (lead[k]) lineas.push(k + ": " + lead[k]);
+    });
+    var u = utms();
+    ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"].forEach(function (k) {
+      if (u[k]) lineas.push(k + ": " + u[k]);
+    });
+    return lineas.join("\n");
+  }
+
+  function enlacesWaIntake() {
+    var cfg = window.IA_CONFIG || {};
+    document.querySelectorAll("[data-wa-intake]").forEach(function (a) {
+      var num = String(cfg[a.getAttribute("data-wa-destino") || "cafe_wa_diagnostico"] || "").replace(/\D/g, "");
+      if (!num) { a.classList.add("enlace-pendiente"); a.setAttribute("href", "#"); return; }
+      var lead = leerLead();
+      var texto = (lead && lead.nombre) ? textoDiag(lead)
+        : "Hola, quiero mi diagnostico de fertilizacion FertiCafe.";
+      a.setAttribute("href", "https://wa.me/" + num + "?text=" + encodeURIComponent(texto));
+      a.setAttribute("target", "_blank");
+      a.setAttribute("rel", "noopener");
+      a.classList.remove("enlace-pendiente");
+    });
+  }
+
   /* ---------- Configuracion central (assets/config.js) ----------
      Texto:  <span data-cfg="nombre_experto"></span>
      Enlace: <a data-cfg-href="url_checkout" href="#">...</a>
@@ -251,6 +287,7 @@
     contadores();
     stickyCta();
     formularios();
+    enlacesWaIntake();
   }
 
   if (document.readyState === "loading") {

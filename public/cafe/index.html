@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Transmisión gratis para cafeteros: por qué tu cafetal deja menos cada año | Instituto Agropecuario</title>
+<meta name="description" content="Transmisión en vivo y gratuita para fincas cafeteras de 1 a 12 hectáreas: por qué la cosecha rinde menos cada año y qué puedes hacer con la finca que ya tienes. Incluye diagnóstico de fertilización gratis.">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CO">
+<meta property="og:title" content="Transmisión gratis para cafeteros: por qué tu cafetal deja menos cada año">
+<meta property="og:description" content="Transmisión en vivo y gratuita para fincas cafeteras de 1 a 12 hectáreas. Incluye diagnóstico de fertilización gratis para tu lote.">
+<meta property="og:site_name" content="Instituto Agropecuario">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%90%94%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@600&family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+
+<!-- SECCIÓN 1 — BARRA DE AVISO -->
+<div class="barra-aviso">
+  🔴 TRANSMISIÓN EN VIVO Y GRATUITA PARA CAFETEROS &nbsp;·&nbsp; <b><span data-cfg="cafe_fecha_webinar"></span></b> &nbsp;·&nbsp; No se pide tarjeta, no se cobra nada
+</div>
+
+<!-- SECCIÓN 2 — CABECERA -->
+<header class="topbar bg-crema">
+  <a class="logo" href="/">Instituto <span>Agropecuario</span></a>
+</header>
+
+<!-- SECCIÓN 3 — HÉROE / BLOQUE DE CONVERSIÓN -->
+<section class="bg-verde textura sec-lg">
+  <div class="wrap">
+
+    <div class="centro">
+      <span class="pretitular">Para fincas cafeteras en Colombia — de 1 a 12 hectáreas</span>
+
+      <h1>¿Tu cafetal cada año te deja menos, aunque trabajes igual o más que antes?</h1>
+
+      <p class="subtitular">
+        Transmisión en vivo y <strong>gratuita</strong>. Te voy a mostrar por qué las fincas cafeteras
+        del Cauca y del resto de Colombia han venido rindiendo menos, y —lo más importante—
+        <span class="destacado">qué puedes hacer tú, con la finca que ya tienes, sin comprar más tierra</span>
+        y sin meterle plata que hoy no hay.
+      </p>
+
+      <p class="grande">
+        📅 <strong><span data-cfg="cafe_fecha_webinar"></span></strong>
+        &nbsp;·&nbsp; 🕖 <strong><span data-cfg="cafe_hora_webinar"></span></strong>
+        &nbsp;·&nbsp; ⏱ <strong><span data-cfg="cafe_duracion_webinar"></span></strong>
+        &nbsp;·&nbsp; 📱 <strong>En línea, desde el celular</strong>
+      </p>
+
+      <div class="contador" data-cfg-cuenta="cafe_fecha_iso_webinar"></div>
+    </div>
+
+    <div class="grid grid-2 mt-l">
+
+      <!-- Columna izquierda: lo que se lleva -->
+      <div>
+        <span class="kicker">Esto es lo que te llevas el mismo día</span>
+        <h2>Lo que vas a entender cuando se acabe la transmisión</h2>
+        <ul class="bullets">
+          <li><strong>Por qué el cafetal rinde menos cada año</strong> aunque tú hagas lo mismo o más. Tiene nombre, y no es mala suerte.</li>
+          <li><strong>Si el abono que estás aplicando es el que la tierra necesita</strong>, o si estás botando plata sin saberlo. El abono es de los costos más grandes del cafetal.</li>
+          <li><strong>Cuál es la parte del problema que sí está en tus manos.</strong> El precio del café no lo vas a mover tú; no vamos a perder tiempo ahí.</li>
+          <li><strong>Un diagnóstico de tu finca</strong>, en vivo, para saber en qué punto está hoy y por qué.</li>
+          <li><strong>Cómo hacen las fincas cafeteras que sí se sostuvieron</strong> mientras a la mayoría le fue peor. No son las más grandes.</li>
+          <li><strong>Preguntas abiertas al final:</strong> escribes tu caso en el chat y se responde en vivo.</li>
+        </ul>
+        <p class="chico">
+          Es gratis de verdad. No se pide tarjeta ni datos de banco. Solo tu nombre y tu WhatsApp,
+          que es por donde te mandamos el enlace, el recordatorio y tu diagnóstico.
+        </p>
+      </div>
+
+      <!-- Columna derecha: formulario de registro + intake del diagnóstico -->
+      <div id="registro">
+        <form class="form-caja" data-form-registro data-destino="/cafe/gracias/" data-wa-destino="cafe_wa_diagnostico">
+          <h3>Aparta tu puesto y pide tu diagnóstico (gratis)</h3>
+          <p class="chico centro">
+            Con estas preguntas de tu lote preparamos tu <strong>diagnóstico de fertilización</strong>
+            y te lo mandamos por WhatsApp. Apartas el puesto de la transmisión en el mismo paso.
+          </p>
+
+          <div class="campo"><label for="nombre">Tu nombre</label><input id="nombre" name="nombre" type="text" autocomplete="given-name" required></div>
+          <div class="campo"><label for="whatsapp">Tu WhatsApp (ahí te llega el enlace y el diagnóstico)</label><input id="whatsapp" name="whatsapp" type="tel" inputmode="tel" placeholder="+57 300 000 0000" autocomplete="tel" required></div>
+          <div class="campo"><label for="correo">Tu correo (opcional)</label><input id="correo" name="correo" type="email" autocomplete="email"></div>
+
+          <div class="campo"><label for="variedad">¿Qué variedad de café tiene el lote?</label>
+            <select id="variedad" name="variedad" required>
+              <option value="">Elige una opción</option>
+              <option value="castillo">Castillo</option>
+              <option value="cenicafe1">Cenicafé 1</option>
+              <option value="colombia">Colombia</option>
+              <option value="caturra">Caturra</option>
+              <option value="tabi">Tabí</option>
+              <option value="borbon">Borbón</option>
+              <option value="typica">Typica / Pajarito</option>
+              <option value="otra">Otra / no sé</option>
+            </select>
+          </div>
+
+          <div class="campo"><label for="edad">¿Cuántos años tiene el cafetal?</label>
+            <select id="edad" name="edad" required>
+              <option value="">Elige una opción</option>
+              <option value="levante">Menos de 2 años (levante)</option>
+              <option value="2a5">Entre 2 y 5 años</option>
+              <option value="6a9">Entre 6 y 9 años</option>
+              <option value="10mas">10 años o más</option>
+              <option value="zoca">Está zoqueado / en renovación</option>
+            </select>
+          </div>
+
+          <div class="campo"><label for="hectareas">¿Cuántas hectáreas tiene el lote de café?</label>
+            <select id="hectareas" name="hectareas" required>
+              <option value="">Elige una opción</option>
+              <option value="menos1">Menos de 1 hectárea</option>
+              <option value="1a3">Entre 1 y 3 hectáreas</option>
+              <option value="3a6">Entre 3 y 6 hectáreas</option>
+              <option value="6a12">Entre 6 y 12 hectáreas</option>
+              <option value="mas12">Más de 12 hectáreas</option>
+            </select>
+          </div>
+
+          <div class="campo"><label for="matas">¿Cuántas matas de café tiene, más o menos?</label><input id="matas" name="matas" type="text" inputmode="numeric" placeholder="Ej: 6000"></div>
+
+          <div class="campo"><label for="sombra">¿Cómo es la sombra del lote?</label>
+            <select id="sombra" name="sombra" required>
+              <option value="">Elige una opción</option>
+              <option value="libre">A libre exposición (sin sombra)</option>
+              <option value="baja">Poca sombra</option>
+              <option value="media">Sombra media</option>
+              <option value="alta">Bastante sombra</option>
+            </select>
+          </div>
+
+          <div class="campo"><label for="estado">¿Cómo ves el cafetal hoy?</label>
+            <select id="estado" name="estado" required>
+              <option value="">Elige una opción</option>
+              <option value="bueno">Bueno, parejo y verde</option>
+              <option value="regular">Regular, disparejo</option>
+              <option value="malo">Flojo, amarillo o con caída de hoja</option>
+            </select>
+          </div>
+
+          <div class="campo"><label for="humedad">¿Cómo está el suelo ahora mismo?</label>
+            <select id="humedad" name="humedad" required>
+              <option value="">Elige una opción</option>
+              <option value="seco">Seco</option>
+              <option value="humedo">Con humedad, en punto</option>
+              <option value="encharcado">Muy húmedo o encharcado</option>
+            </select>
+          </div>
+
+          <div class="campo"><label for="analisis">¿Tienes análisis de suelo del lote?</label>
+            <select id="analisis" name="analisis" required>
+              <option value="">Elige una opción</option>
+              <option value="no">No tengo</option>
+              <option value="viejo">Tengo uno viejo (más de 2 años)</option>
+              <option value="si">Sí, tengo uno reciente</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-lg">SÍ, QUIERO MI PUESTO Y MI DIAGNÓSTICO</button>
+          <p class="form-error"></p>
+          <p class="form-legal">
+            Cupos limitados. Usamos estos datos solo para preparar tu diagnóstico y avisarte de la
+            transmisión por WhatsApp. No guardamos historial técnico de tu finca. Puedes salirte cuando quieras.
+          </p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divisor"></div>
+
+<!-- SECCIÓN 4 — ESTO TE SUENA (la escena del dolor, en su idioma) -->
+<section class="bg-crema sec">
+  <div class="wrap">
+
+    <div class="centro max-820">
+      <span class="pretitular-linea">Mírate un momento</span>
+      <h2>Si alguna de estas frases es tuya, esta transmisión es para ti</h2>
+      <p class="subtitular">
+        No hace falta que las digas en voz alta. Basta con que las hayas pensado
+        una noche, después de cerrar el día.
+      </p>
+    </div>
+
+    <div class="grid grid-2 mt-l">
+
+      <div class="card">
+        <h3>Lo que se siente adentro</h3>
+        <ul class="bullets bullets-x">
+          <li>“El bulto de abono volvió a subir y a mí me siguen pagando lo mismo por la carga.”</li>
+          <li>“Trabajo más que hace tres años y estoy llevando menos a la casa.”</li>
+          <li>“Le echo el abono que me venden y rezo. No sé si le estoy dando a la tierra lo que necesita.”</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Lo que se ve en el lote</h3>
+        <ul class="bullets bullets-x">
+          <li>“Todo el año se decide en una cosecha, y con el precio que me den ese día.”</li>
+          <li>“Cuando entra la cosecha, entra todo de una; el resto del año hay que estirar lo que quedó.”</li>
+          <li>“Ese lote ya no carga como antes y no sé bien desde cuándo se me fue cansando.”</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="max-820 mt-l">
+      <div class="nota">
+        <p>
+          Nada de esto es culpa tuya, ni pereza, ni falta de trabajo. La mayoría de las fincas
+          cafeteras de 1 a 12 hectáreas en Colombia están exactamente en el mismo punto.
+          <strong>Lo que pasa es que casi nadie le ha puesto nombre al problema</strong>,
+          y a lo que no tiene nombre no se le puede hacer nada.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SECCIÓN 5 — EL PROBLEMA TIENE NOMBRE -->
+<section class="bg-blanco sec">
+  <div class="wrap">
+
+    <div class="centro max-820">
+      <span class="kicker">Ponle nombre y deja de adivinar</span>
+      <h2>Tu problema se llama: la finca de un solo renglón</h2>
+    </div>
+
+    <div class="max-820 mt-m">
+      <p class="grande">
+        Una finca de un solo renglón es la que vive de un solo producto. En tu caso, el café.
+        Todo el año de trabajo termina apostado a <strong>un precio</strong>, el día que toca vender,
+        y a <strong>una sola cosecha</strong> al año.
+      </p>
+      <p>
+        Y ahí está el detalle: <span class="destacado">si dependes de un solo producto, dependes de un solo precio.</span>
+        Cuando ese precio se cae —y se cae, tarde o temprano se cae— no se te cae una parte del año:
+        se te cae el año entero. No hay nada más que lo sostenga.
+      </p>
+      <p>
+        Hay una segunda parte, propia del café: a ese único renglón le estás metiendo plata
+        <strong>a ciegas</strong>. El abono es de los gastos más grandes del cafetal, y casi nadie
+        sabe si el que aplica es el que la tierra pide. Eso también se puede resolver, y por eso
+        el diagnóstico es gratis.
+      </p>
+    </div>
+
+    <div class="max-820 mt-m">
+      <div class="card card-borde-rojo">
+        <h3>El principio que se usa para manejar riesgo, dicho en campesino</h3>
+        <p>
+          El que maneja riesgo profesionalmente tiene una regla vieja: <strong>ninguna estrategia
+          puede depender de un solo estado del mercado.</strong> Siempre tiene que haber cobertura,
+          es decir, algo que responda cuando lo principal falla.
+        </p>
+        <p>
+          Traducido al campo: <strong>ninguna finca debería depender de un solo precio.</strong>
+          Cobertura, en tu lote, quiere decir tener más de un renglón produciendo —y que esos
+          renglones no dependan de la misma cosa: ni del mismo comprador, ni de la misma época,
+          ni del mismo precio.
+        </p>
+        <p class="mb0">
+          Cuando una finca no tiene cobertura, cada mal año la deja un poco más abajo.
+          <strong>No es mala suerte. Es falta de cobertura.</strong>
+        </p>
+      </div>
+    </div>
+
+    <div class="max-820 mt-m">
+      <p>
+        Fíjate en lo que <em>no</em> estoy diciendo. No estoy diciendo que sea el dólar,
+        ni el gobierno, ni el intermediario, ni la Federación. Esas cosas existen, sí, pero tú y yo
+        no las vamos a mover, y hablar de ellas no te cambia el año que viene.
+      </p>
+      <p>
+        Lo que sí puedes mover está adentro del alambrado. Y ahí es donde vale la pena
+        poner la cabeza.
+      </p>
+    </div>
+
+    <div class="max-820 mt-m">
+      <div class="nota">
+        <p class="grande mb0">
+          <strong>No necesitas más tierra.</strong> Necesitas dos cosas: saber qué le estás dando
+          a la tierra que ya tienes, y que esa tierra trabaje en más de un renglón.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SECCIÓN 6 — EL DIAGNÓSTICO DE FERTILIZACIÓN (el imán, explicado) -->
+<section class="bg-crema2 sec">
+  <div class="wrap">
+
+    <div class="centro max-820">
+      <span class="pretitular">Lo primero, y es gratis</span>
+      <h2>Tu diagnóstico de fertilización, sin costo</h2>
+      <p class="subtitular">
+        Antes de hablar de renglones nuevos, veamos si al que ya tienes le estás dando bien de comer.
+        Con las preguntas que respondiste arriba se prepara una recomendación para tu lote.
+      </p>
+    </div>
+
+    <div class="grid grid-2 mt-l">
+      <div class="card">
+        <h3>Qué te llega</h3>
+        <ul class="bullets">
+          <li><strong>Qué fórmula</strong> conviene para tu café según edad, sombra y estado del lote.</li>
+          <li><strong>Cuántos kilos por hectárea</strong> y <strong>cuántos gramos por mata</strong>.</li>
+          <li><strong>En cuántas aplicaciones</strong> repartirlo en el año.</li>
+          <li><strong>Cuántos bultos ir a comprar</strong> para tu lote y cuánto te sobra.</li>
+          <li><strong>Cuándo NO aplicar:</strong> suelo seco, encharcado, antes de aguaceros fuertes.</li>
+        </ul>
+      </div>
+      <div class="card card-verde">
+        <h3>Qué NO es</h3>
+        <ul class="bullets bullets-x">
+          <li>No reemplaza un análisis de suelo ni una visita técnica.</li>
+          <li>Sin análisis, es una recomendación general y prudente; el propio reporte te lo dice.</li>
+          <li>No te promete que vas a cosechar más ni cuánto vas a ganar. Eso nadie honesto lo promete.</li>
+          <li>No recomienda cal ni menores “a ciegas”: para eso sí se necesita análisis.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="max-820 mt-m">
+      <p class="chico centro">
+        La recomendación se prepara con la metodología de fertilización de café según análisis de
+        suelos (Cenicafé) y las guías de la Federación Nacional de Cafeteros, adaptada por
+        <span data-cfg="nombre_experto"></span>, <span data-cfg="cargo_experto"></span>.
+        Los nombres de productos son de referencia: verifica siempre el registro ICA vigente.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- SECCIÓN 7 — FRÁGIL, ROBUSTO Y ACOMODADO -->
+<section class="bg-blanco sec">
+  <div class="wrap">
+
+    <div class="centro max-820">
+      <span class="pretitular">Los tres estados de una finca cafetera</span>
+      <h2>Frágil, robusta o de las que se acomodan</h2>
+      <p class="subtitular">
+        Toda finca está en uno de estos tres puntos. Ninguno es para siempre:
+        se puede pasar del primero al segundo, y del segundo al tercero.
+        Lo primero es saber en cuál estás parado hoy.
+      </p>
+    </div>
+
+    <div class="grid grid-3 mt-l">
+
+      <div class="card card-borde-rojo">
+        <span class="kicker">Punto 1</span>
+        <h3>Finca frágil</h3>
+        <p><strong>Una cosecha de café decide tu año.</strong></p>
+        <p>
+          Todo el lote está en café. Si el precio está bueno cuando vendes, el año se salva.
+          Si está malo, no hay de dónde sacar. Aguantas y esperas la cosecha siguiente.
+        </p>
+        <p class="chico mb0">
+          <strong>Ejemplo:</strong> dos hectáreas, todo en café, una cosecha grande al año
+          y el precio que le pongan ese día.
+        </p>
+      </div>
+
+      <div class="card">
+        <span class="kicker">Punto 2</span>
+        <h3>Finca robusta</h3>
+        <p><strong>Si el café tiene mal año, no te tumba.</strong></p>
+        <p>
+          El café sigue siendo la base, pero hay uno o dos renglones más que entran plata
+          en otras épocas y no dependen del mismo precio. El año malo duele, pero no te saca.
+        </p>
+        <p class="chico mb0">
+          <strong>Ejemplo:</strong> las mismas dos hectáreas de café, más un renglón que entra
+          plata cada semana y algo de lo que se come en la casa saliendo del propio lote.
+        </p>
+      </div>
+
+      <div class="card card-verde">
+        <span class="kicker">Punto 3</span>
+        <h3>Finca que se acomoda</h3>
+        <p><strong>El año malo para otros es el año en que tú te acomodas mejor.</strong></p>
+        <p>
+          Cuando el vecino tiene que vender el café barato porque necesita la plata ya, tú puedes
+          esperar. La misma situación que a otros los aprieta, a ti te abre una puerta.
+        </p>
+        <p class="chico mb0">
+          <strong>Ejemplo:</strong> la finca tiene entrada semanal y con qué aguantar un par de
+          meses sin vender café, y por eso puede escoger cuándo y a quién le vende.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="max-820 mt-l centro">
+      <p class="grande">
+        La pregunta de la transmisión es exactamente esa:
+        <span class="destacado">si hoy estás frágil, ¿cómo te pones robusto?</span>
+        Y después, con el tiempo, ¿cómo llegas a ser de los que se acomodan?
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- SECCIÓN 8 — LAS TRES FALSAS CREENCIAS -->
+<section class="bg-verde sec">
+  <div class="wrap">
+
+    <div class="centro max-820">
+      <span class="pretitular">Lo que se cree en la zona cafetera</span>
+      <h2>Tres cosas que todo el mundo repite y que están dejando fincas en el suelo</h2>
+      <p class="subtitular">
+        No las repite la gente por bruta. Las repite porque nadie le ha mostrado la otra cara.
+      </p>
+    </div>
+
+    <div class="grid grid-3 mt-l">
+
+      <div class="card">
+        <span class="kicker">Lo que se cree</span>
+        <h3>“Lo que pasa es que el precio del café está malo”</h3>
+        <p class="chico"><strong class="rojo">Lo que pasa de verdad:</strong></p>
+        <p>
+          El precio del café sube y baja, siempre lo ha hecho. Eso no lo vas a cambiar tú ni yo.
+        </p>
+        <p class="mb0">
+          Lo que sí se puede cambiar es <strong>cuánto te cuesta producir la carga</strong> y
+          <strong>de cuántos precios depende tu año</strong>. Esas dos decisiones son tuyas.
+        </p>
+      </div>
+
+      <div class="card">
+        <span class="kicker">Lo que se cree</span>
+        <h3>“Para que la finca dé más hay que tener más matas”</h3>
+        <p class="chico"><strong class="rojo">Lo que pasa de verdad:</strong></p>
+        <p>
+          Más matas con la misma forma de trabajar es más costo, más jornal de recolección
+          y el mismo precio único decidiendo el año.
+        </p>
+        <p class="mb0">
+          El asunto no es cuántas matas, es <strong>qué le estás metiendo a las que ya tienes</strong>
+          y qué más produce el mismo lote entre calles.
+        </p>
+      </div>
+
+      <div class="card">
+        <span class="kicker">Lo que se cree</span>
+        <h3>“El análisis de suelo y esas cosas son para fincas grandes”</h3>
+        <p class="chico"><strong class="rojo">Lo que pasa de verdad:</strong></p>
+        <p>
+          Un análisis de suelo cuesta una fracción de lo que gastas en abono en un año.
+          Y el diagnóstico de arranque no cuesta nada.
+        </p>
+        <p class="mb0">
+          Aplicar sin saber qué tiene la tierra es lo que de verdad sale caro:
+          <strong>abono que la planta no aprovecha es plata botada</strong>.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="max-820 mt-l">
+      <p class="grande centro">
+        Si en esta transmisión solo te llevas el haber soltado estas tres frases,
+        <strong>ya valió la pena el rato</strong>.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- SECCIÓN 9 — CTA INTERMEDIO -->
+<section class="bg-yema sec-sm centro">
+  <div class="wrap">
+    <div class="max-720">
+      <h2>Esto se ve en vivo, no se lee</h2>
+      <p class="grande">
+        Es una transmisión en línea, gratuita, y se puede ver desde el celular.
+        Apartas el puesto y pides tu diagnóstico en el mismo formulario.
+      </p>
+      <div class="cta-bloque">
+        <a class="btn btn-lg" href="#registro">SÍ, QUIERO MI PUESTO</a>
+        <span class="btn-sub">Es gratis · No se pide tarjeta · <span data-cfg="cafe_fecha_webinar"></span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN 10 — QUÉ VAS A VER EN LA TRANSMISIÓN -->
+<section class="bg-blanco sec">
+  <div class="wrap">
+
+    <div class="centro max-820">
+      <span class="pretitular-linea">El plan del día</span>
+      <h2>Qué vamos a hacer en la transmisión</h2>
+      <p class="subtitular">
+        No es una charla de conceptos. Es un recorrido por tu finca cafetera, con preguntas
+        concretas, para que salgas viendo cosas que hoy tienes al frente y no estás viendo.
+      </p>
+    </div>
+
+    <div class="max-820 mt-l">
+      <ol class="pasos">
+
+        <li>
+          <h3>Aprender a ver lo que hoy pasa por delante y no se nota</h3>
+          <p>
+            El suelo del cafetal que se va cansando de a poquitos. La sombra que quedó mal regulada.
+            El abono que se compra por costumbre y no por cuenta. La cosecha que entra toda de una
+            y deja el resto del año en las justas.
+          </p>
+          <p class="mb0">
+            Cuando les pones nombre, dejan de ser “así es esto” y pasan a ser
+            <strong>cosas que se pueden arreglar</strong>.
+          </p>
+        </li>
+
+        <li>
+          <h3>Hacer el diagnóstico de tu finca, en vivo</h3>
+          <p>
+            Un test corto para saber <strong>en qué punto está tu finca hoy y cuáles pueden ser
+            las causas</strong>. Frágil, robusta o de las que se acomodan.
+          </p>
+          <p class="mb0">
+            Y por separado, tu <strong>diagnóstico de fertilización</strong> del lote, que ya
+            pediste en el formulario y te llega por WhatsApp. No hay que pagar nada por ninguno.
+          </p>
+        </li>
+
+        <li>
+          <h3>Conocer herramientas que ya existen y quizá no sabías</h3>
+          <p>
+            Unas son de mano y otras son del celular. El solo hecho de saber que existen ya cambia
+            cómo tomas decisiones: dejas de calcular “al ojo” cosas que se pueden saber con certeza
+            —cuánto abono, cuánto te cuesta la carga, cuánto te deja el lote.
+          </p>
+          <p class="mb0">
+            Te muestro cuáles sirven de verdad para una finca cafetera de 1 a 12 hectáreas y
+            cuáles son un gasto que no te va a devolver nada.
+          </p>
+        </li>
+
+        <li>
+          <h3>Qué te falta aprender a hacer — y qué costumbres pequeñas cambian el año</h3>
+          <p>
+            Hay dos o tres cosas que uno tiene que saber hacer con las manos y dos o tres con los
+            números. No son muchas. Te digo cuáles son para que no pierdas tiempo en el resto.
+          </p>
+          <p class="mb0">
+            Y sobre todo: <strong>acciones chiquitas sostenidas en el tiempo</strong>.
+            Anotar lo que entra y lo que sale. Revisar el lote un día fijo a la semana.
+          </p>
+        </li>
+
+        <li>
+          <h3>El primer renglón de cobertura: por dónde empieza casi todo el mundo</h3>
+          <p>
+            Aquí sí aterrizamos en un ejemplo concreto, y por eso lo dejamos de último:
+            <strong>las gallinas ponedoras</strong>.
+          </p>
+          <p>
+            No porque sea el único camino, sino porque es el que menos plata y menos tierra pide
+            para arrancar, y porque resuelve el problema del ritmo:
+            <span class="destacado">entra plata todas las semanas mientras el café tarda meses en pagar</span>.
+            Esa entrada seguida es lo que le da aire a la finca para no tener que vender el café barato
+            cuando aprieta.
+          </p>
+          <p class="mb0">
+            También caben otros renglones —abejas con la floración del café, ciclo corto entre calles,
+            lombricultura con la pulpa— y los vas a ver. Pero uno a la vez, y bien hecho.
+          </p>
+        </li>
+
+        <li>
+          <h3>Preguntas abiertas, sin afán</h3>
+          <p class="mb0">
+            Al final escribes tu caso en el chat —tu finca, tu variedad, tu problema— y se responde
+            en vivo. No es un formulario: es una conversación.
+          </p>
+        </li>
+
+      </ol>
+    </div>
+
+    <div class="cta-bloque">
+      <a class="btn btn-lg" href="#registro">SÍ, QUIERO MI PUESTO</a>
+      <span class="btn-sub">Dura <span data-cfg="cafe_duracion_webinar"></span> · Se ve desde el celular</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- SECCIÓN 11 — LO QUE TE LLEVAS AUNQUE NO COMPRES NADA -->
+<section class="bg-crema sec-sm">
+  <div class="wrap">
+
+    <div class="centro max-820">
+      <span class="kicker">Sin letra menuda</span>
+      <h2>Lo que te llevas aunque nunca nos compres nada</h2>
+    </div>
+
+    <div class="max-820 mt-m">
+      <div class="card">
+        <p>
+          Al final de la transmisión te voy a contar que existe una formación pagada, porque existe
+          y sería raro escondértelo. Va a ser al final, va a durar unos minutos, y si en ese momento
+          te sales, no pasa absolutamente nada.
+        </p>
+        <p><strong>Esto es tuyo pase lo que pase:</strong></p>
+        <ul class="bullets">
+          <li><strong>Tu diagnóstico de fertilización</strong> del lote, en PDF y por WhatsApp. Lo puedes llevar a la tienda de insumos tal cual.</li>
+          <li><strong>La transmisión completa</strong>, con las causas y con lo que sí está en tus manos.</li>
+          <li><strong>El diagnóstico de tu finca</strong> (frágil / robusta / acomodada), que haces en vivo y te llevas.</li>
+          <li><strong>Las cosas de costo bajo o costo cero</strong> que se hacen con lo que ya hay en el lote —empezando por la pulpa del café.</li>
+          <li><strong>La respuesta a tu pregunta</strong> si la escribes en el chat, hayas comprado o no.</li>
+        </ul>
+        <p class="mb0">
+          Sé que hay cafeteros que hoy no pueden pagar una formación. No es una falla ni una
+          vergüenza: es el momento en el que están. Por eso lo de arriba es gratis y es completo,
+          <strong>y por eso la puerta queda abierta para cuando se pueda</strong>.
+        </p>
+      </div>
+    </div>
+
+    <div class="max-820 mt-m">
+      <div class="aviso">
+        <p class="mb0">
+          <strong>Y para ser justos también al revés:</strong> esto no te va a servir si lo que buscas
+          es una fórmula para ganar plata rápido, o una cifra de cuánto vas a hacer la cosecha que viene.
+          Eso no existe y no te lo voy a prometer. Aquí se habla de trabajo, de orden y de decisiones.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SECCIÓN 12 — QUIÉN TE VA A HABLAR -->
+<section class="bg-crema2 sec">
+  <div class="wrap">
+
+    <div class="centro max-820">
+      <span class="pretitular">Quién te va a hablar</span>
+      <h2>No es un video de internet: es un ingeniero agrícola de la zona cafetera</h2>
+    </div>
+
+    <div class="about mt-l">
+
+      <div class="foto">FOTO DE EDUARD EN UN CAFETAL (pendiente)</div>
+
+      <div>
+        <h3><span data-cfg="nombre_experto"></span> — <span data-cfg="cargo_experto"></span></h3>
+        <p>
+          Es de Popayán, Cauca. Habla como se habla allá porque de allá es. Lleva
+          <strong><span data-cfg="anos_experiencia"></span> años</strong> metido con fincas
+          cafeteras del mismo tamaño que la tuya, de 1 a 12 hectáreas, en el mismo tipo de terreno
+          y con los mismos problemas: la roya, la broca, la sombra, el suelo de ladera, el abono caro.
+        </p>
+        <p>
+          Su trabajo no es impresionarte con títulos ni llenarte de palabras raras.
+          Su trabajo es <strong>traducir</strong>: coger lo que se sabe de suelos, de nutrición del café
+          y de números, y dejártelo en un idioma que puedas usar el lunes por la mañana,
+          en tu lote, con lo que tienes.
+        </p>
+        <p>
+          Y hace dos cosas que un PDF no hace: <strong>te contesta el teléfono</strong> y
+          <strong>se juega su nombre</strong>. En un pueblo cafetero eso pesa. Aquí el que da un mal
+          consejo se lo encuentra en la plaza el sábado.
+        </p>
+
+        <ul class="credenciales">
+          <li><span data-cfg="cargo_experto"></span>, de Popayán (Cauca), Colombia.</li>
+          <li><span data-cfg="anos_experiencia"></span> años trabajando con fincas cafeteras de 1 a 12 hectáreas.</li>
+          <li>Titulación y universidad: <span class="dato-pendiente">CONFIRMAR CON EDUARD</span></li>
+          <li>Municipios y veredas cafeteras donde ha trabajado: <span class="dato-pendiente">CONFIRMAR CON EDUARD</span></li>
+          <li>Número de fincas cafeteras acompañadas: <span class="dato-pendiente">CONFIRMAR CON EDUARD</span></li>
+        </ul>
+
+        <p class="chico mt-s">
+          Los datos en amarillo se publican cuando Eduard los confirme. Preferimos dejarlos
+          marcados antes que inventarlos.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- SECCIÓN 13 — PRUEBA SOCIAL (pendiente de testimonios reales) -->
+<section class="bg-blanco sec-sm">
+  <div class="wrap">
+
+    <div class="centro max-820">
+      <span class="kicker">Cafeteros, no actores</span>
+      <h2>Lo que dicen los que ya trabajaron con él</h2>
+      <p class="subtitular">
+        Aquí van testimonios reales, con nombre, vereda y foto, grabados por la propia persona.
+        Mientras no los tengamos, no ponemos nada inventado.
+      </p>
+    </div>
+
+    <div class="grid grid-3 mt-l">
+
+      <!-- PERFIL 1: cafetero de 1-2 ha, solo café, que sumó un segundo renglón (ponedoras/abejas).
+           Contar: cómo era depender de una sola cosecha y qué cambió en el ritmo de entrada de plata. SIN cifras. -->
+      <div class="testimonio">
+        <div class="estrellas">★★★★★</div>
+        <p><span class="dato-pendiente">TESTIMONIO REAL PENDIENTE</span></p>
+        <div class="autor"><span class="inicial">?</span> <span class="dato-pendiente">NOMBRE Y VEREDA PENDIENTES</span></div>
+      </div>
+
+      <!-- PERFIL 2: cafetero que empezó a fertilizar con criterio (diagnóstico / análisis) tras años de aplicar "al ojo".
+           Contar: qué cambió al saber qué pedía la tierra. SIN promesas de cosecha. -->
+      <div class="testimonio">
+        <div class="estrellas">★★★★★</div>
+        <p><span class="dato-pendiente">TESTIMONIO REAL PENDIENTE</span></p>
+        <div class="autor"><span class="inicial">?</span> <span class="dato-pendiente">NOMBRE Y VEREDA PENDIENTES</span></div>
+      </div>
+
+      <!-- PERFIL 3: mujer cabeza de familia con finca cafetera pequeña o tierra prestada.
+           Contar: que se puede empezar sin plata guardada, con la pulpa y el espacio que ya hay. SIN cifras. -->
+      <div class="testimonio">
+        <div class="estrellas">★★★★★</div>
+        <p><span class="dato-pendiente">TESTIMONIO REAL PENDIENTE</span></p>
+        <div class="autor"><span class="inicial">?</span> <span class="dato-pendiente">NOMBRE Y VEREDA PENDIENTES</span></div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- SECCIÓN 14 — PREGUNTAS FRECUENTES -->
+<section class="bg-crema2 sec">
+  <div class="wrap">
+
+    <div class="centro max-820">
+      <span class="pretitular">Antes de que preguntes</span>
+      <h2>Preguntas que nos hacen siempre</h2>
+    </div>
+
+    <div class="faq mt-l">
+
+      <details>
+        <summary>¿El diagnóstico de fertilización es gratis de verdad?</summary>
+        <div class="respuesta">
+          <p>
+            Sí. Con las preguntas del formulario se prepara una recomendación general para tu lote
+            y te llega por WhatsApp. No se pide tarjeta ni pago. Si más adelante quieres una
+            recomendación técnica con tu análisis de suelo revisado por el ingeniero, eso sí tiene
+            un costo, y te lo decimos claro cuando llegue el momento.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>¿La transmisión es gratis o al final hay que pagar algo?</summary>
+        <div class="respuesta">
+          <p>
+            Es gratis. No hay cobro escondido. Al final se cuenta que existe una formación pagada,
+            unos minutos, y si te sales en ese momento te llevas todo lo demás igual.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>¿Sirve si mi cafetal es chiquito, de menos de una hectárea?</summary>
+        <div class="respuesta">
+          <p>
+            Sí. Entre más pequeña es la finca, más pesa el problema del renglón único, porque no hay
+            de dónde sacar cuando el café tiene mal año. Todo lo que se muestra está pensado para
+            fincas de 1 a 12 hectáreas, y buena parte funciona también en menos de una.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>¿Y si la tierra no es mía, si la tengo al partir o arrendada?</summary>
+        <div class="respuesta">
+          <p>
+            Sirve igual, con un cuidado: en tierra que no es tuya conviene empezar por lo que se
+            puede mover o desarmar, no por lo que queda clavado en el suelo. Eso se explica en la
+            transmisión, porque es un caso muy común en la zona cafetera.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>¿Tengo que dejar de cultivar café?</summary>
+        <div class="respuesta">
+          <p>
+            No. Al contrario: el café es la base y no se toca de entrada. De lo que se habla es de
+            <strong>sumar</strong> uno o dos renglones que no dependan del mismo precio ni de la misma
+            época, para que el café deje de cargar con todo el año él solo. Y de darle mejor de comer
+            al cafetal que ya tienes.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>¿Necesito internet bueno para verlo?</summary>
+        <div class="respuesta">
+          <p>
+            Con la señal que te sirve para ver un video en el celular es suficiente. Si se te corta,
+            vuelves a entrar con el mismo enlace. Mucha gente lo ve desde el pueblo o desde donde
+            tiene mejor señal.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>¿Esto es de gallinas o de café?</summary>
+        <div class="respuesta">
+          <p>
+            Es de cómo hacer que tu finca cafetera deje de depender de una sola cosecha y de un solo
+            precio, y de fertilizar el café con criterio. Las gallinas ponedoras aparecen como el
+            ejemplo más práctico de por dónde empezar el segundo renglón —piden poca plata, poca
+            tierra y dan entrada semanal— pero no son el tema.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>¿Hay que comprar algo o invertir plata para empezar?</summary>
+        <div class="respuesta">
+          <p>
+            Para la transmisión, nada. Y de lo que ahí se muestra, las primeras cosas son de costo
+            bajo y algunas de costo cero, porque se hacen con lo que ya hay en la finca —empezando
+            por la pulpa del café.
+          </p>
+          <p>
+            No te vamos a decir cuánto vas a ganar ni en cuánto tiempo, porque eso depende de tu
+            tierra, de tu trabajo y de tus decisiones.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>¿Cómo me llega el enlace y el diagnóstico?</summary>
+        <div class="respuesta">
+          <p>
+            Todo por WhatsApp. Después de registrarte, en la página siguiente tocas un botón que
+            abre WhatsApp con los datos de tu lote ya escritos: le das enviar y el diagnóstico de
+            fertilización te llega a ese chat, normalmente en unos minutos. El enlace de la
+            transmisión y el recordatorio se mandan al grupo. Si dejas correo, el enlace te llega
+            también por ahí, pero el canal principal es WhatsApp.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>¿Queda grabada si no puedo entrar a esa hora?</summary>
+        <div class="respuesta">
+          <p>
+            Regístrate de todos modos: por WhatsApp te avisamos qué se puede hacer si no alcanzas a
+            entrar en vivo. Eso sí, las preguntas del final solo se responden en vivo.
+          </p>
+        </div>
+      </details>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- SECCIÓN 15 — CTA FINAL -->
+<section class="bg-verde textura sec-lg centro">
+  <div class="wrap">
+
+    <span class="pretitular">Última llamada</span>
+    <h2>Tu cafetal no va a cambiar solo</h2>
+
+    <p class="subtitular">
+      La semana que viene el lote va a seguir igual. Va a entrar el mismo bulto de abono,
+      va a salir la misma cosecha, y el precio lo va a poner el que siempre lo pone.
+      Eso no es culpa tuya. Pero tampoco se arregla solo.
+    </p>
+
+    <div class="contador" data-cfg-cuenta="cafe_fecha_iso_webinar"></div>
+
+    <p class="grande">
+      📅 <strong><span data-cfg="cafe_fecha_webinar"></span></strong>
+      &nbsp;·&nbsp; 🕖 <strong><span data-cfg="cafe_hora_webinar"></span></strong>
+      &nbsp;·&nbsp; ⏱ <strong><span data-cfg="cafe_duracion_webinar"></span></strong>
+    </p>
+
+    <div class="cta-bloque">
+      <a class="btn btn-lg" href="#registro">SÍ, QUIERO MI PUESTO</a>
+      <span class="btn-sub">Es gratis · No se pide tarjeta · El enlace y el diagnóstico llegan por WhatsApp</span>
+    </div>
+
+    <div class="max-720">
+      <div class="divisor-huevo">🌱 ☕ 🌱</div>
+      <p class="grande">
+        Una cosecha más igual no es una tragedia. Es simplemente una cosecha más igual.
+        El asunto es que van sumando, y cada una deja la finca un poquito más justa que la anterior.
+      </p>
+      <p class="grande">
+        <span class="destacado">Lo único que cambia con esta transmisión es que dejas de adivinar.</span>
+        Y eso no te cuesta plata: te cuesta <span data-cfg="cafe_duracion_webinar"></span> de tu tiempo.
+      </p>
+      <p class="firma">Nos vemos en la transmisión ☕</p>
+      <p class="chico"><span data-cfg="nombre_experto"></span> — <span data-cfg="cargo_experto"></span></p>
+    </div>
+
+  </div>
+</section>
+
+<!-- SECCIÓN 16 — PIE -->
+<footer class="footer">
+  <div class="wrap">
+    <p><strong>Instituto Agropecuario</strong> &mdash; Formación práctica para producir y vender en el campo colombiano.</p>
+    <p><a href="/legal/privacidad.html">Política de privacidad</a> &nbsp;·&nbsp; <a href="/legal/terminos.html">Términos y condiciones</a> &nbsp;·&nbsp; <a data-cfg-mailto href="#">escríbenos</a></p>
+    <p class="legal">Este contenido es formación agropecuaria y de gestión. No sustituye asesoría agronómica, veterinaria, sanitaria, contable ni financiera profesional. El diagnóstico de fertilización es una orientación general y no reemplaza un análisis de suelo ni una visita técnica de campo. Los nombres comerciales de productos son de referencia; verifique el registro ICA vigente. Los resultados de cualquier proyecto productivo dependen del trabajo, las condiciones y las decisiones de cada persona. Este sitio no está afiliado a Meta, Facebook, Instagram, Google ni YouTube.</p>
+    <p class="legal">&copy; 2026 Instituto Agropecuario. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<!-- SECCIÓN 17 — CTA PEGAJOSO -->
+<div class="sticky-cta">
+  <a class="btn" href="#registro">SÍ, QUIERO MI PUESTO ☕</a>
+</div>
+
+<!-- SECCIÓN 18 — SCRIPTS -->
+<script src="/assets/config.js"></script>
+<script>
+  /* Solo en /cafe/: el lead se guarda tambien en el servicio del diagnostico.
+     Si cafe_url_endpoint_diagnostico esta vacio, no se hace POST (solo localStorage). */
+  (function () {
+    var base = (window.IA_CONFIG && window.IA_CONFIG.cafe_url_endpoint_diagnostico) || "";
+    if (base) window.IA_ENDPOINT_REGISTRO = base.replace(/\/+$/, "") + "/registro";
+  })();
+</script>
+<script src="/assets/funnel.js"></script>
+</body>
+</html>
