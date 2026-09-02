@@ -50,7 +50,7 @@ window.IA_CONFIG = {
   /* ---- Cafe: WhatsApp ---- */
   cafe_wa_grupo_webinar: "",         // https://chat.whatsapp.com/XXXX
   cafe_wa_grupo_cohorte: "",         // https://chat.whatsapp.com/XXXX
-  cafe_wa_diagnostico: "",           // SOLO DIGITOS del numero de WhatsApp Cloud API que da Meta,
+  cafe_wa_diagnostico: "15556777383", // SOLO DIGITOS del numero de WhatsApp Cloud API que da Meta,
                                      // con indicativo y sin +  (ej: "573001234567").
                                      // Es el numero al que el cafetero manda el bloque #DIAG.
                                      // Ver docs/WHATSAPP-CLOUD-API-SETUP.md
@@ -58,7 +58,7 @@ window.IA_CONFIG = {
   /* ---- Cafe: diagnostico de fertilizacion (FertiCafe) ---- */
   cafe_precio_nivel2_cop: "",        // [REVISAR] sugerido 30.000-40.000
   cafe_precio_nivel3_cop: "",        // [REVISAR] sugerido 60.000-90.000
-  cafe_url_endpoint_diagnostico: "", // URL publica del servicio ferticafe-service ya desplegado,
+  cafe_url_endpoint_diagnostico: "https://ferticafe.onrender.com", // URL publica del servicio ferticafe-service ya desplegado,
                                      // SIN barra final (ej: "https://ferticafe-service.onrender.com").
                                      // La landing le agrega "/registro" para guardar el lead.
                                      // Ver docs/DESPLIEGUE-SERVICIO.md
