@@ -64,6 +64,8 @@ En **Environment** del servicio, agrega (valores del `WHATSAPP-CLOUD-API-SETUP.m
 | `ADMIN_TOKEN` | otra frase larga tuya (para abrir `/leads`) |
 | `CFG_WEBINAR` | opcional, ej. `jueves 11 de septiembre 7 p.m.` |
 | `CFG_GRUPO_WA` | opcional, link del grupo `https://chat.whatsapp.com/...` |
+| `CFG_PRECIO_NIVEL3` | opcional, ej. `70.000 COP` — sin esto, el bot no dice precio y avisa que Eduard escribe con el valor |
+| `CFG_DATOS_PAGO` | opcional, ej. `Nequi 300 123 4567 (Eduard Burbano)` — a dónde confirma el pago el cafetero |
 
 Guarda → Render redepliega.
 
@@ -98,11 +100,32 @@ Desde un WhatsApp registrado como destinatario de prueba en Meta:
   despertar. Meta **reintenta** el webhook varias veces, así que el mensaje no se
   pierde: solo llega con retraso la primera consulta del día. Si molesta, un
   "cron" externo (ej. cron-job.org) que pegue `/health` cada 10 min lo mantiene despierto.
-- **`leads.db` es efímero:** se borra en cada redeploy. No es crítico (el chat de
-  WhatsApp es el registro real y el resumen se entrega igual). Para historial durable:
-  subir a plan de pago + disco, o añadir un Postgres (Render → New → PostgreSQL; luego
-  cambiar `store.py` a `psycopg`). Por ahora no hace falta.
+- **Historial durable (Postgres):** `render.yaml` ya trae un bloque `databases:`
+  (`ferticafe-db`, plan free) conectado al servicio por `DATABASE_URL`. Si Render lo
+  detecta como Blueprint, la crea sola al desplegar; si no, créala a mano (**New →
+  PostgreSQL**, plan Free) y pega su "Internal Connection String" en la variable
+  `DATABASE_URL` del servicio. Sin esto, `store.py` cae solo a SQLite local (efímero,
+  se borra en cada redeploy) — no rompe nada, pero el seguimiento por cliente
+  (recordatorio de próxima aplicación) no sobrevive a un redeploy.
+  **Ojo:** el Postgres free de Render puede expirar si pasa mucho tiempo sin uso —
+  revisa el estado en el dashboard; si el negocio ya depende de este historial,
+  conviene pasar a un plan pago antes de confiar en él a largo plazo.
 - **Logs:** Render → tu servicio → **Logs**. Ahí se ven los errores de proceso.
+
+## Recordatorio de próxima aplicación (recompra)
+
+El motor ya calcula cuántas aplicaciones de fertilizante recomienda al año; el
+servicio guarda la fecha estimada de la siguiente y expone `POST
+/tareas/recordatorios?token=<ADMIN_TOKEN>` para dispararlos.
+
+1. **Crear y aprobar la plantilla en Meta** (Administrador de WhatsApp → Plantillas
+   de mensajes): usar el texto de `mensajes.PLANTILLA_META_RECORDATORIO_APLICACION`
+   en `ferticafe-motor/mensajes.py`. Sin esto, el endpoint falla al intentar enviar
+   (no marca nada como enviado, así que no se pierde — reintenta al día siguiente).
+2. **Programar el cron:** en cron-job.org (o similar), una tarea diaria que haga
+   `POST https://<tu-servicio>.onrender.com/tareas/recordatorios?token=<ADMIN_TOKEN>`.
+3. Los Nivel 3 entregados a mano con `operador.py --registrar-url ... --registrar-token
+   ...` también entran a este recordatorio (ver `SISTEMA-DIAGNOSTICO-SUELOS.md`).
 
 ## Alternativa: Fly.io
 
