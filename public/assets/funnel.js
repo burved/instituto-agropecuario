@@ -203,7 +203,26 @@
      NO toca la logica del formulario (el contrato pide no tocarla): la landing
      redirige a /gracias/ como siempre, y aqui se ofrece el envio por WhatsApp. */
   var CAMPOS_DIAG = ["nombre", "whatsapp", "correo", "variedad", "edad", "hectareas",
-                     "matas", "sombra", "estado", "humedad", "analisis"];
+                     "matas", "distancia_siembra", "sombra", "estado", "humedad", "analisis"];
+
+  /* ---------- Area del lote: "no se las hectareas" ----------
+     Aditivo, no toca formularios(). La casilla [data-area-toggle] revela el
+     bloque [data-area-distancia] y quita el "required" del campo de hectareas
+     para que el cafetero pueda dar matas + distancia en su lugar. */
+  function areaLote() {
+    var toggle = document.querySelector("[data-area-toggle]");
+    var caja = document.querySelector("[data-area-distancia]");
+    var ha = document.getElementById("hectareas");
+    if (!toggle || !caja || !ha) return;
+    function sync() {
+      var noSabe = toggle.checked;
+      caja.hidden = !noSabe;
+      if (noSabe) { ha.removeAttribute("required"); ha.value = ""; }
+      else { ha.setAttribute("required", "required"); }
+    }
+    toggle.addEventListener("change", sync);
+    sync();
+  }
 
   function textoDiag(lead) {
     var lineas = ["Hola, quiero mi diagnostico de fertilizacion FertiCafe.", "", "#DIAG"];
@@ -287,6 +306,7 @@
     contadores();
     stickyCta();
     formularios();
+    areaLote();
     enlacesWaIntake();
   }
 

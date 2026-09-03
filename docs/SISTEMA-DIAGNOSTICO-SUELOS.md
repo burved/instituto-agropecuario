@@ -57,7 +57,7 @@ cafetero conteste cuál es) para que Eduard lo revise y procese con `operador.py
 | Lógica del embudo | `instituto-agropecuario/public/assets/funnel.js` | arma el enlace `wa.me` con el `#DIAG` |
 | Config editable | `instituto-agropecuario/public/assets/config.js` | `cafe_wa_diagnostico`, `cafe_url_endpoint_diagnostico` |
 | Motor técnico | `proyectos/ferticafe-motor/ferticafe_engine.py` | calcula la recomendación (no se toca sin Eduard) |
-| Adaptador | `proyectos/ferticafe-motor/intake_adapter.py` | traduce los campos del formulario al motor |
+| Adaptador | `proyectos/ferticafe-motor/intake_adapter.py` | traduce los campos del formulario al motor; calcula el área del lote (hectáreas exactas, o matas × distancia de siembra si el cafetero no las sabe) |
 | Parser | `proyectos/ferticafe-motor/parser_diag.py` | extrae el bloque `#DIAG` del mensaje |
 | Textos WhatsApp | `proyectos/ferticafe-motor/mensajes.py` + `plantillas_mensajes.md` | acuse, entrega, etc. |
 | Operador manual | `proyectos/ferticafe-motor/operador.py` | fallback y Nivel 3 |
