@@ -64,7 +64,8 @@ En **Environment** del servicio, agrega (valores del `WHATSAPP-CLOUD-API-SETUP.m
 | `ADMIN_TOKEN` | otra frase larga tuya (para abrir `/leads`) |
 | `CFG_WEBINAR` | opcional, ej. `jueves 11 de septiembre 7 p.m.` |
 | `CFG_GRUPO_WA` | opcional, link del grupo `https://chat.whatsapp.com/...` |
-| `CFG_PRECIO_NIVEL3` | opcional, ej. `70.000 COP` — sin esto, el bot no dice precio y avisa que Eduard escribe con el valor |
+| `CFG_PRECIO_NIVEL2` | opcional, ej. `25.000 COP` — precio del ajuste solo con fotos, sin análisis de laboratorio |
+| `CFG_PRECIO_NIVEL3` | opcional, ej. `50.000 COP` — precio de la interpretación de un análisis de suelo real. Sin ninguno de los dos, el bot no dice precio y avisa que Eduard escribe con el valor |
 | `CFG_DATOS_PAGO` | opcional, ej. `Nequi 300 123 4567 (Eduard Burbano)` — a dónde confirma el pago el cafetero |
 
 Guarda → Render redepliega.

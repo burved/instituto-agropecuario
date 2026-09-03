@@ -42,8 +42,10 @@ Todo con el número **gratuito** de WhatsApp Cloud API de Meta.
 ```
 
 Si el cafetero manda una **foto** o un texto con datos de análisis, el servicio
-responde "lo revisa un técnico" y marca el lead como `pendiente_nivel3` para que
-Eduard lo procese con `operador.py`.
+le pregunta si es Nivel 2 (fotos del cafetal, sin análisis de laboratorio) o
+Nivel 3 (análisis de suelo real), con los dos precios, y marca el lead como
+`pendiente_nivel3` (nombre interno del estado; cubre ambos niveles hasta que el
+cafetero conteste cuál es) para que Eduard lo revise y procese con `operador.py`.
 
 ---
 
