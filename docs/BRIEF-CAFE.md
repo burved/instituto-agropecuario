@@ -125,11 +125,16 @@ como ejemplo**; en la carta, como el módulo ARRANCAR.
 
 ### Nivel 2 y 3 — DE PAGO (upsell + módulo de la oferta)
 
-- **Nivel 2 (con fotos):** ajusta alertas con fotos del cafetal. Precio **[REVISAR con
-  Eduard]** — sugerido 30.000–40.000 COP.
+- **Nivel 2 (con fotos):** ajusta alertas con fotos del cafetal. Precio decidido
+  2026-09-02: **25.000 COP** — por debajo de medio jornal (2026: ~58.000 COP/día),
+  un "sí fácil" tras el Nivel 1 gratis. Guardado en `config.js`, todavía sin cobro
+  automatizado (el bot de WhatsApp no distingue Nivel 2 de Nivel 3 todavía).
 - **Nivel 3 (con análisis de suelo):** Eduard interpreta el análisis y entrega plan técnico
-  con correctivos y menores. Precio **[REVISAR]** — sugerido 60.000–90.000 COP. Aquí hay
-  trabajo humano real de un ingeniero agrícola; se puede y se debe cobrar más.
+  con correctivos y menores. Precio decidido 2026-09-02: **50.000 COP** — cerca de un
+  jornal, y muy por debajo de las referencias de mercado: un análisis de suelo nuevo en
+  laboratorio (~147.000 COP) o una visita presencial de un ingeniero agrónomo
+  (200.000–300.000 COP/día). Cobro ya activo vía `CFG_PRECIO_NIVEL3`/`CFG_DATOS_PAGO`
+  en el servicio (Render).
 - **Dónde se ofrecen:** como upsell inmediato en `/cafe/gracias/` ("¿ya tenés análisis de
   suelo? Subilo y te devuelvo el plan técnico") y como herramienta incluida/con descuento
   dentro de la Cohorte.

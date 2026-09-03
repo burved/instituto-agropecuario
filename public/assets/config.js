@@ -56,8 +56,11 @@ window.IA_CONFIG = {
                                      // Ver docs/WHATSAPP-CLOUD-API-SETUP.md
 
   /* ---- Cafe: diagnostico de fertilizacion (FertiCafe) ---- */
-  cafe_precio_nivel2_cop: "",        // [REVISAR] sugerido 30.000-40.000
-  cafe_precio_nivel3_cop: "",        // [REVISAR] sugerido 60.000-90.000
+  cafe_precio_nivel2_cop: "25.000",  // decidido 2026-09-02 (ajuste con fotos, sin analisis de suelo).
+                                     // Sin usar todavia en ninguna pagina (falta el data-cfg en el HTML).
+  cafe_precio_nivel3_cop: "50.000",  // decidido 2026-09-02 (interpretacion de analisis de suelo).
+                                     // El que de verdad cobra el bot de WhatsApp es CFG_PRECIO_NIVEL3
+                                     // en Render (variable de entorno del servicio), no este valor.
   cafe_url_endpoint_diagnostico: "https://ferticafe.onrender.com", // URL publica del servicio ferticafe-service ya desplegado,
                                      // SIN barra final (ej: "https://ferticafe-service.onrender.com").
                                      // La landing le agrega "/registro" para guardar el lead.
