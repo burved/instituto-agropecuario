@@ -13,8 +13,13 @@ El cafetero llena el formulario de `/cafe/`, manda los datos de su lote por What
 y recibe **en ese mismo chat** su recomendación de fertilización en PDF + un resumen.
 Todo con el número **gratuito** de WhatsApp Cloud API de Meta.
 
-- **Nivel 1 (siempre, automático, gratis):** el formulario genera una recomendación
-  general sin análisis de suelo.
+- **Nivel 1 (automático, con costo por defecto):** el formulario genera una
+  recomendación general sin análisis de suelo. Desde el 2026-09-14 cuesta
+  10.000 COP (`cafe_precio_nivel1_cop` en la landing; el que de verdad cobra
+  el bot es `CFG_PRECIO_NIVEL1` en `config.py`, con ese mismo valor **por
+  defecto en el código** — no hace falta configurar nada en Render para que
+  cobre — ver §5). Para volver al Nivel 1 gratis e instantáneo de antes, hay
+  que poner `CFG_PRECIO_NIVEL1` vacío **de forma explícita** en Render.
 - **Nivel 3 (manual, si el cafetero lo pide):** si además manda su análisis de suelo
   (foto o números) por WhatsApp, Eduard lo procesa a mano con `operador.py` y devuelve
   una versión ajustada. Este nivel puede tener costo (`cafe_precio_nivel3_cop`).
@@ -35,11 +40,22 @@ Todo con el número **gratuito** de WhatsApp Cloud API de Meta.
         ▼
 (4) ferticafe-service (Render)
         ├─ parsea el bloque #DIAG
-        ├─ intake_adapter -> motor FertiCafé (Nivel 1) -> genera el PDF
-        └─ responde por WhatsApp:  acuse + PDF + resumen
+        └─ por defecto (CFG_PRECIO_NIVEL1 = "10.000 COP" en el codigo):
+              guarda los datos del lote (no corre el motor todavia)
+              responde por WhatsApp pidiendo el pago, estado = pendiente_nivel1
+           si CFG_PRECIO_NIVEL1 se deja vacio EXPLICITAMENTE en Render:
+              intake_adapter -> motor FertiCafé (Nivel 1) -> genera el PDF
+              responde por WhatsApp:  acuse + PDF + resumen
         ▼
-(5) El cafetero recibe su diagnóstico en el chat  (gratis: ventana de servicio de 24 h)
+(5) El cafetero recibe su diagnóstico en el chat  (dentro de la ventana de servicio
+    de 24 h, sin costo de WhatsApp para nosotros -- el costo del diagnóstico en si
+    es aparte, ver §1 y §5)
 ```
+
+Por defecto (sin tocar nada en Render) el PDF no se genera hasta que Eduard confirma
+el pago con el botón de `/leads.html` (o llamando `POST /leads/nivel1-confirmar-pago`) —
+en ese momento se usan los datos del lote que el cafetero ya mandó, sin pedírselos de
+nuevo. Ver §5.
 
 Si el cafetero manda una **foto** o un texto con datos de análisis, el servicio
 le pregunta si es Nivel 2 (fotos del cafetal, sin análisis de laboratorio) o
@@ -91,9 +107,24 @@ Mientras no esté todo esto: el botón de WhatsApp de `/cafe/gracias/` sale como
 
 ## 5. Operación diaria (con el servicio en línea)
 
-- **Nivel 1:** no hay que hacer nada. Llega solo.
+- **Nivel 1 gratis** (solo si pusiste `CFG_PRECIO_NIVEL1` vacío a propósito en
+  Render): no hay que hacer nada. Llega solo.
+- **Nivel 1 con cobro (`pendiente_nivel1`) — comportamiento por defecto:** el cafetero
+  mandó su `#DIAG` y el bot ya le respondió pidiendo el pago (mensaje
+  `pedido_pago_nivel1`, con el precio y los datos de `CFG_DATOS_PAGO`).
+  1. **Cobro manual, en el mismo chat de WhatsApp:** confirmas el pago (Nequi,
+     Bancolombia, transferencia) antes de entregar. No hay checkout automático.
+  2. Entra a `https://<URL>/leads.html?token=<ADMIN_TOKEN>` y busca ese teléfono
+     en estado `pendiente_nivel1`.
+  3. Clic en **"Confirmar pago y enviar"**. El servicio recupera los datos del lote
+     que el cafetero ya mandó (no hay que volver a pedírselos), genera el PDF y lo
+     entrega solo, igual que el Nivel 1 automático.
+  4. Si prefieres no usar el botón, el mismo resultado se logra con
+     `POST /leads/nivel1-confirmar-pago?token=<ADMIN_TOKEN>` y body
+     `{"telefono": "57..."}`.
 - **Revisar leads:** `https://<URL>/leads.html?token=<ADMIN_TOKEN>` — lista de quién
-  pidió diagnóstico, estado (`entregado`, `pendiente_nivel3`, `procesando`...).
+  pidió diagnóstico, estado (`entregado`, `pendiente_nivel1`, `pendiente_nivel3`,
+  `procesando`...).
 - **Nivel 3 (`pendiente_nivel3`):** el cafetero mandó foto o texto de su análisis.
   1. El servicio ya le respondió solo pidiendo el pago (mensaje `recibido_analisis`,
      con el precio y los datos de pago de `CFG_PRECIO_NIVEL3` / `CFG_DATOS_PAGO` si

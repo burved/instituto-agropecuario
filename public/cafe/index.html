@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Transmisión gratis para cafeteros: por qué tu cafetal deja menos cada año | Instituto Agropecuario</title>
-<meta name="description" content="Transmisión en vivo y gratuita para fincas cafeteras de 1 a 12 hectáreas: por qué la cosecha rinde menos cada año y qué puedes hacer con la finca que ya tienes. Incluye diagnóstico de fertilización gratis.">
+<meta name="description" content="Transmisión en vivo y gratuita para fincas cafeteras de 1 a 12 hectáreas: por qué la cosecha rinde menos cada año y qué puedes hacer con la finca que ya tienes. Incluye diagnóstico de fertilización desde $10.000 COP.">
 <meta name="robots" content="index,follow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_CO">
 <meta property="og:title" content="Transmisión gratis para cafeteros: por qué tu cafetal deja menos cada año">
-<meta property="og:description" content="Transmisión en vivo y gratuita para fincas cafeteras de 1 a 12 hectáreas. Incluye diagnóstico de fertilización gratis para tu lote.">
+<meta property="og:description" content="Transmisión en vivo y gratuita para fincas cafeteras de 1 a 12 hectáreas. Incluye diagnóstico de fertilización desde $10.000 COP para tu lote.">
 <meta property="og:site_name" content="Instituto Agropecuario">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%90%94%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +21,7 @@
 
 <!-- SECCIÓN 1 — BARRA DE AVISO -->
 <div class="barra-aviso">
-  🔴 TRANSMISIÓN EN VIVO Y GRATUITA PARA CAFETEROS &nbsp;·&nbsp; <b><span data-cfg="cafe_fecha_webinar"></span></b> &nbsp;·&nbsp; No se pide tarjeta, no se cobra nada
+  🔴 TRANSMISIÓN EN VIVO Y GRATUITA PARA CAFETEROS &nbsp;·&nbsp; <b><span data-cfg="cafe_fecha_webinar"></span></b> &nbsp;·&nbsp; No se pide tarjeta para apuntarte
 </div>
 
 <!-- SECCIÓN 2 — CABECERA -->
@@ -70,18 +70,22 @@
           <li><strong>Preguntas abiertas al final:</strong> escribes tu caso en el chat y se responde en vivo.</li>
         </ul>
         <p class="chico">
-          Es gratis de verdad. No se pide tarjeta ni datos de banco. Solo tu nombre y tu WhatsApp,
-          que es por donde te mandamos el enlace, el recordatorio y tu diagnóstico.
+          La transmisión es gratis de verdad: no se pide tarjeta ni datos de banco, solo tu nombre
+          y tu WhatsApp, que es por donde te mandamos el enlace y el recordatorio. El diagnóstico de
+          fertilización tiene un costo de <span data-cfg="cafe_precio_nivel1_cop"></span> COP: te
+          escribimos por WhatsApp con los datos para pagar y te llega en cuanto lo confirmamos.
         </p>
       </div>
 
       <!-- Columna derecha: formulario de registro + intake del diagnóstico -->
       <div id="registro">
         <form class="form-caja" data-form-registro data-destino="/cafe/gracias/" data-wa-destino="cafe_wa_diagnostico">
-          <h3>Aparta tu puesto y pide tu diagnóstico (gratis)</h3>
+          <h3>Aparta tu puesto y pide tu diagnóstico</h3>
           <p class="chico centro">
             Con estas preguntas de tu lote preparamos tu <strong>diagnóstico de fertilización</strong>
-            y te lo mandamos por WhatsApp. Apartas el puesto de la transmisión en el mismo paso.
+            y te lo mandamos por WhatsApp por <span data-cfg="cafe_precio_nivel1_cop"></span> COP
+            (te decimos cómo pagar en el mismo chat). Apartas el puesto de la transmisión
+            —esa sí es gratis— en el mismo paso.
           </p>
 
           <div class="campo"><label for="nombre">Tu nombre</label><input id="nombre" name="nombre" type="text" autocomplete="given-name" required></div>
@@ -261,8 +265,9 @@
       <p>
         Hay una segunda parte, propia del café: a ese único renglón le estás metiendo plata
         <strong>a ciegas</strong>. El abono es de los gastos más grandes del cafetal, y casi nadie
-        sabe si el que aplica es el que la tierra pide. Eso también se puede resolver, y por eso
-        el diagnóstico es gratis.
+        sabe si el que aplica es el que la tierra pide. Eso también se puede resolver: por
+        <span data-cfg="cafe_precio_nivel1_cop"></span> COP el diagnóstico te dice qué aplicar y
+        cuánto, antes de gastar en el próximo bulto.
       </p>
     </div>
 
@@ -770,13 +775,14 @@
     <div class="faq mt-l">
 
       <details>
-        <summary>¿El diagnóstico de fertilización es gratis de verdad?</summary>
+        <summary>¿Cuánto cuesta el diagnóstico de fertilización?</summary>
         <div class="respuesta">
           <p>
-            Sí. Con las preguntas del formulario se prepara una recomendación general para tu lote
-            y te llega por WhatsApp. No se pide tarjeta ni pago. Si más adelante quieres una
-            recomendación técnica con tu análisis de suelo revisado por el ingeniero, eso sí tiene
-            un costo, y te lo decimos claro cuando llegue el momento.
+            <span data-cfg="cafe_precio_nivel1_cop"></span> COP. Con las preguntas del formulario
+            se prepara una recomendación general para tu lote; te escribimos por WhatsApp con los
+            datos para pagar y en cuanto lo confirmamos te llega el PDF. Si más adelante quieres una
+            recomendación técnica con tu análisis de suelo revisado por el ingeniero, eso tiene un
+            costo aparte, y te lo decimos claro cuando llegue el momento.
           </p>
         </div>
       </details>
@@ -914,7 +920,7 @@
 
     <div class="cta-bloque">
       <a class="btn btn-lg" href="#registro">SÍ, QUIERO MI PUESTO</a>
-      <span class="btn-sub">Es gratis · No se pide tarjeta · El enlace y el diagnóstico llegan por WhatsApp</span>
+      <span class="btn-sub">La transmisión es gratis · El diagnóstico cuesta <span data-cfg="cafe_precio_nivel1_cop"></span> COP · Todo llega por WhatsApp</span>
     </div>
 
     <div class="max-720">

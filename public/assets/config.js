@@ -56,6 +56,10 @@ window.IA_CONFIG = {
                                      // Ver docs/WHATSAPP-CLOUD-API-SETUP.md
 
   /* ---- Cafe: diagnostico de fertilizacion (FertiCafe) ---- */
+  cafe_precio_nivel1_cop: "10.000",  // decidido 2026-09-14 (diagnostico general, sin fotos ni analisis).
+                                     // El que de verdad cobra el bot es CFG_PRECIO_NIVEL1 en Render
+                                     // (variable de entorno del servicio); Eduard confirma el pago a
+                                     // mano con el boton de /leads.html. Ver docs/SISTEMA-DIAGNOSTICO-SUELOS.md.
   cafe_precio_nivel2_cop: "25.000",  // decidido 2026-09-02 (ajuste con fotos, sin analisis de suelo).
                                      // Sin usar todavia en ninguna pagina (falta el data-cfg en el HTML).
   cafe_precio_nivel3_cop: "50.000",  // decidido 2026-09-02 (interpretacion de analisis de suelo).
