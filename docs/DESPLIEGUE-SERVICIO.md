@@ -68,7 +68,7 @@ En **Environment** del servicio, agrega (valores del `WHATSAPP-CLOUD-API-SETUP.m
 | `CFG_PRECIO_NIVEL2` | opcional, ej. `25.000 COP` — precio del ajuste solo con fotos, sin análisis de laboratorio |
 | `CFG_PRECIO_NIVEL3` | opcional, ej. `50.000 COP` — precio de la interpretación de un análisis de suelo real. Sin ninguno de los dos, el bot no dice precio y avisa que Eduard escribe con el valor |
 | `CFG_DATOS_PAGO` | opcional, ej. `Nequi 300 123 4567 (Eduard Burbano)` — a dónde confirma el pago el cafetero |
-| `ANTHROPIC_API_KEY` | necesaria para el Nivel 2 (fotos) — clave de console.anthropic.com. Sin ella el botón `#FOTOS` guarda el lead y pide las fotos igual, pero falla al evaluarlas (`/health` → `puede_evaluar_fotos_nivel2:false`) |
+| `ANTHROPIC_API_KEY` | necesaria para el Nivel 2 (fotos) y el Nivel 3 (análisis + fotos) — clave de console.anthropic.com. Sin ella esos flujos guardan el lead y piden lo que haga falta igual, pero fallan al evaluarlo (`/health` → `puede_evaluar_fotos_nivel2:false`) |
 | `ANTHROPIC_MODEL` | opcional, por defecto `claude-sonnet-5` |
 | `HTTP_TIMEOUT_VISION` | opcional, segundos de espera a Claude (por defecto `90` — 6-8 fotos tardan más que un mensaje de texto) |
 
