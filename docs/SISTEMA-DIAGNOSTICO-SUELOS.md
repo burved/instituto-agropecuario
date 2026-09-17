@@ -13,6 +13,12 @@ El cafetero llena el formulario de `/cafe/`, manda los datos de su lote por What
 y recibe **en ese mismo chat** su recomendación de fertilización en PDF + un resumen.
 Todo con el número **gratuito** de WhatsApp Cloud API de Meta.
 
+**Desde 2026-09-17, un solo botón + lista de WhatsApp:** la landing ya no tiene un
+botón por nivel. El único botón manda el bloque `#DIAG` (datos del lote) y el bot
+responde con una **lista interactiva de WhatsApp** (Nivel 1 / Nivel 2 / Nivel 3, con
+sus precios) para que el cafetero elija ahí mismo — más simple que repartir la
+decisión entre varios botones o preguntas de texto. Ver el detalle en §2.
+
 - **Nivel 1 (automático, con costo por defecto):** el formulario genera una
   recomendación general sin análisis de suelo. Desde el 2026-09-14 cuesta
   10.000 COP (`cafe_precio_nivel1_cop` en la landing; el que de verdad cobra
@@ -48,25 +54,37 @@ Todo con el número **gratuito** de WhatsApp Cloud API de Meta.
 (1) Cafetero llena el formulario en  /cafe/
         │  funnel.js guarda el lead y (si hay endpoint) hace POST /registro
         ▼
-(2) Página /cafe/gracias/  ->  botón "ENVIAR MIS DATOS POR WHATSAPP"
+(2) Página /cafe/gracias/  ->  UN boton "ENVIAR MIS DATOS POR WHATSAPP"
         │  abre wa.me/<numero>?text=  con un bloque "#DIAG" ya escrito
         ▼
 (3) El cafetero le da ENVIAR  ->  el mensaje llega al número Cloud API de Meta
         │  Meta llama al webhook del servicio:  POST /webhook
         ▼
 (4) ferticafe-service (Render)
-        ├─ parsea el bloque #DIAG
-        └─ por defecto (CFG_PRECIO_NIVEL1 = "10.000 COP" en el codigo):
-              guarda los datos del lote (no corre el motor todavia)
-              responde por WhatsApp pidiendo el pago, estado = pendiente_nivel1
-           si CFG_PRECIO_NIVEL1 se deja vacio EXPLICITAMENTE en Render:
-              intake_adapter -> motor FertiCafé (Nivel 1) -> genera el PDF
-              responde por WhatsApp:  acuse + PDF + resumen
+        ├─ parsea el bloque #DIAG, guarda los datos del lote (estado = eligiendo_nivel)
+        └─ manda una LISTA INTERACTIVA de WhatsApp (wa_client.send_list):
+              Nivel 1 - General          (precio de CFG_PRECIO_NIVEL1)
+              Nivel 2 - Con fotos        (precio de CFG_PRECIO_NIVEL2)
+              Nivel 3 - Analisis         (precio de CFG_PRECIO_NIVEL3)
         ▼
-(5) El cafetero recibe su diagnóstico en el chat  (dentro de la ventana de servicio
+(5) El cafetero TOCA una fila  ->  llega al webhook como type="interactive",
+    interactive.type="list_reply", interactive.list_reply.id = nivel_1|nivel_2|nivel_3
+        ├─ nivel_1: pide pago si CFG_PRECIO_NIVEL1 esta puesto (por defecto "10.000 COP",
+        │           sin tocar Render), si no genera el PDF de una vez -- igual que antes.
+        ├─ nivel_2: pide pago si aplica, despues las 6 fotos del cafetal (ver mas abajo).
+        └─ nivel_3: pide el analisis de suelo (foto o texto) -- a diferencia del flujo
+                    ambiguo de antes, aqui el cafetero YA eligio Nivel 3, asi que se le
+                    pide el analisis directo, sin preguntar "Nivel 2 o Nivel 3?" -- y
+                    despues las 6 fotos, igual que Nivel 2.
+        ▼
+(6) El cafetero recibe su diagnóstico en el chat  (dentro de la ventana de servicio
     de 24 h, sin costo de WhatsApp para nosotros -- el costo del diagnóstico en si
     es aparte, ver §1 y §5)
 ```
+
+`#FOTOS` (Nivel 2 directo) y el flujo ambiguo por imagen/texto suelto (`pendiente_nivel3`,
+mas abajo) siguen funcionando tal cual para quien entra por ahí en vez de la lista —
+por ejemplo, si Eduard quiere mandar un enlace directo a Nivel 2 en un anuncio.
 
 Por defecto (sin tocar nada en Render) el PDF no se genera hasta que Eduard confirma
 el pago con el botón de `/leads.html` (o llamando `POST /leads/nivel1-confirmar-pago`) —
