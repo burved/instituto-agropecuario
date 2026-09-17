@@ -20,6 +20,14 @@ Todo con el número **gratuito** de WhatsApp Cloud API de Meta.
   defecto en el código** — no hace falta configurar nada en Render para que
   cobre — ver §5). Para volver al Nivel 1 gratis e instantáneo de antes, hay
   que poner `CFG_PRECIO_NIVEL1` vacío **de forma explícita** en Render.
+- **Nivel 2 (automático, con fotos — desde 2026-09-17):** el cafetero manda
+  6 fotos de su cafetal (protocolo en
+  `salidas/2026-09-03_protocolo-fotos-nivel2_v1.md` del repo `agente-embudos`)
+  y un modelo de visión (Claude, vía `ANTHROPIC_API_KEY`) las lee y arma el
+  `sintomas` que ya sabía interpretar el motor. Sin gate de revisión humana:
+  el diagnóstico siempre se entrega; si el modelo ve algo fuera de lo
+  nutricional (daño de tronco, plaga fuerte), se agrega como nota informativa
+  en el mensaje, no como bloqueo. Ver §2 y §5.
 - **Nivel 3 (manual, si el cafetero lo pide):** si además manda su análisis de suelo
   (foto o números) por WhatsApp, Eduard lo procesa a mano con `operador.py` y devuelve
   una versión ajustada. Este nivel puede tener costo (`cafe_precio_nivel3_cop`).
@@ -57,11 +65,29 @@ el pago con el botón de `/leads.html` (o llamando `POST /leads/nivel1-confirmar
 en ese momento se usan los datos del lote que el cafetero ya mandó, sin pedírselos de
 nuevo. Ver §5.
 
-Si el cafetero manda una **foto** o un texto con datos de análisis, el servicio
-le pregunta si es Nivel 2 (fotos del cafetal, sin análisis de laboratorio) o
-Nivel 3 (análisis de suelo real), con los dos precios, y marca el lead como
-`pendiente_nivel3` (nombre interno del estado; cubre ambos niveles hasta que el
-cafetero conteste cuál es) para que Eduard lo revise y procese con `operador.py`.
+**Nivel 2 por el botón de fotos** (`#FOTOS`, el otro botón de `/cafe/gracias/` o de
+la landing): el circuito es igual al de `#DIAG` hasta el paso (4), pero en vez de
+generar el PDF de una vez, el bot pide el pago si `CFG_PRECIO_NIVEL2` está
+configurado y luego pide las **6 fotos obligatorias, una por una** (ver protocolo).
+Cuando llegan las 6:
+
+```
+servicio (background task)
+   ├─ descarga cada foto de WhatsApp (Graph API)
+   ├─ vision_client.evaluar_fotos()  ->  llama a Claude con las 6-8 fotos
+   ├─ vision_adapter.parsear_resultado_vision()  ->  JSON
+   ├─ ¿alguna foto obligatoria no usable?
+   │     sí -> pide repetir SOLO esa foto, vuelve a esperar
+   │     no -> vision_adapter.vision_a_ferticafe()  ->  motor (Nivel 2)  ->  PDF
+   └─ entrega PDF + resumen (con notas informativas si hubo señales sanitarias)
+```
+
+Si el cafetero manda una **foto suelta** (sin haber tocado el botón `#FOTOS`) o un
+texto con datos de análisis, el servicio le pregunta si es Nivel 2 o Nivel 3 (con los
+dos precios) y marca el lead como `pendiente_nivel3` (nombre interno del estado;
+cubre ambos niveles hasta que el cafetero conteste cuál es) para que Eduard lo revise
+y procese a mano con `operador.py`. Esta vía manual sigue existiendo tal cual —
+el circuito automático de arriba solo aplica a quien entra por el botón `#FOTOS`.
 
 ---
 
@@ -74,10 +100,12 @@ cafetero conteste cuál es) para que Eduard lo revise y procese con `operador.py
 | Config editable | `instituto-agropecuario/public/assets/config.js` | `cafe_wa_diagnostico`, `cafe_url_endpoint_diagnostico` |
 | Motor técnico | `proyectos/ferticafe-motor/ferticafe_engine.py` | calcula la recomendación (no se toca sin Eduard) |
 | Adaptador | `proyectos/ferticafe-motor/intake_adapter.py` | traduce los campos del formulario al motor; calcula el área del lote (hectáreas exactas, o matas × distancia de siembra si el cafetero no las sabe) |
-| Parser | `proyectos/ferticafe-motor/parser_diag.py` | extrae el bloque `#DIAG` del mensaje |
-| Textos WhatsApp | `proyectos/ferticafe-motor/mensajes.py` + `plantillas_mensajes.md` | acuse, entrega, etc. |
+| Parser | `proyectos/ferticafe-motor/parser_diag.py` | extrae los bloques `#DIAG` y `#FOTOS` del mensaje |
+| Adaptador de fotos | `proyectos/ferticafe-motor/vision_adapter.py` | prompt del modelo de visión + traduce su JSON a `sintomas` del motor (Nivel 2) |
+| Textos WhatsApp | `proyectos/ferticafe-motor/mensajes.py` + `plantillas_mensajes.md` | acuse, entrega, pedido de fotos, etc. |
 | Operador manual | `proyectos/ferticafe-motor/operador.py` | fallback y Nivel 3 |
 | Servicio | `proyectos/ferticafe-service/` | webhook + captura de leads (FastAPI, Render) |
+| Cliente de visión | `proyectos/ferticafe-service/vision_client.py` | llama a la API de Claude con las fotos del Nivel 2 |
 
 ---
 
@@ -94,6 +122,9 @@ cafetero conteste cuál es) para que Eduard lo revise y procese con `operador.py
 4. **Editar `config.js`:**
    - `cafe_wa_diagnostico`: el número de Meta, **solo dígitos** (ej. `"573001234567"`).
    - `cafe_url_endpoint_diagnostico`: la URL del servicio, **sin barra final**.
+4.b. **Nivel 2 (fotos):** crear una clave en console.anthropic.com y cargarla como
+   `ANTHROPIC_API_KEY` en Render. Sin esto, el Nivel 1 sigue funcionando normal;
+   solo el botón `#FOTOS` no puede evaluar las fotos (ver §5).
 5. **Publicar** `public/` en Cloudflare Pages.
 6. **Prueba real:** desde un WhatsApp que hayas registrado como destinatario de prueba
    en Meta, entra a `/cafe/`, llena el formulario, manda el `#DIAG`. Debe llegar el PDF
@@ -147,6 +178,21 @@ Mientras no esté todo esto: el botón de WhatsApp de `/cafe/gracias/` sale como
   y reprocesar con `operador.py`.
 - **Recordatorio de próxima aplicación:** ver `DESPLIEGUE-SERVICIO.md` §"Recordatorio
   de próxima aplicación" — requiere una plantilla de Meta aprobada y un cron externo.
+- **Nivel 2 con fotos (`nivel2_recibiendo_fotos` / `nivel2_procesando`):** el cafetero
+  entró por el botón `#FOTOS`.
+  1. Si `CFG_PRECIO_NIVEL2` está configurado, el lead queda en `pendiente_nivel2_pago`
+     hasta que confirmes el pago en `/leads.html` (botón **"Confirmar pago y pedir
+     fotos"**) o con `POST /leads/nivel2-confirmar-pago?token=<ADMIN_TOKEN>` +
+     `{"telefono": "57..."}`. Ahí arranca el pedido de fotos, no la entrega directa.
+  2. El bot pide las 6 fotos una por una (`nivel2_recibiendo_fotos`). Si alguna sale
+     mal, el modelo la rechaza y el bot pide repetir solo esa — no hace falta que
+     intervengas.
+  3. Con las 6 usables, el servicio llama a Claude, arma el diagnóstico y lo entrega
+     solo (`entregado`, `nivel=2`) — igual de automático que el Nivel 1.
+  4. Requiere `ANTHROPIC_API_KEY` configurada en Render; sin ella, `/health` marca
+     `puede_evaluar_fotos_nivel2: false` y el paso 3 falla (el lead queda en `error`,
+     visible en `/leads.html`, y hay que procesarlo a mano con `operador.py` mientras
+     se configura la clave).
 
 ---
 

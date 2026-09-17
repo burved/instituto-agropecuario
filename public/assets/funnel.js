@@ -199,7 +199,10 @@
   /* ---------- Enlace de WhatsApp con el intake del diagnostico ----------
      Uso (solo en /cafe/gracias/):
        <a class="btn btn-wa" data-wa-intake data-wa-destino="cafe_wa_diagnostico" href="#">ENVIAR MIS DATOS</a>
-     Reconstruye el mensaje "#DIAG ..." con el lead guardado y arma el wa.me.
+       <a class="btn btn-wa" data-wa-intake data-wa-destino="cafe_wa_diagnostico" data-wa-marcador="#FOTOS" href="#">ENVIAR FOTOS</a>
+     Reconstruye el mensaje "#DIAG ..." (o "#FOTOS ..." con data-wa-marcador)
+     con el lead guardado y arma el wa.me. Sin data-wa-marcador, el default es
+     "#DIAG" (compatibilidad con lo que ya habia).
      NO toca la logica del formulario (el contrato pide no tocarla): la landing
      redirige a /gracias/ como siempre, y aqui se ofrece el envio por WhatsApp. */
   var CAMPOS_DIAG = ["nombre", "whatsapp", "correo", "variedad", "edad", "hectareas",
@@ -224,8 +227,17 @@
     sync();
   }
 
-  function textoDiag(lead) {
-    var lineas = ["Hola, quiero mi diagnostico de fertilizacion FertiCafe.", "", "#DIAG"];
+  /* marcador: "#DIAG" (Nivel 1, texto) o "#FOTOS" (Nivel 2, con fotos).
+     El servicio ferticafe lee el marcador para saber que nivel arrancar --
+     ver parser_diag.py (parsear_mensaje_diag / parsear_mensaje_fotos). */
+  function saludoDiag(marcador) {
+    return marcador === "#FOTOS"
+      ? "Hola, quiero mi diagnostico con fotos FertiCafe."
+      : "Hola, quiero mi diagnostico de fertilizacion FertiCafe.";
+  }
+
+  function textoDiag(lead, marcador) {
+    var lineas = [saludoDiag(marcador), "", marcador];
     CAMPOS_DIAG.forEach(function (k) {
       if (lead[k]) lineas.push(k + ": " + lead[k]);
     });
@@ -241,9 +253,9 @@
     document.querySelectorAll("[data-wa-intake]").forEach(function (a) {
       var num = String(cfg[a.getAttribute("data-wa-destino") || "cafe_wa_diagnostico"] || "").replace(/\D/g, "");
       if (!num) { a.classList.add("enlace-pendiente"); a.setAttribute("href", "#"); return; }
+      var marcador = a.getAttribute("data-wa-marcador") || "#DIAG";
       var lead = leerLead();
-      var texto = (lead && lead.nombre) ? textoDiag(lead)
-        : "Hola, quiero mi diagnostico de fertilizacion FertiCafe.";
+      var texto = (lead && lead.nombre) ? textoDiag(lead, marcador) : saludoDiag(marcador);
       a.setAttribute("href", "https://wa.me/" + num + "?text=" + encodeURIComponent(texto));
       a.setAttribute("target", "_blank");
       a.setAttribute("rel", "noopener");

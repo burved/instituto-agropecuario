@@ -61,7 +61,9 @@ window.IA_CONFIG = {
                                      // (variable de entorno del servicio); Eduard confirma el pago a
                                      // mano con el boton de /leads.html. Ver docs/SISTEMA-DIAGNOSTICO-SUELOS.md.
   cafe_precio_nivel2_cop: "25.000",  // decidido 2026-09-02 (ajuste con fotos, sin analisis de suelo).
-                                     // Sin usar todavia en ninguna pagina (falta el data-cfg en el HTML).
+                                     // El que de verdad cobra el bot es CFG_PRECIO_NIVEL2 en Render
+                                     // (vacio = no cobra nada; hay que ponerlo para que coincida con
+                                     // este precio). Ver docs/SISTEMA-DIAGNOSTICO-SUELOS.md.
   cafe_precio_nivel3_cop: "50.000",  // decidido 2026-09-02 (interpretacion de analisis de suelo).
                                      // El que de verdad cobra el bot de WhatsApp es CFG_PRECIO_NIVEL3
                                      // en Render (variable de entorno del servicio), no este valor.
