@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Datos recibidos | Instituto Agropecuario</title>
+<meta name="description" content="Ya recibimos los datos de tu lote. Vuelve a WhatsApp para seguir con tu diagnóstico de fertilización.">
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CO">
+<meta property="og:title" content="Datos recibidos">
+<meta property="og:description" content="Vuelve a WhatsApp para seguir con tu diagnóstico.">
+<meta property="og:site_name" content="Instituto Agropecuario">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%90%94%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@600&family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+
+<header class="topbar bg-crema">
+  <a class="logo" href="/">Instituto <span>Agropecuario</span></a>
+</header>
+
+<section class="bg-verde textura sec centro">
+  <div class="wrap">
+
+    <p class="pretitular">✅ Datos recibidos</p>
+    <h1>Listo, <span data-lead="nombre">amigo</span>: ya tengo los datos de tu lote</h1>
+
+    <p class="subtitular">
+      Vuelve a tu chat de WhatsApp — ahí seguimos con tu diagnóstico.
+    </p>
+
+    <div class="cta-bloque">
+      <a class="btn btn-wa" id="volver-whatsapp" href="#">VOLVER A WHATSAPP</a>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <p><strong>Instituto Agropecuario</strong> &mdash; Formación práctica para producir y vender en el campo colombiano.</p>
+    <p><a href="/legal/privacidad.html">Política de privacidad</a> &nbsp;·&nbsp; <a href="/legal/terminos.html">Términos y condiciones</a> &nbsp;·&nbsp; <a data-cfg-mailto href="#">escríbenos</a></p>
+    <p class="legal">Este sitio no está afiliado a Meta, Facebook, Instagram, Google ni YouTube.</p>
+    <p class="legal">&copy; 2026 Instituto Agropecuario. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script src="/assets/config.js"></script>
+<script>
+  /* "Volver a WhatsApp": solo abre el chat existente, sin texto precargado
+     (el bot ya mando el siguiente mensaje ahi). data-cfg-href no sirve aqui
+     porque cafe_wa_diagnostico son solo digitos, no una URL de wa.me. */
+  (function () {
+    var cfg = window.IA_CONFIG || {};
+    var num = String(cfg.cafe_wa_diagnostico || "").replace(/\D/g, "");
+    var a = document.getElementById("volver-whatsapp");
+    if (!a) return;
+    if (num) {
+      a.setAttribute("href", "https://wa.me/" + num);
+      a.setAttribute("target", "_blank");
+      a.setAttribute("rel", "noopener");
+    } else {
+      a.classList.add("enlace-pendiente");
+    }
+  })();
+</script>
+<script src="/assets/funnel.js"></script>
+</body>
+</html>

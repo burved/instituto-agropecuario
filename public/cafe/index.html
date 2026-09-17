@@ -77,112 +77,28 @@
         </p>
       </div>
 
-      <!-- Columna derecha: formulario de registro + intake del diagnóstico -->
+      <!-- Columna derecha: formulario de registro (los datos del lote se piden
+           despues, por WhatsApp, solo a quien de verdad pide el diagnostico) -->
       <div id="registro">
         <form class="form-caja" data-form-registro data-destino="/cafe/gracias/" data-wa-destino="cafe_wa_diagnostico">
           <h3>Aparta tu puesto y pide tu diagnóstico</h3>
           <p class="chico centro">
-            Con estas preguntas de tu lote preparamos tu <strong>diagnóstico de fertilización</strong>
-            y te lo mandamos por WhatsApp por <span data-cfg="cafe_precio_nivel1_cop"></span> COP
-            (te decimos cómo pagar en el mismo chat). Apartas el puesto de la transmisión
-            —esa sí es gratis— en el mismo paso.
+            Con tu nombre y tu WhatsApp apartas tu puesto en la transmisión —esa es gratis—.
+            En el mismo chat de WhatsApp te preguntamos si quieres tu
+            <strong>diagnóstico de fertilización</strong> (desde
+            <span data-cfg="cafe_precio_nivel1_cop"></span> COP) y te mostramos las opciones.
           </p>
 
           <div class="campo"><label for="nombre">Tu nombre</label><input id="nombre" name="nombre" type="text" autocomplete="given-name" required></div>
           <div class="campo"><label for="whatsapp">Tu WhatsApp (ahí te llega el enlace y el diagnóstico)</label><input id="whatsapp" name="whatsapp" type="tel" inputmode="tel" placeholder="+57 300 000 0000" autocomplete="tel" required></div>
           <div class="campo"><label for="correo">Tu correo (opcional)</label><input id="correo" name="correo" type="email" autocomplete="email"></div>
 
-          <div class="campo"><label for="variedad">¿Qué variedad de café tiene el lote?</label>
-            <select id="variedad" name="variedad" required>
-              <option value="">Elige una opción</option>
-              <option value="castillo">Castillo</option>
-              <option value="cenicafe1">Cenicafé 1</option>
-              <option value="colombia">Colombia</option>
-              <option value="caturra">Caturra</option>
-              <option value="tabi">Tabí</option>
-              <option value="borbon">Borbón</option>
-              <option value="typica">Typica / Pajarito</option>
-              <option value="otra">Otra / no sé</option>
-            </select>
-          </div>
-
-          <div class="campo"><label for="edad">¿Cuántos años tiene el cafetal?</label>
-            <select id="edad" name="edad" required>
-              <option value="">Elige una opción</option>
-              <option value="levante">Menos de 2 años (levante)</option>
-              <option value="2a5">Entre 2 y 5 años</option>
-              <option value="6a9">Entre 6 y 9 años</option>
-              <option value="10mas">10 años o más</option>
-              <option value="zoca">Está zoqueado / en renovación</option>
-            </select>
-          </div>
-
-          <div class="campo"><label for="hectareas">¿Cuántas hectáreas tiene el lote de café?</label>
-            <input id="hectareas" name="hectareas" type="number" inputmode="decimal" step="0.1" min="0.1" max="60" placeholder="Ej: 2.5" required>
-          </div>
-
-          <div class="campo"><label for="matas">¿Cuántas matas de café tiene, más o menos?</label><input id="matas" name="matas" type="text" inputmode="numeric" placeholder="Ej: 6000"></div>
-
-          <div class="campo">
-            <label><input type="checkbox" data-area-toggle> No sé cuántas hectáreas tiene</label>
-            <div data-area-distancia hidden>
-              <label for="distancia_siembra">¿A qué distancia están sembradas las matas?</label>
-              <select id="distancia_siembra" name="distancia_siembra">
-                <option value="">Elige una opción</option>
-                <option value="2.0x1.0">2,0 m entre surcos × 1,0 m entre matas</option>
-                <option value="1.5x1.5">1,5 × 1,5 m</option>
-                <option value="1.5x1.0">1,5 × 1,0 m</option>
-                <option value="1.4x1.4">1,4 × 1,4 m</option>
-                <option value="1.3x1.3">1,3 × 1,3 m</option>
-                <option value="1.0x1.0">1,0 × 1,0 m</option>
-                <option value="nose">No sé la distancia</option>
-              </select>
-              <p class="chico">Con el número de matas y la distancia calculamos el área del lote.</p>
-            </div>
-          </div>
-
-          <div class="campo"><label for="sombra">¿Cómo es la sombra del lote?</label>
-            <select id="sombra" name="sombra" required>
-              <option value="">Elige una opción</option>
-              <option value="libre">A libre exposición (sin sombra)</option>
-              <option value="baja">Poca sombra</option>
-              <option value="media">Sombra media</option>
-              <option value="alta">Bastante sombra</option>
-            </select>
-          </div>
-
-          <div class="campo"><label for="estado">¿Cómo ves el cafetal hoy?</label>
-            <select id="estado" name="estado" required>
-              <option value="">Elige una opción</option>
-              <option value="bueno">Bueno, parejo y verde</option>
-              <option value="regular">Regular, disparejo</option>
-              <option value="malo">Flojo, amarillo o con caída de hoja</option>
-            </select>
-          </div>
-
-          <div class="campo"><label for="humedad">¿Cómo está el suelo ahora mismo?</label>
-            <select id="humedad" name="humedad" required>
-              <option value="">Elige una opción</option>
-              <option value="seco">Seco</option>
-              <option value="humedo">Con humedad, en punto</option>
-              <option value="encharcado">Muy húmedo o encharcado</option>
-            </select>
-          </div>
-
-          <div class="campo"><label for="analisis">¿Tienes análisis de suelo del lote?</label>
-            <select id="analisis" name="analisis" required>
-              <option value="">Elige una opción</option>
-              <option value="no">No tengo</option>
-              <option value="viejo">Tengo uno viejo (más de 2 años)</option>
-              <option value="si">Sí, tengo uno reciente</option>
-            </select>
-          </div>
-
-          <button type="submit" class="btn btn-lg">SÍ, QUIERO MI PUESTO Y MI DIAGNÓSTICO</button>
+          <button type="submit" class="btn btn-lg">SÍ, QUIERO MI PUESTO</button>
           <p class="form-error"></p>
           <p class="form-legal">
-            Cupos limitados. Usamos estos datos solo para preparar tu diagnóstico y avisarte de la
-            transmisión por WhatsApp. No guardamos historial técnico de tu finca. Puedes salirte cuando quieras.
+            Cupos limitados. Usamos estos datos para avisarte de la transmisión por WhatsApp y,
+            si pides tu diagnóstico, para mandártelo ahí mismo. No guardamos historial técnico
+            de tu finca. Puedes salirte cuando quieras.
           </p>
         </form>
       </div>
@@ -321,11 +237,12 @@
   <div class="wrap">
 
     <div class="centro max-820">
-      <span class="pretitular">Lo primero, y es gratis</span>
-      <h2>Tu diagnóstico de fertilización, sin costo</h2>
+      <span class="pretitular">Lo primero</span>
+      <h2>Tu diagnóstico de fertilización</h2>
       <p class="subtitular">
         Antes de hablar de renglones nuevos, veamos si al que ya tienes le estás dando bien de comer.
-        Con las preguntas que respondiste arriba se prepara una recomendación para tu lote.
+        Cuando pidas tu diagnóstico por WhatsApp (desde <span data-cfg="cafe_precio_nivel1_cop"></span> COP)
+        te hacemos ahí mismo las preguntas de tu lote, y con eso se prepara la recomendación.
       </p>
     </div>
 
@@ -508,7 +425,7 @@
       <h2>Esto se ve en vivo, no se lee</h2>
       <p class="grande">
         Es una transmisión en línea, gratuita, y se puede ver desde el celular.
-        Apartas el puesto y pides tu diagnóstico en el mismo formulario.
+        Apartas el puesto en el formulario, y por WhatsApp pides tu diagnóstico si quieres.
       </p>
       <div class="cta-bloque">
         <a class="btn btn-lg" href="#registro">SÍ, QUIERO MI PUESTO</a>
@@ -554,8 +471,9 @@
             las causas</strong>. Frágil, robusta o de las que se acomodan.
           </p>
           <p class="mb0">
-            Y por separado, tu <strong>diagnóstico de fertilización</strong> del lote, que ya
-            pediste en el formulario y te llega por WhatsApp. No hay que pagar nada por ninguno.
+            El diagnóstico de finca (frágil / robusta / acomodada) no cuesta nada. Y si pediste
+            tu <strong>diagnóstico de fertilización</strong> por WhatsApp, también te llega ese
+            día al mismo chat.
           </p>
         </li>
 
@@ -638,14 +556,18 @@
           y sería raro escondértelo. Va a ser al final, va a durar unos minutos, y si en ese momento
           te sales, no pasa absolutamente nada.
         </p>
-        <p><strong>Esto es tuyo pase lo que pase:</strong></p>
+        <p><strong>Esto es tuyo pase lo que pase, sin pagar nada:</strong></p>
         <ul class="bullets">
-          <li><strong>Tu diagnóstico de fertilización</strong> del lote, en PDF y por WhatsApp. Lo puedes llevar a la tienda de insumos tal cual.</li>
           <li><strong>La transmisión completa</strong>, con las causas y con lo que sí está en tus manos.</li>
           <li><strong>El diagnóstico de tu finca</strong> (frágil / robusta / acomodada), que haces en vivo y te llevas.</li>
           <li><strong>Las cosas de costo bajo o costo cero</strong> que se hacen con lo que ya hay en el lote —empezando por la pulpa del café.</li>
           <li><strong>La respuesta a tu pregunta</strong> si la escribes en el chat, hayas comprado o no.</li>
         </ul>
+        <p>
+          Aparte, si pediste tu <strong>diagnóstico de fertilización</strong> por WhatsApp
+          (desde <span data-cfg="cafe_precio_nivel1_cop"></span> COP), también te llega en PDF
+          ese mismo día — lo puedes llevar a la tienda de insumos tal cual.
+        </p>
         <p class="mb0">
           Sé que hay cafeteros que hoy no pueden pagar una formación. No es una falla ni una
           vergüenza: es el momento en el que están. Por eso lo de arriba es gratis y es completo,
@@ -778,11 +700,11 @@
         <summary>¿Cuánto cuesta el diagnóstico de fertilización?</summary>
         <div class="respuesta">
           <p>
-            <span data-cfg="cafe_precio_nivel1_cop"></span> COP. Con las preguntas del formulario
-            se prepara una recomendación general para tu lote; te escribimos por WhatsApp con los
-            datos para pagar y en cuanto lo confirmamos te llega el PDF. Si más adelante quieres una
-            recomendación técnica con tu análisis de suelo revisado por el ingeniero, eso tiene un
-            costo aparte, y te lo decimos claro cuando llegue el momento.
+            <span data-cfg="cafe_precio_nivel1_cop"></span> COP. Te hacemos las preguntas de tu
+            lote por WhatsApp y con eso se prepara una recomendación general; te escribimos con
+            los datos para pagar y en cuanto lo confirmamos te llega el PDF. Si más adelante
+            quieres una recomendación técnica con tu análisis de suelo revisado por el ingeniero,
+            eso tiene un costo aparte, y te lo decimos claro cuando llegue el momento.
           </p>
         </div>
       </details>
@@ -874,10 +796,11 @@
         <div class="respuesta">
           <p>
             Todo por WhatsApp. Después de registrarte, en la página siguiente tocas un botón que
-            abre WhatsApp con los datos de tu lote ya escritos: le das enviar y el diagnóstico de
-            fertilización te llega a ese chat, normalmente en unos minutos. El enlace de la
-            transmisión y el recordatorio se mandan al grupo. Si dejas correo, el enlace te llega
-            también por ahí, pero el canal principal es WhatsApp.
+            abre WhatsApp: ahí eliges si quieres el diagnóstico general, con fotos de tu cafetal,
+            o con tu análisis de suelo, y te pedimos los datos de tu lote que hagan falta según la
+            opción. El diagnóstico te llega a ese mismo chat, normalmente en unos minutos. El
+            enlace de la transmisión y el recordatorio se mandan al grupo. Si dejas correo, el
+            enlace te llega también por ahí, pero el canal principal es WhatsApp.
           </p>
         </div>
       </details>

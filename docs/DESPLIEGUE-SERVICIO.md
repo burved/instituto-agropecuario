@@ -71,6 +71,7 @@ En **Environment** del servicio, agrega (valores del `WHATSAPP-CLOUD-API-SETUP.m
 | `ANTHROPIC_API_KEY` | necesaria para el Nivel 2 (fotos) y el Nivel 3 (análisis + fotos) — clave de console.anthropic.com. Sin ella esos flujos guardan el lead y piden lo que haga falta igual, pero fallan al evaluarlo (`/health` → `puede_evaluar_fotos_nivel2:false`) |
 | `ANTHROPIC_MODEL` | opcional, por defecto `claude-sonnet-5` |
 | `HTTP_TIMEOUT_VISION` | opcional, segundos de espera a Claude (por defecto `90` — 6-8 fotos tardan más que un mensaje de texto) |
+| `CFG_URL_LANDING` | opcional, ya trae `https://institutoagropecuario.com` por defecto — dominio que se usa para armar el enlace al formulario corto de datos del lote (`/cafe/lote/`) que se manda al elegir nivel en la lista de WhatsApp |
 
 Guarda → Render redepliega.
 

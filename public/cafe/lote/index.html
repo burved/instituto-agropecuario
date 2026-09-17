@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Datos de tu lote | Instituto Agropecuario</title>
+<meta name="description" content="Completa los datos de tu lote de café para terminar de preparar tu diagnóstico de fertilización FertiCafé.">
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CO">
+<meta property="og:title" content="Datos de tu lote">
+<meta property="og:description" content="Completa los datos de tu lote de café para terminar tu diagnóstico de fertilización.">
+<meta property="og:site_name" content="Instituto Agropecuario">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%90%94%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@600&family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+
+<!-- SECCIÓN 1 — CABECERA -->
+<header class="topbar bg-crema">
+  <a class="logo" href="/">Instituto <span>Agropecuario</span></a>
+</header>
+
+<!-- SECCIÓN 2 — FORMULARIO DEL LOTE -->
+<section class="bg-verde textura sec">
+  <div class="wrap-texto">
+
+    <p class="pretitular">Último paso</p>
+    <h1>Los datos de tu lote</h1>
+    <p class="subtitular">
+      Con esto terminamos de preparar tu diagnóstico. Te toma un minuto — cuando termines,
+      vuelve a tu chat de WhatsApp y seguimos ahí.
+    </p>
+
+    <p class="chico centro" data-lote-whatsapp-texto></p>
+
+  </div>
+</section>
+
+<section class="bg-crema sec">
+  <div class="wrap-texto">
+
+    <form class="form-caja" data-form-registro data-destino="/cafe/lote/listo/">
+      <h3>Tu lote de café</h3>
+
+      <input type="hidden" id="whatsapp" name="whatsapp" value="">
+      <input type="hidden" id="nombre" name="nombre" value="">
+
+      <div class="campo"><label for="variedad">¿Qué variedad de café tiene el lote?</label>
+        <select id="variedad" name="variedad" required>
+          <option value="">Elige una opción</option>
+          <option value="castillo">Castillo</option>
+          <option value="cenicafe1">Cenicafé 1</option>
+          <option value="colombia">Colombia</option>
+          <option value="caturra">Caturra</option>
+          <option value="tabi">Tabí</option>
+          <option value="borbon">Borbón</option>
+          <option value="typica">Typica / Pajarito</option>
+          <option value="otra">Otra / no sé</option>
+        </select>
+      </div>
+
+      <div class="campo"><label for="edad">¿Cuántos años tiene el cafetal?</label>
+        <select id="edad" name="edad" required>
+          <option value="">Elige una opción</option>
+          <option value="levante">Menos de 2 años (levante)</option>
+          <option value="2a5">Entre 2 y 5 años</option>
+          <option value="6a9">Entre 6 y 9 años</option>
+          <option value="10mas">10 años o más</option>
+          <option value="zoca">Está zoqueado / en renovación</option>
+        </select>
+      </div>
+
+      <div class="campo"><label for="hectareas">¿Cuántas hectáreas tiene el lote de café?</label>
+        <input id="hectareas" name="hectareas" type="number" inputmode="decimal" step="0.1" min="0.1" max="60" placeholder="Ej: 2.5" required>
+      </div>
+
+      <div class="campo"><label for="matas">¿Cuántas matas de café tiene, más o menos?</label><input id="matas" name="matas" type="text" inputmode="numeric" placeholder="Ej: 6000"></div>
+
+      <div class="campo">
+        <label><input type="checkbox" data-area-toggle> No sé cuántas hectáreas tiene</label>
+        <div data-area-distancia hidden>
+          <label for="distancia_siembra">¿A qué distancia están sembradas las matas?</label>
+          <select id="distancia_siembra" name="distancia_siembra">
+            <option value="">Elige una opción</option>
+            <option value="2.0x1.0">2,0 m entre surcos × 1,0 m entre matas</option>
+            <option value="1.5x1.5">1,5 × 1,5 m</option>
+            <option value="1.5x1.0">1,5 × 1,0 m</option>
+            <option value="1.4x1.4">1,4 × 1,4 m</option>
+            <option value="1.3x1.3">1,3 × 1,3 m</option>
+            <option value="1.0x1.0">1,0 × 1,0 m</option>
+            <option value="nose">No sé la distancia</option>
+          </select>
+          <p class="chico">Con el número de matas y la distancia calculamos el área del lote.</p>
+        </div>
+      </div>
+
+      <div class="campo"><label for="sombra">¿Cómo es la sombra del lote?</label>
+        <select id="sombra" name="sombra" required>
+          <option value="">Elige una opción</option>
+          <option value="libre">A libre exposición (sin sombra)</option>
+          <option value="baja">Poca sombra</option>
+          <option value="media">Sombra media</option>
+          <option value="alta">Bastante sombra</option>
+        </select>
+      </div>
+
+      <div class="campo"><label for="estado">¿Cómo ves el cafetal hoy?</label>
+        <select id="estado" name="estado" required>
+          <option value="">Elige una opción</option>
+          <option value="bueno">Bueno, parejo y verde</option>
+          <option value="regular">Regular, disparejo</option>
+          <option value="malo">Flojo, amarillo o con caída de hoja</option>
+        </select>
+      </div>
+
+      <div class="campo"><label for="humedad">¿Cómo está el suelo ahora mismo?</label>
+        <select id="humedad" name="humedad" required>
+          <option value="">Elige una opción</option>
+          <option value="seco">Seco</option>
+          <option value="humedo">Con humedad, en punto</option>
+          <option value="encharcado">Muy húmedo o encharcado</option>
+        </select>
+      </div>
+
+      <div class="campo"><label for="analisis">¿Tienes análisis de suelo del lote?</label>
+        <select id="analisis" name="analisis" required>
+          <option value="">Elige una opción</option>
+          <option value="no">No tengo</option>
+          <option value="viejo">Tengo uno viejo (más de 2 años)</option>
+          <option value="si">Sí, tengo uno reciente</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-lg">LISTO, ENVIAR MIS DATOS</button>
+      <p class="form-error"></p>
+      <p class="form-legal">
+        Usamos estos datos solo para preparar tu diagnóstico de fertilización. No guardamos
+        historial técnico de tu finca.
+      </p>
+    </form>
+
+  </div>
+</section>
+
+<!-- SECCIÓN 3 — PIE -->
+<footer class="footer">
+  <div class="wrap">
+    <p><strong>Instituto Agropecuario</strong> &mdash; Formación práctica para producir y vender en el campo colombiano.</p>
+    <p><a href="/legal/privacidad.html">Política de privacidad</a> &nbsp;·&nbsp; <a href="/legal/terminos.html">Términos y condiciones</a> &nbsp;·&nbsp; <a data-cfg-mailto href="#">escríbenos</a></p>
+    <p class="legal">Este contenido es formación agropecuaria y de gestión. No sustituye asesoría agronómica, veterinaria, sanitaria, contable ni financiera profesional. El diagnóstico de fertilización es una orientación general y no reemplaza un análisis de suelo ni una visita técnica de campo. Este sitio no está afiliado a Meta, Facebook, Instagram, Google ni YouTube.</p>
+    <p class="legal">&copy; 2026 Instituto Agropecuario. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<!-- SECCIÓN 4 — SCRIPTS -->
+<script src="/assets/config.js"></script>
+<script>
+  /* Prellena whatsapp/nombre desde el enlace que manda el bot de WhatsApp
+     (?whatsapp=...&nombre=...) -- ver mensajes.pedir_datos_lote() en el
+     motor y app._pedir_datos_lote() en el servicio. Sin esto el formulario
+     generico (data-form-registro) no deja enviar: pide nombre y whatsapp. */
+  (function () {
+    var p = new URLSearchParams(window.location.search);
+    var whatsapp = p.get("whatsapp") || "";
+    var nombre = p.get("nombre") || "";
+    var campoWa = document.getElementById("whatsapp");
+    var campoNombre = document.getElementById("nombre");
+    if (campoWa) campoWa.value = whatsapp;
+    if (campoNombre) campoNombre.value = nombre;
+
+    var texto = document.querySelector("[data-lote-whatsapp-texto]");
+    if (texto && whatsapp) {
+      texto.textContent = "Completando los datos para el WhatsApp " + whatsapp + ".";
+    }
+
+    var base = (window.IA_CONFIG && window.IA_CONFIG.cafe_url_endpoint_diagnostico) || "";
+    if (base) window.IA_ENDPOINT_REGISTRO = base.replace(/\/+$/, "") + "/registro";
+  })();
+</script>
+<script src="/assets/funnel.js"></script>
+</body>
+</html>
