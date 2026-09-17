@@ -117,6 +117,28 @@ Desde un WhatsApp registrado como destinatario de prueba en Meta:
   conviene pasar a un plan pago antes de confiar en él a largo plazo.
 - **Logs:** Render → tu servicio → **Logs**. Ahí se ven los errores de proceso.
 
+### Migrar columnas nuevas si ya tienes Postgres con leads reales
+
+`store.py` usa `create_all()` de SQLAlchemy para crear la tabla `leads`: eso crea la
+tabla si no existe, pero **no le agrega columnas nuevas a una tabla que ya existe**.
+Si ya desplegaste con `DATABASE_URL` (Postgres) y tienes leads reales guardados,
+antes de subir el código del Nivel 2/3 con fotos hay que agregar a mano las 3
+columnas nuevas (si el deploy arranca sin ellas, el servicio revienta al primer
+`/registro` o mensaje de WhatsApp con un error de columna inexistente):
+
+```sql
+ALTER TABLE leads ADD COLUMN IF NOT EXISTS fotos_json TEXT;
+ALTER TABLE leads ADD COLUMN IF NOT EXISTS fotos_pendientes_json TEXT;
+ALTER TABLE leads ADD COLUMN IF NOT EXISTS informe_suelo_json TEXT;
+```
+
+Cómo correrlo: en el dashboard de Render, entra a tu base `ferticafe-db` →
+**Connect** → copia el comando `psql <connection string>` y pégalo en tu terminal
+(necesitas `psql` instalado), o usa el botón **"Connect" → "External Connection"**
+con cualquier cliente de Postgres (ej. TablePlus, DBeaver) pegando la misma cadena.
+Si el servicio arrancó con SQLite local (sin `DATABASE_URL`) no hay que hacer nada
+— `create_all()` sí crea la tabla completa desde cero.
+
 ## Recordatorio de próxima aplicación (recompra)
 
 El motor ya calcula cuántas aplicaciones de fertilizante recomienda al año; el
