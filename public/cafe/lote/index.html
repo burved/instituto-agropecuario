@@ -49,6 +49,44 @@
       <input type="hidden" id="whatsapp" name="whatsapp" value="">
       <input type="hidden" id="nombre" name="nombre" value="">
 
+      <div class="campo"><label for="departamento">¿En qué departamento está tu finca?</label>
+        <select id="departamento" name="departamento" required>
+          <option value="">Elige una opción</option>
+          <option>Antioquia</option>
+          <option>Arauca</option>
+          <option>Boyacá</option>
+          <option>Caldas</option>
+          <option>Caquetá</option>
+          <option>Casanare</option>
+          <option>Cauca</option>
+          <option>Cesar</option>
+          <option>Chocó</option>
+          <option>Cundinamarca</option>
+          <option>Huila</option>
+          <option>La Guajira</option>
+          <option>Magdalena</option>
+          <option>Meta</option>
+          <option>Nariño</option>
+          <option>Norte de Santander</option>
+          <option>Putumayo</option>
+          <option>Quindío</option>
+          <option>Risaralda</option>
+          <option>Santander</option>
+          <option>Tolima</option>
+          <option>Valle del Cauca</option>
+          <option value="otro">Otro</option>
+        </select>
+      </div>
+
+      <div class="campo"><label for="municipio">¿En qué municipio?</label>
+        <input id="municipio" name="municipio" type="text" autocomplete="address-level2" placeholder="Ej: Piendamó" required>
+      </div>
+
+      <div class="campo"><label for="altitud">¿A qué altura está tu finca? (metros, si la sabes)</label>
+        <input id="altitud" name="altitud" type="number" inputmode="numeric" step="10" min="200" max="3200" placeholder="Ej: 1700">
+        <p class="chico">Con el municipio y la altura vemos las lluvias de tu zona y te decimos en qué meses y en qué semana abonar.</p>
+      </div>
+
       <div class="campo"><label for="variedad">¿Qué variedad de café tiene el lote?</label>
         <select id="variedad" name="variedad" required>
           <option value="">Elige una opción</option>
