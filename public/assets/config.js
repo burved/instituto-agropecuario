@@ -50,7 +50,7 @@ window.IA_CONFIG = {
   /* ---- Cafe: WhatsApp ---- */
   cafe_wa_grupo_webinar: "",         // https://chat.whatsapp.com/XXXX
   cafe_wa_grupo_cohorte: "",         // https://chat.whatsapp.com/XXXX
-  cafe_wa_diagnostico: "15556777383", // SOLO DIGITOS del numero de WhatsApp Cloud API que da Meta,
+  cafe_wa_diagnostico: "15557389605", // SOLO DIGITOS del numero de WhatsApp Cloud API que da Meta,
                                      // con indicativo y sin +  (ej: "573001234567").
                                      // Es el numero al que el cafetero manda el bloque #DIAG.
                                      // Ver docs/WHATSAPP-CLOUD-API-SETUP.md
