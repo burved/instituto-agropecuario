@@ -55,11 +55,8 @@ window.IA_CONFIG = {
                                      // Es el numero al que el cafetero manda el bloque #DIAG.
                                      // Ver docs/WHATSAPP-CLOUD-API-SETUP.md
 
-  /* ---- Cafe: diagnostico de fertilizacion (FertiCafe) ---- */
-  cafe_precio_nivel1_cop: "10.000",  // decidido 2026-09-14 (diagnostico general, sin fotos ni analisis).
-                                     // El que de verdad cobra el bot es CFG_PRECIO_NIVEL1 en Render
-                                     // (variable de entorno del servicio); Eduard confirma el pago a
-                                     // mano con el boton de /leads.html. Ver docs/SISTEMA-DIAGNOSTICO-SUELOS.md.
+  /* ---- Cafe: diagnostico de fertilizacion (FertiCafe) ----
+     Nivel 1 es GRATIS desde 2026-10-28 (no lleva precio). */
   cafe_precio_nivel2_cop: "25.000",  // decidido 2026-09-02 (ajuste con fotos, sin analisis de suelo).
                                      // El que de verdad cobra el bot es CFG_PRECIO_NIVEL2 en Render
                                      // (vacio = no cobra nada; hay que ponerlo para que coincida con
@@ -72,12 +69,11 @@ window.IA_CONFIG = {
                                      // La landing le agrega "/registro" para guardar el lead.
                                      // Ver docs/DESPLIEGUE-SERVICIO.md
 
-  /* ---- Cafe: oferta / cohorte ---- */
-  cafe_url_checkout_cohorte: "",
-  cafe_precio_cohorte: "",
-  cafe_precio_cohorte_regular: "",
-  cafe_cupos_cohorte: "",
-  cafe_fecha_inicio_cohorte: "",
+  /* ---- Cafe: Membresia FertiCafe (decidida 2026-11-14, reemplaza la cohorte y el Plan Cafetal) ---- */
+  cafe_precio_membresia_cop: "50.000",            // pago mensual
+  cafe_clase_horario: "jueves de 7:00 a 8:00 p. m. (hora Colombia)",
+  cafe_url_checkout_membresia: "",                // link de pago de Wompi (pendiente: cuenta Wompi de Eduard)
+  cafe_wa_grupo_miembros: "",                     // https://chat.whatsapp.com/XXXX  (grupo de miembros)
 
   /* ---- Legal / marca ---- */
   marca: "Instituto Agropecuario",

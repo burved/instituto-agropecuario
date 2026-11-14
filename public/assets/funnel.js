@@ -298,7 +298,7 @@
     document.querySelectorAll("[data-cfg-cuenta]").forEach(function (el) {
       var valor = cfg[el.getAttribute("data-cfg-cuenta")];
       if (valor) el.setAttribute("data-cuenta-regresiva", valor);
-      else if (!el.getAttribute("data-horas")) el.setAttribute("data-horas", "48");
+      else el.style.display = "none"; /* sin fecha real no se muestra contador: cero urgencia falsa */
     });
 
     if (cfg.correo_soporte) {

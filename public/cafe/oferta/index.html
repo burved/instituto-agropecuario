@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>La Cohorte Fundadora: Finca con Cobertura (café) | Instituto Agropecuario</title>
-<meta name="description" content="Acompañamiento en vivo para que tu finca cafetera deje de depender de una sola cosecha y un solo precio: fertilización con criterio y un segundo renglón que entra plata cada semana.">
+<title>Membresía FertiCafé: un agrónomo en vivo cada jueves | Instituto Agropecuario</title>
+<meta name="description" content="Clase virtual cada jueves, sus preguntas resueltas, aviso de cuándo abonar y 3 diagnósticos de abonada al año. 50.000 COP al mes.">
 <meta name="robots" content="index,follow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_CO">
-<meta property="og:title" content="La Cohorte Fundadora: Finca con Cobertura (café)">
-<meta property="og:description" content="Acompañamiento en vivo para que tu finca cafetera deje de depender de una sola cosecha y un solo precio.">
+<meta property="og:title" content="Membresía FertiCafé: un agrónomo en vivo cada jueves">
+<meta property="og:description" content="Clase virtual cada jueves, sus preguntas resueltas y 3 diagnósticos de abonada al año.">
 <meta property="og:site_name" content="Instituto Agropecuario">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%90%94%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%98%95%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@600&family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -20,415 +20,271 @@
 <body>
 
 <!--
-  ============================================================================
-  ESQUELETO DE LA CARTA DE VENTAS DE CAFÉ  ·  BORRADOR
-  ----------------------------------------------------------------------------
-  Estructura calcada de /oferta/index.html (gallinas) y adaptada al café con
-  docs/BRIEF-CAFE.md. Las secciones conceptuales llevan copy real; las de
-  precio, módulos detallados, bonos, garantía y testimonios están marcadas
-  con dato-pendiente y necesitan decisiones de Eduard (ver
-  salidas/2026-08-27_auditoria-ferticafe_y_encaje-instituto-agropecuario_v1.md,
-  sección 8). NO publicar hasta completarlas.
-  ============================================================================
+  Oferta decidida por Eduard el 2026-11-14 (salidas/2026-11-14_oferta-membresia-ferticafe_v1.md).
+  Reemplaza la "Cohorte Fundadora / Finca con Cobertura" y el Plan Cafetal anual.
+  Se presenta al final de la clase en vivo (S93), no en la landing (S96).
+  Pendiente para publicar: link de pago de Wompi (cafe_url_checkout_membresia),
+  grupo de miembros, credenciales y testimonios reales.
 -->
-
-<div class="barra-aviso">
-  ☕ COHORTE FUNDADORA &nbsp;·&nbsp; Cupos limitados &nbsp;·&nbsp; <span data-cfg="cafe_fecha_inicio_cohorte"></span>
-</div>
 
 <header class="topbar bg-crema">
   <a class="logo" href="/">Instituto <span>Agropecuario</span></a>
 </header>
 
-<!-- 1 — APERTURA: LA CONVERSACIÓN DEL POTRERO -->
+<!-- 1 — APERTURA -->
 <section class="bg-verde textura sec-lg">
-  <div class="wrap-texto">
-    <span class="pretitular">Para el cafetero que ya se cansó de que cada cosecha le deje menos</span>
-    <h1>Hay una conversación que he tenido decenas de veces, parado en un cafetal, y siempre termina igual</h1>
-    <p class="grande">
-      El productor me dice que trabaja igual o más que hace cinco años, que le mete el mismo abono
-      o más, y que a fin de año lleva menos a la casa. Y casi siempre lo remata con la misma frase:
-      <em>"será que el café ya no es negocio"</em>.
+  <div class="wrap-texto centro">
+    <span class="pretitular">Para el cafetero que no quiere volver a abonar a ciegas</span>
+    <h1>Membresía FertiCafé: un agrónomo en vivo cada jueves, para su cafetal</h1>
+    <p class="subtitular">
+      Lo que vio en la clase, pero todas las semanas: sus preguntas resueltas, el aviso de cuándo
+      abonar en su zona y sus diagnósticos de abonada incluidos.
     </p>
-    <p>
-      No le voy a decir que el café es un gran negocio ni que es una ruina. Le voy a decir otra cosa:
-      <strong>el problema no es el café. Es que toda la finca carga sobre el café.</strong>
-      Y que a ese café le está metiendo plata sin saber si es la que la tierra necesita.
-    </p>
-    <p>Las dos cosas se pueden cambiar. De eso se trata esto.</p>
+    <p class="grande"><strong><span data-cfg="cafe_precio_membresia_cop"></span> COP al mes</strong></p>
     <div class="cta-bloque">
-      <a class="btn btn-lg" data-cfg-href="cafe_url_checkout_cohorte" href="#">QUIERO ENTRAR A LA COHORTE</a>
-      <span class="btn-sub">Precio de fundador · <span class="dato-pendiente">PRECIO — DEFINIR CON EDUARD</span></span>
+      <a class="btn btn-lg" data-cfg-href="cafe_url_checkout_membresia" href="#">QUIERO SER MIEMBRO</a>
+      <span class="btn-sub">Se paga mes a mes · Clase los <span data-cfg="cafe_clase_horario"></span></span>
     </div>
   </div>
 </section>
 
-<!-- 2 — LO QUE ESTÁ PASANDO EN TU FINCA, DICHO SIN RODEOS -->
+<!-- 2 — POR QUÉ ASÍ -->
 <section class="bg-crema sec">
   <div class="wrap-texto">
-    <span class="pretitular-linea">Lo que pasa, en tres partes</span>
-    <h2>Lo que está pasando en tu finca cafetera, dicho sin rodeos</h2>
-
-    <h3>1. Lo que se ve: la finca que trabaja en una sola cosa</h3>
+    <span class="pretitular-linea">Por qué en línea</span>
+    <h2>Una visita a la finca llega a pocos. Una clase llega a todos.</h2>
     <p>
-      Todo el lote en café. Una cosecha grande al año (y una traviesa, si acaso). El resto del año
-      se estira lo que quedó. El suelo de ladera que se va lavando. El abono que se compra por
-      costumbre. Y ni un número anotado que te diga cuánto te cuesta producir la carga.
-    </p>
-
-    <h3 class="mt-l">2. Lo que se siente: la impotencia de creer que hay que esperar a tener plata</h3>
-    <p>
-      La sensación de que para cambiar algo primero hay que tener con qué, y como nunca sobra, todo
-      se queda igual. Y la vergüenza callada de trabajar más cada año para llevar menos a la casa.
+      Un técnico que va finca por finca alcanza a visitar unas pocas al mes, y solo en su zona.
+      Por eso la mayoría de los cafeteros pasa años sin que nadie le revise el cafetal.
     </p>
     <p>
-      Hay cosas que se hacen <strong>ya</strong>, con lo que hay en la finca —empezando por la pulpa
-      del café, que la mayoría bota— y que no cuestan plata. Esperar a "tener plata" es justo lo que
-      deja las fincas frágiles año tras año.
+      La membresía resuelve eso de otra forma: <strong>una clase en vivo cada semana</strong>
+      donde se responden las dudas de todos, y <strong>diagnósticos por WhatsApp</strong> con los
+      datos, las fotos o el análisis de su lote, sin esperar una visita.
     </p>
-
-    <h3 class="mt-l">3. Lo que es injusto: tú cargas todo el riesgo y eres el único sin información</h3>
-    <p>
-      Pones la tierra, el trabajo y el año entero. Y a la hora de vender, el precio lo sabe el
-      comprador y tú te enteras ese día. El que menos información tiene en toda la cadena es el que
-      más se juega. Eso no es orden natural: es falta de herramientas, y se corrige.
-    </p>
-  </div>
-</section>
-
-<!-- 3 — LAS TRES FALSAS CREENCIAS -->
-<section class="bg-blanco sec">
-  <div class="wrap-texto">
-    <span class="pretitular">Lo que se cree</span>
-    <h2>Tres cosas que crees, y que te tienen quieto</h2>
-
-    <div class="card card-borde-rojo mt-m">
-      <h3 class="rojo">LO QUE SE CREE #1: "Lo que pasa es que el precio del café está malo"</h3>
-      <p>
-        El precio sube y baja, siempre. No lo mueves tú. Lo que sí mueves: cuánto te cuesta producir
-        la carga, y de cuántos precios depende tu año. Una finca con dos o tres renglones que no
-        dependen del mismo precio no vive pendiente de la bolsa.
-      </p>
-    </div>
-
-    <div class="card card-borde-rojo mt-m">
-      <h3 class="rojo">LO QUE SE CREE #2: "Para que la finca dé más hay que tener más matas o más tierra"</h3>
-      <p>
-        Más de lo mismo es más costo, más jornal y el mismo precio único decidiendo el año. El
-        cambio no está en el tamaño, está en el uso: qué le das a las matas que ya tienes, y qué
-        más produce el mismo lote entre calles y alrededor de la casa.
-      </p>
-    </div>
-
-    <div class="card card-borde-rojo mt-m">
-      <h3 class="rojo">LO QUE SE CREE #3: "Diversificar y hacer análisis de suelo es para el que tiene plata"</h3>
-      <p>
-        La cobertura no se compra: se organiza, con el terreno, el agua, el tiempo y los
-        desperdicios que ya tienes. Y un análisis de suelo cuesta una fracción de lo que gastas en
-        abono al año: aplicar sin saber qué tiene la tierra es lo que de verdad sale caro.
+    <div class="nota">
+      <p class="mb0">
+        Hay problemas que solo se ven parado en el lote. Para la mayoría de las dudas de abonada,
+        sombra y manejo, no hace falta esperar a que alguien llegue.
       </p>
     </div>
   </div>
 </section>
 
-<!-- 4 — LA FINCA DE UN SOLO RENGLÓN / COBERTURA -->
-<section class="bg-crema2 sec">
-  <div class="wrap-texto">
-    <span class="pretitular">El mecanismo</span>
-    <h2>La finca de un solo renglón</h2>
-    <p class="grande">
-      Tu finca vive de una sola cosecha, a un solo precio, una vez al año. Cuando ese precio cae
-      —o la cosecha falla, o el abono subió— no hay nada más que sostenga. No es mala suerte:
-      es que toda la finca carga sobre un solo palo.
-    </p>
-
-    <h3 class="mt-l">La palabra clave es cobertura</h3>
-    <p>
-      El que maneja riesgo en serio tiene una regla: ninguna estrategia puede depender de un solo
-      estado del mercado. En tu lote, cobertura quiere decir tener más de un renglón produciendo,
-      y que no dependan de la misma cosa: ni del mismo comprador, ni de la misma época, ni del
-      mismo precio.
-    </p>
-
-    <h3 class="mt-l">Frágil, firme, aprovechado</h3>
-    <p>
-      Frágil: una cosecha decide tu año. Firme: si el café tiene mal año, los otros renglones
-      sostienen la casa. Aprovechado: el año malo para otros es el año en que tú te acomodas,
-      porque puedes esperar y escoger a quién le vendes.
-    </p>
-
-    <h3 class="mt-l">Y ahora sí: ¿cuál segundo renglón?</h3>
-    <p>
-      El primero suele ser <strong>gallinas ponedoras</strong>: poca plata, poca tierra, y entra
-      plata todas las semanas mientras el café tarda meses. También caben abejas con la floración
-      del café, ciclo corto entre calles, o lombricultura con la pulpa. Uno a la vez, y bien hecho.
-    </p>
-  </div>
-</section>
-
-<!-- 5 — EL MÉTODO -->
+<!-- 3 — QUÉ INCLUYE -->
 <section class="bg-blanco sec">
   <div class="wrap">
     <div class="centro max-820">
-      <span class="pretitular">Lo que vas a hacer conmigo</span>
-      <h2>El Método Finca con Cobertura</h2>
-      <p class="subtitular">Cuatro pasos. En cada uno sales con una pieza de tu finca terminada, no con apuntes.</p>
+      <span class="pretitular">Lo que recibe</span>
+      <h2>Qué incluye la membresía</h2>
     </div>
 
-    <div class="modulo">
-      <div class="letra">1</div>
-      <div>
-        <h3>VER &mdash; el diagnóstico de tu finca y de tu suelo</h3>
-        <p>
-          Miramos la finca completa: en qué punto está (frágil / firme / aprovechada), qué le falta
-          a la tierra y en qué estado real está el cafetal. Aquí se revisa tu análisis de suelo
-          —o se te dice cómo y dónde hacerlo— y se convierte tu diagnóstico de fertilización general
-          en un plan técnico.
-        </p>
-        <ul class="bullets">
-          <li><span class="dato-pendiente">DETALLE DE ENTREGABLES DEL PASO 1 — DEFINIR CON EDUARD</span></li>
-        </ul>
+    <div class="grid grid-2 mt-l">
+      <div class="card">
+        <h3>📅 Clase virtual cada semana</h3>
+        <p class="mb0">Los <strong><span data-cfg="cafe_clase_horario"></span></strong>. Un tema técnico del café por semana, explicado en palabras claras, desde el celular.</p>
       </div>
-    </div>
-
-    <div class="modulo">
-      <div class="letra">2</div>
-      <div>
-        <h3>ARMAR &mdash; las herramientas y el calendario de fertilización con criterio</h3>
-        <p>
-          Qué se aplica, cuánto, cuándo y en cuántas veces en el año. Cómo llevar el registro sin
-          complicarse. Cómo calcular cuánto te cuesta producir la carga y cuál es tu precio piso.
-        </p>
-        <ul class="bullets">
-          <li><span class="dato-pendiente">DETALLE DE HERRAMIENTAS Y PLANTILLAS DEL PASO 2 — DEFINIR CON EDUARD</span></li>
-        </ul>
+      <div class="card">
+        <h3>🎥 Grabación de cada clase</h3>
+        <p class="mb0">Si un jueves no puede conectarse, la ve después, cuando tenga señal y tiempo.</p>
       </div>
-    </div>
-
-    <div class="modulo">
-      <div class="letra">3</div>
-      <div>
-        <h3>ARRANCAR &mdash; el primer renglón que entra plata cada semana</h3>
-        <p>
-          El segundo renglón de cobertura, montado o listo para montar. Empezando por ponedoras
-          como ejemplo principal: qué ave, cuántas, dónde, con cuánta plata, y qué necesita de
-          verdad para no fracasar.
-        </p>
-        <ul class="bullets">
-          <li><span class="dato-pendiente">DETALLE DEL PASO 3 (PONEDORAS Y ALTERNATIVAS) — DEFINIR CON EDUARD</span></li>
-        </ul>
+      <div class="card">
+        <h3>❓ Solución a sus preguntas</h3>
+        <p class="mb0">Manda su duda con los datos de su lote y se responde en la clase. Lo que le pasa a usted casi siempre le está pasando a otros.</p>
       </div>
-    </div>
-
-    <div class="modulo">
-      <div class="letra">4</div>
-      <div>
-        <h3>SOSTENER &mdash; la rutina que hace que a los seis meses esto siga en pie</h3>
-        <p>
-          Acciones chiquitas sostenidas: revisar el lote un día fijo a la semana, anotar lo que
-          entra y sale, aprovechar la pulpa, el calendario del año. Y tu plan de los próximos 90 días.
-        </p>
-        <ul class="bullets">
-          <li><span class="dato-pendiente">DETALLE DEL PASO 4 — DEFINIR CON EDUARD</span></li>
-        </ul>
+      <div class="card">
+        <h3>🌧️ Aviso de cuándo abonar</h3>
+        <p class="mb0">Según la época y las lluvias de la zona donde está su finca, para no abonar con el suelo seco ni antes de un aguacero.</p>
+      </div>
+      <div class="card card-verde">
+        <h3>🌱 Diagnóstico con fotos (Nivel 2)</h3>
+        <p class="mb0">Uno cada 6 meses. Manda fotos de su cafetal y se ajusta la recomendación con lo que se ve.</p>
+      </div>
+      <div class="card card-verde">
+        <h3>🧪 Diagnóstico con análisis de suelo (Nivel 3)</h3>
+        <p class="mb0">Uno al año. Se interpreta su análisis de laboratorio y se convierte en una recomendación de abonada por fórmula.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 6 — LA COHORTE -->
+<!-- 4 — CÓMO FUNCIONAN LOS DIAGNÓSTICOS -->
 <section class="bg-crema2 sec">
   <div class="wrap-texto">
-    <span class="pretitular">Cómo se hace</span>
-    <h2>La Cohorte Fundadora: semanas conmigo, en vivo</h2>
-    <p>
-      <span class="dato-pendiente">NÚMERO DE SEMANAS, FORMATO DE LAS SESIONES, GRUPO DE WHATSAPP, TIPO DE REVISIÓN — DEFINIR CON EDUARD</span>
-    </p>
-    <div class="card">
-      <h3>Semana a semana</h3>
-      <p><span class="dato-pendiente">CALENDARIO SEMANA A SEMANA — DEFINIR CON EDUARD (alinear con el Método de arriba)</span></p>
-    </div>
-    <div class="card mt-m">
-      <h3>La promesa concreta de estas semanas</h3>
-      <p>
-        Terminas con tu plan de fertilización técnico, tu costo de la carga calculado y tu primer
-        renglón de cobertura montado o listo para montar &mdash; revisado por el ingeniero, no por
-        ti solo. <strong>No es una promesa de ingresos ni de mayor cosecha.</strong>
+    <span class="pretitular">Las reglas claras</span>
+    <h2>Cómo funcionan los diagnósticos incluidos</h2>
+    <ul class="bullets">
+      <li><strong>Tres diagnósticos al año</strong>: dos con fotos (Nivel 2) y uno con análisis de suelo (Nivel 3). Usted decide si los usa en un mismo lote o en lotes distintos.</li>
+      <li><strong>El Nivel 2 se habilita desde su segundo mes</strong> de membresía, y el <strong>Nivel 3 desde su cuarto mes</strong>.</li>
+      <li><strong>La membresía es para un solo productor.</strong></li>
+      <li><strong>Si necesita más diagnósticos</strong>, se pagan a precio normal: Nivel 2 a <span data-cfg="cafe_precio_nivel2_cop"></span> COP y Nivel 3 a <span data-cfg="cafe_precio_nivel3_cop"></span> COP.</li>
+      <li><strong>El análisis de laboratorio va aparte.</strong> El Nivel 3 interpreta el análisis; el laboratorio lo paga usted directamente.</li>
+      <li><strong>El diagnóstico general (Nivel 1) sigue gratis</strong> para todos, sea miembro o no.</li>
+    </ul>
+    <div class="nota">
+      <p class="mb0">
+        <strong>Si ya compró un diagnóstico suelto</strong> (Nivel 2 o 3) y se hace miembro ese
+        mismo mes, lo que pagó se le abona a su primer mes de membresía.
       </p>
     </div>
-    <div class="card mt-m">
-      <h3>¿Por qué "Fundadora"? Y por qué este precio.</h3>
-      <p><span class="dato-pendiente">JUSTIFICACIÓN DEL PRECIO DE FUNDADOR Y DEL CUPO LIMITADO — DEFINIR CON EDUARD</span></p>
-    </div>
   </div>
 </section>
 
-<!-- 7 — BONOS -->
-<section class="bg-blanco sec">
-  <div class="wrap">
-    <div class="centro max-820">
-      <span class="pretitular">Incluido</span>
-      <h2>Los bonos, y cada uno tumba una pared distinta</h2>
-    </div>
-    <div class="grid grid-3 mt-l">
-      <div class="bono">
-        <div class="letra">BONO 1</div>
-        <h3><span class="dato-pendiente">BONO 1 — DEFINIR (sugerido: calculadora de costo de la carga / plantilla de fertilización)</span></h3>
-      </div>
-      <div class="bono">
-        <div class="letra">BONO 2</div>
-        <h3><span class="dato-pendiente">BONO 2 — DEFINIR (sugerido: el registro semanal de la finca)</span></h3>
-      </div>
-      <div class="bono">
-        <div class="letra">BONO 3</div>
-        <h3><span class="dato-pendiente">BONO 3 — DEFINIR (sugerido: directorio de la zona — dónde comprar pollonas, insumos, laboratorio de suelos)</span></h3>
-      </div>
-    </div>
-    <p class="chico centro mt-m">
-      El currículo de 104 temas de caficultura del Instituto puede entrar aquí como estructura de
-      formación de fondo. <span class="dato-pendiente">DECIDIR CON EDUARD si se incluye y cómo.</span>
-    </p>
-  </div>
-</section>
-
-<!-- 8 — TODO LO QUE ENTRA HOY -->
+<!-- 5 — RESUMEN Y PRECIO -->
 <section class="bg-crema sec">
   <div class="wrap-texto">
     <span class="pretitular">El resumen</span>
-    <h2>Esto es todo lo que entra hoy</h2>
+    <h2>Todo lo que entra por su cuota</h2>
     <table class="valor">
-      <tr><td>Método Finca con Cobertura (4 pasos)</td><td><span class="dato-pendiente">VALOR</span></td></tr>
-      <tr><td>Cohorte Fundadora en vivo</td><td><span class="dato-pendiente">VALOR</span></td></tr>
-      <tr><td>Diagnóstico técnico de tu suelo</td><td><span class="dato-pendiente">VALOR</span></td></tr>
-      <tr><td>Bonos 1, 2 y 3</td><td><span class="dato-pendiente">VALOR</span></td></tr>
-      <tr class="total"><td>Hoy pagas</td><td><span class="dato-pendiente">PRECIO DE FUNDADOR</span></td></tr>
+      <tr><td>Clase virtual cada jueves</td><td>Incluido</td></tr>
+      <tr><td>Grabación de cada clase</td><td>Incluido</td></tr>
+      <tr><td>Respuesta a sus preguntas</td><td>Incluido</td></tr>
+      <tr><td>Aviso de cuándo abonar en su zona</td><td>Incluido</td></tr>
+      <tr><td>2 diagnósticos con fotos al año (precio suelto: <span data-cfg="cafe_precio_nivel2_cop"></span> COP c/u)</td><td>Incluido</td></tr>
+      <tr><td>1 diagnóstico con análisis de suelo al año (precio suelto: <span data-cfg="cafe_precio_nivel3_cop"></span> COP)</td><td>Incluido</td></tr>
+      <tr class="total"><td>Usted paga</td><td><span data-cfg="cafe_precio_membresia_cop"></span> COP al mes</td></tr>
     </table>
     <div class="precio-caja">
-      <p class="precio-antes"><span class="dato-pendiente">PRECIO REGULAR</span></p>
-      <p class="precio"><span data-cfg="cafe_precio_cohorte"></span></p>
-      <p class="precio-nota">Precio de cohorte fundadora. Las siguientes entran al precio regular.</p>
-      <a class="btn btn-lg" data-cfg-href="cafe_url_checkout_cohorte" href="#">QUIERO ENTRAR A LA COHORTE</a>
+      <p class="precio"><span data-cfg="cafe_precio_membresia_cop"></span> COP</p>
+      <p class="precio-nota">Al mes. Se paga mes a mes, por <span class="dato-pendiente">MEDIOS DE PAGO — CONFIRMAR AL ABRIR LA CUENTA DE WOMPI (Nequi, Daviplata, PSE, Bancolombia, efectivo)</span>.</p>
+      <a class="btn btn-lg" data-cfg-href="cafe_url_checkout_membresia" href="#">QUIERO SER MIEMBRO</a>
     </div>
   </div>
 </section>
 
-<!-- 9 — GARANTÍA -->
-<section class="bg-blanco sec">
+<!-- 6 — SI NO QUIERE MEMBRESÍA -->
+<section class="bg-blanco sec-sm">
   <div class="wrap-texto">
-    <span class="pretitular">El riesgo lo cargo yo</span>
-    <h2>Garantía</h2>
-    <div class="garantia">
-      <span class="sello">14 días</span>
-      <p><span class="dato-pendiente">CONDICIÓN EXACTA DE LA GARANTÍA — DEFINIR CON EDUARD (ej: "haces el paso VER, entregas tu diagnóstico, y si sientes que no te sirvió, se te devuelve todo"). Verificar que el reembolso se puede ejecutar en la pasarela elegida.</span></p>
+    <h2>¿No quiere membresía? Compre solo el diagnóstico</h2>
+    <p>
+      Está bien. Puede pedir el diagnóstico que necesite por WhatsApp y pagarlo suelto: con fotos
+      (Nivel 2) a <span data-cfg="cafe_precio_nivel2_cop"></span> COP, o con análisis de suelo
+      (Nivel 3) a <span data-cfg="cafe_precio_nivel3_cop"></span> COP. El general (Nivel 1) es gratis.
+    </p>
+    <div class="cta-bloque">
+      <a class="btn btn-wa" data-wa-intake data-wa-destino="cafe_wa_diagnostico" href="#">QUIERO PEDIR MI DIAGNÓSTICO</a>
     </div>
   </div>
 </section>
 
-<!-- 10 — DESCALIFICACIÓN HONESTA -->
+<!-- 7 — PARA QUIÉN ES -->
 <section class="bg-crema2 sec">
   <div class="wrap-texto">
     <h2>Esto no es para todo el mundo</h2>
     <div class="grid grid-2 mt-m">
       <div class="card card-verde">
-        <h3 class="verde">Esto SÍ es para ti si...</h3>
+        <h3 class="verde">Sí es para usted si...</h3>
         <ul class="bullets">
-          <li>Tienes una finca cafetera de 1 a 12 hectáreas y quieres que deje de depender de una sola cosecha.</li>
-          <li>Estás dispuesto a anotar números y a hacer una tarea corta cada semana.</li>
-          <li>Quieres fertilizar con criterio y no "al ojo".</li>
-          <li>Vas a meter las manos: esto es para hacer, no para mirar.</li>
+          <li>Es cafetero y tiene su lote.</li>
+          <li>Quiere abonar con criterio y no "al ojo".</li>
+          <li>Puede sacar una hora a la semana, en vivo o con la grabación.</li>
+          <li>Prefiere preguntar antes de gastar en abono.</li>
         </ul>
       </div>
       <div class="card card-borde-rojo">
-        <h3 class="rojo">Esto NO es para ti si...</h3>
+        <h3 class="rojo">No es para usted si...</h3>
         <ul class="bullets bullets-x">
-          <li>Buscas una fórmula para ganar plata rápido o una cifra de cuánto vas a hacer.</li>
-          <li>No vas a asistir a las sesiones ni a hacer la tarea.</li>
-          <li>Quieres que alguien vaya a tu finca a hacerlo por ti.</li>
-          <li>No tienes finca ni acceso a un lote de café.</li>
+          <li>Busca que le prometan cuántas arrobas va a cosechar o cuánto va a ganar.</li>
+          <li>Necesita que alguien vaya a la finca a hacerlo por usted.</li>
+          <li>No tiene cafetal ni acceso a uno.</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 11 — PARA EL QUE HOY NO PUEDE PAGAR -->
-<section class="bg-verde sec">
-  <div class="wrap-texto">
-    <h2>Esta parte es para el que hoy no puede pagar</h2>
-    <p>
-      Si hoy no te alcanza, no es una falla ni una vergüenza: es el momento en el que estás.
-      Te quedas con lo que ya es tuyo y no cuesta nada: tu diagnóstico de fertilización, la
-      transmisión completa, y las cosas de costo cero que se hacen con lo que ya hay en la finca
-      —empezando por la pulpa del café—. La puerta queda abierta para cuando se pueda.
-    </p>
-    <p class="chico"><span class="dato-pendiente">¿HAY GRUPO / MATERIAL GRATUITO PERMANENTE PARA ESTE SEGMENTO? — DEFINIR CON EDUARD</span></p>
+<!-- 8 — QUIÉN DA LAS CLASES -->
+<section class="bg-blanco sec">
+  <div class="wrap">
+    <div class="about">
+      <div class="foto"><span class="dato-pendiente">FOTO REAL DE EDUARD EN UN CAFETAL PENDIENTE</span></div>
+      <div>
+        <span class="kicker">Quién da las clases</span>
+        <h2><span data-cfg="nombre_experto"></span></h2>
+        <p class="kicker"><span data-cfg="cargo_experto"></span> — Popayán, Cauca</p>
+        <p>
+          Un ingeniero de la zona cafetera que traduce lo que se sabe de suelos y nutrición del café
+          a decisiones que se pueden tomar en el lote, con lo que hay.
+        </p>
+        <ul class="credenciales">
+          <li>Universidad y título: <span class="dato-pendiente">CONFIRMAR CON EDUARD</span></li>
+          <li>Experiencia con cafeteros: <span class="dato-pendiente">CONFIRMAR CON EDUARD</span></li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- 12 — TESTIMONIOS -->
-<section class="bg-blanco sec-sm">
+<!-- 9 — TESTIMONIOS -->
+<section class="bg-crema sec-sm">
   <div class="wrap">
     <div class="centro max-820">
       <h2>Voces de la zona cafetera</h2>
       <p class="subtitular">Testimonios reales, con nombre y vereda. Mientras no los tengamos, no ponemos nada.</p>
     </div>
     <div class="grid grid-3 mt-l">
-      <div class="testimonio"><div class="estrellas">★★★★★</div><p><span class="dato-pendiente">TESTIMONIO REAL PENDIENTE</span></p><div class="autor"><span class="inicial">?</span> <span class="dato-pendiente">NOMBRE Y VEREDA</span></div></div>
-      <div class="testimonio"><div class="estrellas">★★★★★</div><p><span class="dato-pendiente">TESTIMONIO REAL PENDIENTE</span></p><div class="autor"><span class="inicial">?</span> <span class="dato-pendiente">NOMBRE Y VEREDA</span></div></div>
-      <div class="testimonio"><div class="estrellas">★★★★★</div><p><span class="dato-pendiente">TESTIMONIO REAL PENDIENTE</span></p><div class="autor"><span class="inicial">?</span> <span class="dato-pendiente">NOMBRE Y VEREDA</span></div></div>
+      <div class="testimonio"><p><span class="dato-pendiente">TESTIMONIO REAL PENDIENTE</span></p><div class="autor"><span class="inicial">?</span> <span class="dato-pendiente">NOMBRE Y VEREDA</span></div></div>
+      <div class="testimonio"><p><span class="dato-pendiente">TESTIMONIO REAL PENDIENTE</span></p><div class="autor"><span class="inicial">?</span> <span class="dato-pendiente">NOMBRE Y VEREDA</span></div></div>
+      <div class="testimonio"><p><span class="dato-pendiente">TESTIMONIO REAL PENDIENTE</span></p><div class="autor"><span class="inicial">?</span> <span class="dato-pendiente">NOMBRE Y VEREDA</span></div></div>
     </div>
   </div>
 </section>
 
-<!-- 13 — FAQ -->
+<!-- 10 — PREGUNTAS -->
 <section class="bg-crema2 sec">
   <div class="wrap">
     <div class="centro max-820"><h2>Las dudas que siempre salen</h2></div>
     <div class="faq mt-l">
       <details>
-        <summary>¿Tengo que dejar de cultivar café?</summary>
-        <div class="respuesta"><p>No. El café es la base y no se toca de entrada. Se trata de darle mejor de comer y de sumarle uno o dos renglones que no dependan del mismo precio ni de la misma época.</p></div>
+        <summary>¿A qué hora son las clases?</summary>
+        <div class="respuesta"><p>Los <span data-cfg="cafe_clase_horario"></span>. Si no alcanza a entrar, queda la grabación.</p></div>
       </details>
       <details>
-        <summary>¿Necesito análisis de suelo para entrar?</summary>
-        <div class="respuesta"><p>No para entrar. Dentro del método se revisa el que tengas o se te explica cómo hacerlo. El diagnóstico de arranque funciona sin análisis, en versión general y prudente.</p></div>
+        <summary>¿Cómo pido mis diagnósticos incluidos?</summary>
+        <div class="respuesta"><p>Por el mismo WhatsApp de FertiCafé. El de fotos (Nivel 2) se habilita desde su segundo mes y el de análisis de suelo (Nivel 3) desde su cuarto mes.</p></div>
       </details>
       <details>
-        <summary>¿Y si mi finca es de menos de una hectárea o la tengo al partir?</summary>
-        <div class="respuesta"><p>Sirve igual. En tierra que no es tuya se empieza por lo que se puede mover o desarmar. Eso se trabaja caso por caso en el grupo.</p></div>
+        <summary>¿Puedo usar los diagnósticos en varios lotes?</summary>
+        <div class="respuesta"><p>Sí. Son tres al año para usted, y decide si los usa en un mismo lote o en lotes distintos.</p></div>
       </details>
       <details>
-        <summary><span class="dato-pendiente">MÁS PREGUNTAS FRECUENTES — COMPLETAR CON EDUARD (precio, formas de pago en Colombia, fechas, repetición de sesiones)</span></summary>
-        <div class="respuesta"><p><span class="dato-pendiente">RESPUESTAS PENDIENTES</span></p></div>
+        <summary>¿El análisis de suelo está incluido?</summary>
+        <div class="respuesta"><p>La interpretación sí (Nivel 3). El análisis de laboratorio no: ese lo paga usted directamente al laboratorio.</p></div>
+      </details>
+      <details>
+        <summary>¿Cómo se paga?</summary>
+        <div class="respuesta"><p>Mes a mes, con un enlace de pago. <span class="dato-pendiente">MEDIOS DE PAGO Y QUÉ PASA SI UN MES NO SE PAGA — CONFIRMAR CON EDUARD</span></p></div>
+      </details>
+      <details>
+        <summary>¿Necesito buen internet?</summary>
+        <div class="respuesta"><p>Con la señal que le sirve para ver un video en el celular es suficiente. Si se le corta, queda la grabación.</p></div>
       </details>
     </div>
   </div>
 </section>
 
-<!-- 14 — LOS TRES CAMINOS + CIERRE -->
+<!-- 11 — CIERRE -->
 <section class="bg-verde textura sec-lg">
   <div class="wrap-texto">
-    <h2>A partir de hoy tienes tres caminos</h2>
+    <h2>A partir de hoy tiene tres caminos</h2>
 
-    <h3 class="mt-l">Camino 1: dejar todo como está</h3>
-    <p>La cosecha que viene va a ser parecida a la anterior, y el precio lo va a poner el que siempre lo pone. No es una tragedia; es un año más igual. El asunto es que van sumando.</p>
+    <h3 class="mt-l">Camino 1: seguir como está</h3>
+    <p>La próxima abonada se hace como siempre: con la fórmula de costumbre y sin saber si es la que la tierra pide.</p>
 
-    <h3 class="mt-l">Camino 2: intentarlo solo, por tu cuenta</h3>
-    <p>Se puede. Vas a tardar más, vas a botar plata en abono que la planta no aprovecha, y no vas a tener a quién preguntarle cuando dudes. Pero se puede.</p>
+    <h3 class="mt-l">Camino 2: pedir un diagnóstico suelto</h3>
+    <p>Le resuelve la abonada de ese lote, esa vez. Las dudas que vengan después las resuelve solo.</p>
 
-    <h3 class="mt-l">Camino 3: hacerlo acompañado, en la cohorte</h3>
-    <p>Con fechas, con un grupo arrancando contigo, y con un ingeniero agrícola de la zona revisando lo que haces con tu finca y tus números.</p>
+    <h3 class="mt-l">Camino 3: hacerse miembro</h3>
+    <p>Una clase cada jueves, sus preguntas resueltas, el aviso de cuándo abonar y tres diagnósticos al año incluidos.</p>
 
     <div class="cta-bloque">
-      <a class="btn btn-lg" data-cfg-href="cafe_url_checkout_cohorte" href="#">QUIERO ENTRAR A LA COHORTE</a>
-      <span class="btn-sub">La Cohorte Fundadora arranca el <span data-cfg="cafe_fecha_inicio_cohorte"></span></span>
+      <a class="btn btn-lg" data-cfg-href="cafe_url_checkout_membresia" href="#">QUIERO SER MIEMBRO</a>
+      <span class="btn-sub"><span data-cfg="cafe_precio_membresia_cop"></span> COP al mes · Se paga mes a mes</span>
     </div>
 
     <div class="ps">
       <h3>P.D.</h3>
-      <p>El diagnóstico de fertilización es tuyo aunque no entres a la cohorte. Úsalo: llévalo tal cual al almacén de insumos.</p>
-      <h3 class="mt-l">P.D. 2</h3>
-      <p><span class="dato-pendiente">P.D. 2 — DEFINIR CON EDUARD</span></p>
+      <p>El diagnóstico general (Nivel 1) es suyo aunque no se haga miembro. Úselo: llévelo tal cual a la tienda de insumos.</p>
     </div>
   </div>
 </section>
@@ -437,13 +293,13 @@
   <div class="wrap">
     <p><strong>Instituto Agropecuario</strong> &mdash; Formación práctica para producir y vender en el campo colombiano.</p>
     <p><a href="/legal/privacidad.html">Política de privacidad</a> &nbsp;·&nbsp; <a href="/legal/terminos.html">Términos y condiciones</a> &nbsp;·&nbsp; <a data-cfg-mailto href="#">escríbenos</a></p>
-    <p class="legal">Este contenido es formación agropecuaria y de gestión. No sustituye asesoría agronómica, veterinaria, sanitaria, contable ni financiera profesional. El diagnóstico de fertilización es una orientación general y no reemplaza un análisis de suelo ni una visita técnica de campo. Los nombres comerciales de productos son de referencia; verifique el registro ICA vigente. Los resultados de cualquier proyecto productivo dependen del trabajo, las condiciones y las decisiones de cada persona. Este sitio no está afiliado a Meta, Facebook, Instagram, Google ni YouTube.</p>
+    <p class="legal">Este contenido es formación agropecuaria. No sustituye asesoría agronómica, contable ni financiera profesional. Los diagnósticos de abonada son una orientación y no reemplazan una visita técnica de campo. Las recomendaciones se dan por fórmula, no por marca comercial. Los resultados de cualquier finca dependen del trabajo, las condiciones y las decisiones de cada persona. Este sitio no está afiliado a Meta, Facebook, Instagram, Google ni YouTube.</p>
     <p class="legal">&copy; 2026 Instituto Agropecuario. Todos los derechos reservados.</p>
   </div>
 </footer>
 
 <div class="sticky-cta">
-  <a class="btn" data-cfg-href="cafe_url_checkout_cohorte" href="#">QUIERO ENTRAR ☕</a>
+  <a class="btn" data-cfg-href="cafe_url_checkout_membresia" href="#">QUIERO SER MIEMBRO ☕</a>
 </div>
 
 <script src="/assets/config.js"></script>

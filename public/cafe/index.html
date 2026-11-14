@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FertiCafé: tu diagnóstico de fertilización por WhatsApp | Instituto Agropecuario</title>
-<meta name="description" content="Transmisión en vivo y gratuita: conoce FertiCafé, el diagnóstico de fertilización por WhatsApp para tu cafetal. Sabe qué aplicar y cuánto, desde $10.000 COP.">
+<title>Cafetero: deje de abonar a ciegas | Instituto Agropecuario</title>
+<meta name="description" content="Clase en vivo por internet para cafeteros: con los datos de un lote real vemos qué abono necesita el cafetal, cuánto por mata y cuándo aplicarlo.">
 <meta name="robots" content="index,follow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_CO">
-<meta property="og:title" content="FertiCafé: tu diagnóstico de fertilización por WhatsApp">
-<meta property="og:description" content="Transmisión en vivo y gratuita: conoce FertiCafé, el diagnóstico de fertilización por WhatsApp para tu cafetal, desde $10.000 COP.">
+<meta property="og:title" content="Cafetero: deje de abonar a ciegas">
+<meta property="og:description" content="Clase en vivo por internet: qué abono necesita su cafetal, cuánto por mata y cuándo aplicarlo.">
 <meta property="og:site_name" content="Instituto Agropecuario">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%90%94%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%98%95%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@600&family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -19,137 +19,79 @@
 </head>
 <body>
 
-<!-- SECCIÓN 1 — BARRA DE AVISO -->
-<div class="barra-aviso">
-  🔴 TRANSMISIÓN EN VIVO Y GRATUITA PARA CAFETEROS &nbsp;·&nbsp; <b><span data-cfg="cafe_fecha_webinar"></span></b> &nbsp;·&nbsp; No se pide tarjeta para apuntarte
-</div>
+<!--
+  Correcciones del mentor (Sesion 96, 2026-10-21) aplicadas 2026-11-14:
+  - Primera pantalla: titular + formulario + boton visibles sin scroll en movil.
+  - Sin marca (Instituto / FertiCafe), sin "transmision gratuita" y sin precios arriba.
+    Por eso esta pagina no lleva la barra de aviso ni la cabecera con el logo (excepcion
+    al CONTRATO-HTML solo en esta landing); la marca queda en el pie.
+  - Sin filtro de hectareas: el filtro es ser cafetero con tierra.
+  - Formulario: nombre, WhatsApp y correo obligatorio; repetido en los bloques clave.
+  - Nivel 1 gratis; la oferta (membresia) se presenta al final de la clase, no aqui.
+-->
 
-<!-- SECCIÓN 2 — CABECERA -->
-<header class="topbar bg-crema">
-  <a class="logo" href="/">Instituto <span>Agropecuario</span></a>
-</header>
-
-<!-- SECCIÓN 3 — HÉROE / BLOQUE DE CONVERSIÓN -->
-<section class="bg-verde textura sec-lg">
+<!-- 1 — PRIMERA PANTALLA: TITULAR + FORMULARIO -->
+<section class="bg-verde textura sec-sm">
   <div class="wrap">
-
-    <div class="centro">
-      <span class="pretitular">Para fincas cafeteras en Colombia — de 1 a 12 hectáreas</span>
-
-      <h1>¿Le estás aplicando al cafetal el abono que la tierra necesita, o estás aplicando a ciegas?</h1>
-
+    <div class="centro max-720">
+      <span class="pretitular">Para cafeteros con finca chica o grande</span>
+      <h1>Cafetero: deje de abonar a ciegas</h1>
       <p class="subtitular">
-        Transmisión en vivo y <strong>gratuita</strong>. Te voy a mostrar <strong>FertiCafé</strong>: el
-        diagnóstico de fertilización que te dice qué aplicar y cuánto, para tu lote, por WhatsApp —
-        <span class="destacado">como tener un agrónomo de confianza en el bolsillo, cuando lo necesites</span>,
-        no solo el día de la transmisión.
+        Clase en vivo: <strong>qué abono necesita su cafetal, cuánto por mata y cuándo</strong>.
       </p>
-
-      <p class="grande">
-        📅 <strong><span data-cfg="cafe_fecha_webinar"></span></strong>
-        &nbsp;·&nbsp; 🕖 <strong><span data-cfg="cafe_hora_webinar"></span></strong>
-        &nbsp;·&nbsp; ⏱ <strong><span data-cfg="cafe_duracion_webinar"></span></strong>
-        &nbsp;·&nbsp; 📱 <strong>En línea, desde el celular</strong>
-      </p>
-
-      <div class="contador" data-cfg-cuenta="cafe_fecha_iso_webinar"></div>
     </div>
 
-    <div class="grid grid-2 mt-l">
-
-      <!-- Columna izquierda: lo que se lleva -->
-      <div>
-        <span class="kicker">Esto es lo que te llevas el mismo día</span>
-        <h2>Lo que vas a entender cuando se acabe la transmisión</h2>
-        <ul class="bullets">
-          <li><strong>Por qué aplicar "al ojo" te puede estar costando plata</strong> sin que lo sepas. El abono es de los costos más grandes del cafetal.</li>
-          <li><strong>Qué es FertiCafé y cómo se usa</strong>: le escribes por WhatsApp, respondes unas preguntas de tu lote (o mandas fotos, o tu análisis de suelo) y te dice qué aplicar y cuánto.</li>
-          <li><strong>Un diagnóstico real, en vivo</strong>, con los datos de un cafetal de los que estén conectados — ves cómo se hace el cálculo, no solo el resultado.</li>
-          <li><strong>Los 3 niveles de FertiCafé</strong> (general, con fotos de tu cafetal, o con tu análisis de suelo) y cuál te conviene según lo que tengas a mano.</li>
-          <li><strong>Preguntas abiertas al final:</strong> escribes tu caso en el chat y se responde en vivo.</li>
-        </ul>
-        <p class="chico">
-          La transmisión es gratis de verdad: no se pide tarjeta ni datos de banco, solo tu nombre
-          y tu WhatsApp, que es por donde te mandamos el enlace y el recordatorio. El diagnóstico de
-          fertilización tiene un costo de <span data-cfg="cafe_precio_nivel1_cop"></span> COP: te
-          escribimos por WhatsApp con los datos para pagar y te llega en cuanto lo confirmamos.
-        </p>
-      </div>
-
-      <!-- Columna derecha: formulario de registro (los datos del lote se piden
-           despues, por WhatsApp, solo a quien de verdad pide el diagnostico) -->
-      <div id="registro">
-        <form class="form-caja" data-form-registro data-destino="/cafe/gracias/" data-wa-destino="cafe_wa_diagnostico">
-          <h3>Aparta tu puesto y pide tu diagnóstico</h3>
-          <p class="chico centro">
-            Con tu nombre y tu WhatsApp apartas tu puesto en la transmisión —esa es gratis—.
-            En el mismo chat de WhatsApp te preguntamos si quieres tu
-            <strong>diagnóstico de fertilización</strong> (desde
-            <span data-cfg="cafe_precio_nivel1_cop"></span> COP) y te mostramos las opciones.
-          </p>
-
-          <div class="campo"><label for="nombre">Tu nombre</label><input id="nombre" name="nombre" type="text" autocomplete="given-name" required></div>
-          <div class="campo"><label for="whatsapp">Tu WhatsApp (ahí te llega el enlace y el diagnóstico)</label><input id="whatsapp" name="whatsapp" type="tel" inputmode="tel" placeholder="+57 300 000 0000" autocomplete="tel" required></div>
-          <div class="campo"><label for="correo">Tu correo (opcional)</label><input id="correo" name="correo" type="email" autocomplete="email"></div>
-
-          <button type="submit" class="btn btn-lg">SÍ, QUIERO MI PUESTO</button>
-          <p class="form-error"></p>
-          <p class="form-legal">
-            Cupos limitados. Usamos estos datos para avisarte de la transmisión por WhatsApp y,
-            si pides tu diagnóstico, para mandártelo ahí mismo. No guardamos historial técnico
-            de tu finca. Puedes salirte cuando quieras.
-          </p>
-        </form>
-      </div>
-
+    <div class="max-720" id="registro">
+      <form class="form-caja" data-form-registro data-destino="/cafe/gracias/">
+        <div class="campo"><label for="nombre">Su nombre</label><input id="nombre" name="nombre" type="text" autocomplete="given-name" required></div>
+        <div class="campo"><label for="whatsapp">Su WhatsApp</label><input id="whatsapp" name="whatsapp" type="tel" inputmode="tel" placeholder="+57 300 000 0000" autocomplete="tel" required></div>
+        <div class="campo"><label for="correo">Su correo</label><input id="correo" name="correo" type="email" autocomplete="email" required></div>
+        <button type="submit" class="btn btn-lg">QUIERO DEJAR DE ABONAR A CIEGAS</button>
+        <p class="form-error"></p>
+        <p class="form-legal">No se pide tarjeta. Le avisamos de la clase por WhatsApp y por correo. Puede salirse cuando quiera.</p>
+      </form>
+      <p class="chico centro">
+        📅 <strong><span data-cfg="cafe_fecha_webinar"></span></strong>
+        &nbsp;·&nbsp; 🕖 <strong><span data-cfg="cafe_hora_webinar"></span></strong>
+        &nbsp;·&nbsp; 📱 Desde el celular
+      </p>
     </div>
   </div>
 </section>
 
-<div class="divisor"></div>
-
-<!-- SECCIÓN 4 — ESTO TE SUENA (la escena del dolor, en su idioma) -->
+<!-- 2 — ESTO LE SUENA -->
 <section class="bg-crema sec">
   <div class="wrap">
 
     <div class="centro max-820">
-      <span class="pretitular-linea">Mírate un momento</span>
-      <h2>Si alguna de estas frases es tuya, esta transmisión es para ti</h2>
-      <p class="subtitular">
-        No hace falta que las digas en voz alta. Basta con que las hayas pensado
-        una noche, después de cerrar el día.
-      </p>
+      <span class="pretitular-linea">Mírese un momento</span>
+      <h2>Si alguna de estas frases es suya, esta clase es para usted</h2>
     </div>
 
     <div class="grid grid-2 mt-l">
-
       <div class="card">
-        <h3>Lo que se siente adentro</h3>
+        <h3>Lo que se piensa</h3>
         <ul class="bullets bullets-x">
           <li>“El bulto de abono volvió a subir y a mí me siguen pagando lo mismo por la carga.”</li>
-          <li>“Le echo el abono que me venden y rezo. No sé si le estoy dando a la tierra lo que necesita.”</li>
-          <li>“Cada vez que compro abono es un salto de fe — nadie me ha revisado el suelo.”</li>
+          <li>“Le echo el abono que me venden y rezo. No sé si es lo que la tierra necesita.”</li>
+          <li>“Nadie me ha revisado el suelo. Cada compra de abono es un salto de fe.”</li>
         </ul>
       </div>
-
       <div class="card">
         <h3>Lo que se ve en el lote</h3>
         <ul class="bullets bullets-x">
-          <li>“No sé si el abono que uso es el correcto para mi variedad y mi sombra.”</li>
-          <li>“Aplico la misma fórmula de siempre, sea cual sea el estado del cafetal.”</li>
-          <li>“Ese lote ya no carga como antes y no sé bien desde cuándo se me fue cansando.”</li>
+          <li>“No sé si la fórmula que uso es la correcta para mi variedad y mi sombra.”</li>
+          <li>“Aplico lo mismo de siempre, esté como esté el cafetal.”</li>
+          <li>“Ese lote ya no carga como antes y no sé desde cuándo se me fue cansando.”</li>
         </ul>
       </div>
-
     </div>
 
     <div class="max-820 mt-l">
       <div class="nota">
-        <p>
-          Nada de esto es culpa tuya, ni pereza, ni falta de trabajo. La mayoría de las fincas
-          cafeteras de 1 a 12 hectáreas en Colombia están exactamente en el mismo punto.
-          <strong>Lo que pasa es que casi nadie le ha puesto nombre al problema</strong>,
-          y a lo que no tiene nombre no se le puede hacer nada.
+        <p class="mb0">
+          Nada de esto es culpa suya ni falta de trabajo. Es falta de datos.
+          <strong>Y a un problema sin nombre no se le puede hacer nada.</strong>
         </p>
       </div>
     </div>
@@ -157,54 +99,35 @@
   </div>
 </section>
 
-<!-- SECCIÓN 5 — EL PROBLEMA TIENE NOMBRE -->
+<!-- 3 — EL PROBLEMA TIENE NOMBRE -->
 <section class="bg-blanco sec">
   <div class="wrap">
 
     <div class="centro max-820">
-      <span class="kicker">Ponle nombre y deja de adivinar</span>
-      <h2>Tu problema se llama: fertilización a ciegas</h2>
+      <span class="kicker">Póngale nombre y deje de adivinar</span>
+      <h2>El problema se llama: abonar a ciegas</h2>
     </div>
 
     <div class="max-820 mt-m">
       <p class="grande">
-        Fertilizar a ciegas es aplicar el abono <strong>porque toca</strong>, o
-        <strong>porque siempre se ha hecho así</strong>, sin saber si eso es lo que ese suelo,
-        con esa sombra y esa edad de cafetal, de verdad necesita.
+        Abonar a ciegas es aplicar <strong>porque toca</strong> o <strong>porque siempre se ha
+        hecho así</strong>, sin saber si eso es lo que ese suelo, con esa sombra y esa edad de
+        cafetal, de verdad necesita.
       </p>
       <p>
-        Y ahí está el detalle: <span class="destacado">el abono es de los gastos más grandes del
-        cafetal</span>, y casi nadie sabe si el que aplica es el que la tierra pide. Cuando aplicas
-        de más, botas plata. Cuando aplicas de menos, o lo que no toca, el cafetal no responde y
-        igual gastaste.
-      </p>
-      <p>
-        No es falta de esfuerzo. Es falta de datos. Y los datos que hacen falta son pocos: variedad,
-        edad del cafetal, sombra, cómo se ve hoy, y si tienes o no un análisis de suelo.
+        <span class="destacado">El abono es de los gastos más grandes del cafetal.</span>
+        Cuando se aplica de más, se bota plata. Cuando se aplica de menos, o lo que no toca,
+        el cafetal no responde y la plata igual se gastó.
       </p>
     </div>
 
     <div class="max-820 mt-m">
       <div class="card card-borde-rojo">
-        <h3>Lo que hace cualquier agrónomo antes de recomendar algo</h3>
-        <p>
-          Un ingeniero agrónomo no recomienda un abono sin antes preguntar: qué variedad es, qué
-          edad tiene el cafetal, cuánta sombra hay, cómo se ve la planta, cómo está el suelo. Con
-          esas respuestas decide qué fórmula, cuánto, y cuántas veces al año.
-        </p>
+        <h3>Lo que hace un agrónomo antes de recomendar algo</h3>
         <p class="mb0">
-          Eso es exactamente lo que hace <strong>FertiCafé</strong>: te hace esas mismas preguntas
-          por WhatsApp (o lee tus fotos, o tu análisis de suelo) y te da la misma respuesta que te
-          daría un agrónomo — sin tener que esperar una cita ni pagar una visita.
-        </p>
-      </div>
-    </div>
-
-    <div class="max-820 mt-m">
-      <div class="nota">
-        <p class="grande mb0">
-          <strong>No necesitas ser ingeniero para fertilizar bien.</strong> Necesitas las preguntas
-          correctas — y una respuesta clara. Para eso existe FertiCafé.
+          Pregunta qué variedad es, qué edad tiene el cafetal, cuánta sombra hay, cómo se ve la
+          planta y cómo está el suelo. Con esas respuestas decide qué fórmula, cuánto y cuántas
+          veces al año. <strong>Eso es lo que vamos a hacer juntos en la clase, en vivo.</strong>
         </p>
       </div>
     </div>
@@ -212,289 +135,123 @@
   </div>
 </section>
 
-<!-- SECCIÓN 6 — FERTICAFÉ: EL PRODUCTO, EXPLICADO -->
+<!-- 4 — QUÉ VAMOS A HACER EN LA CLASE + FORMULARIO -->
 <section class="bg-crema2 sec">
   <div class="wrap">
 
     <div class="centro max-820">
-      <span class="pretitular">Conócelo</span>
-      <h2>FertiCafé: tu diagnóstico de fertilización por WhatsApp</h2>
-      <p class="subtitular">
-        Le escribes por WhatsApp cuando quieras —no solo el día de la transmisión— y respondes
-        unas preguntas de tu lote. Con eso se prepara tu recomendación de fertilización.
-      </p>
-    </div>
-
-    <div class="max-820 mt-m">
-      <div class="grid grid-3">
-        <div class="card">
-          <span class="kicker">Nivel 1 · General</span>
-          <h3>Con lo que respondas</h3>
-          <p>Variedad, edad, sombra, estado del cafetal y del suelo. La versión más rápida.</p>
-          <p class="mb0"><strong><span data-cfg="cafe_precio_nivel1_cop"></span> COP</strong></p>
-        </div>
-        <div class="card card-verde">
-          <span class="kicker">Nivel 2 · Con fotos</span>
-          <h3>Más ajustado</h3>
-          <p>Mandas 6 fotos de tu cafetal y se ajusta con lo que se ve: sombra real, estado, señales de plagas o enfermedades.</p>
-          <p class="mb0"><strong><span data-cfg="cafe_precio_nivel2_cop"></span> COP</strong></p>
-        </div>
-        <div class="card">
-          <span class="kicker">Nivel 3 · Con análisis</span>
-          <h3>El más técnico</h3>
-          <p>Mandas tu análisis de suelo (foto o los números) más las fotos. Correctivos y elementos menores incluidos.</p>
-          <p class="mb0"><strong><span data-cfg="cafe_precio_nivel3_cop"></span> COP</strong></p>
-        </div>
-      </div>
-    </div>
-
-    <div class="grid grid-2 mt-l">
-      <div class="card">
-        <h3>Qué te llega</h3>
-        <ul class="bullets">
-          <li><strong>Qué fórmula</strong> conviene para tu café según edad, sombra y estado del lote.</li>
-          <li><strong>Cuántos kilos por hectárea</strong> y <strong>cuántos gramos por mata</strong>.</li>
-          <li><strong>En cuántas aplicaciones</strong> repartirlo en el año.</li>
-          <li><strong>Cuántos bultos ir a comprar</strong> para tu lote y cuánto te sobra.</li>
-          <li><strong>Cuándo NO aplicar:</strong> suelo seco, encharcado, antes de aguaceros fuertes.</li>
-        </ul>
-      </div>
-      <div class="card card-verde">
-        <h3>Qué NO es</h3>
-        <ul class="bullets bullets-x">
-          <li>No reemplaza una visita técnica en terreno.</li>
-          <li>Sin análisis (Nivel 1 y 2), es una recomendación prudente; el propio PDF te lo dice.</li>
-          <li>No te promete que vas a cosechar más ni cuánto vas a ganar. Eso nadie honesto lo promete.</li>
-          <li>No recomienda cal ni elementos menores “a ciegas”: para eso se necesita análisis (Nivel 3).</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="max-820 mt-m">
-      <p class="chico centro">
-        La recomendación se prepara con la metodología de fertilización de café según análisis de
-        suelos (Cenicafé) y las guías de la Federación Nacional de Cafeteros, adaptada por
-        <span data-cfg="nombre_experto"></span>, <span data-cfg="cargo_experto"></span>.
-        Los nombres de productos son de referencia: verifica siempre el registro ICA vigente.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<!-- SECCIÓN 8 — LAS TRES FALSAS CREENCIAS -->
-<section class="bg-verde sec">
-  <div class="wrap">
-
-    <div class="centro max-820">
-      <span class="pretitular">Lo que se cree en la zona cafetera</span>
-      <h2>Tres cosas que todo el mundo repite y que están dejando fincas en el suelo</h2>
-      <p class="subtitular">
-        No las repite la gente por bruta. Las repite porque nadie le ha mostrado la otra cara.
-      </p>
-    </div>
-
-    <div class="grid grid-3 mt-l">
-
-      <div class="card">
-        <span class="kicker">Lo que se cree</span>
-        <h3>“Lo que pasa es que el abono ya no rinde igual”</h3>
-        <p class="chico"><strong class="rojo">Lo que pasa de verdad:</strong></p>
-        <p>
-          El abono rinde igual si es el que ese suelo necesita. Lo que suele pasar es que se sigue
-          aplicando la misma fórmula de siempre, sin revisar si el cafetal cambió de edad, de sombra
-          o de estado.
-        </p>
-        <p class="mb0">
-          Lo que sí se puede cambiar es <strong>saber qué pedir</strong> antes de comprar el próximo
-          bulto. Esa decisión es tuya.
-        </p>
-      </div>
-
-      <div class="card">
-        <span class="kicker">Lo que se cree</span>
-        <h3>“Para que el cafetal dé más hay que echar más abono”</h3>
-        <p class="chico"><strong class="rojo">Lo que pasa de verdad:</strong></p>
-        <p>
-          Más abono sin saber qué falta es plata botada, y a veces hasta le hace daño a la planta.
-          El exceso de un nutriente puede bloquear la absorción de otro.
-        </p>
-        <p class="mb0">
-          El asunto no es cuánto abono, es <strong>si es el que la tierra pide</strong> —
-          eso lo dice el diagnóstico, no la cantidad de bultos.
-        </p>
-      </div>
-
-      <div class="card">
-        <span class="kicker">Lo que se cree</span>
-        <h3>“El análisis de suelo y esas cosas son para fincas grandes”</h3>
-        <p class="chico"><strong class="rojo">Lo que pasa de verdad:</strong></p>
-        <p>
-          Un análisis de suelo cuesta una fracción de lo que gastas en abono en un año. Y hay una
-          versión de arranque —sin análisis, solo con lo que respondas— desde
-          <span data-cfg="cafe_precio_nivel1_cop"></span> COP.
-        </p>
-        <p class="mb0">
-          Aplicar sin saber qué tiene la tierra es lo que de verdad sale caro:
-          <strong>abono que la planta no aprovecha es plata botada</strong>.
-        </p>
-      </div>
-
-    </div>
-
-    <div class="max-820 mt-l">
-      <p class="grande centro">
-        Si en esta transmisión solo te llevas el haber soltado estas tres frases,
-        <strong>ya valió la pena el rato</strong>.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<!-- SECCIÓN 9 — CTA INTERMEDIO -->
-<section class="bg-yema sec-sm centro">
-  <div class="wrap">
-    <div class="max-720">
-      <h2>Esto se ve en vivo, no se lee</h2>
-      <p class="grande">
-        Es una transmisión en línea, gratuita, y se puede ver desde el celular.
-        Apartas el puesto en el formulario, y por WhatsApp pides tu diagnóstico si quieres.
-      </p>
-      <div class="cta-bloque">
-        <a class="btn btn-lg" href="#registro">SÍ, QUIERO MI PUESTO</a>
-        <span class="btn-sub">Es gratis · No se pide tarjeta · <span data-cfg="cafe_fecha_webinar"></span></span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SECCIÓN 10 — QUÉ VAS A VER EN LA TRANSMISIÓN -->
-<section class="bg-blanco sec">
-  <div class="wrap">
-
-    <div class="centro max-820">
-      <span class="pretitular-linea">El plan del día</span>
-      <h2>Qué vamos a hacer en la transmisión</h2>
-      <p class="subtitular">
-        No es una charla de conceptos. Es un recorrido por tu finca cafetera, con preguntas
-        concretas, para que salgas viendo cosas que hoy tienes al frente y no estás viendo.
-      </p>
+      <span class="pretitular-linea">El plan de la clase</span>
+      <h2>Qué vamos a hacer en la clase</h2>
+      <p class="subtitular">No es una charla de conceptos. Es un diagnóstico hecho en vivo, con datos reales.</p>
     </div>
 
     <div class="max-820 mt-l">
       <ol class="pasos">
-
         <li>
-          <h3>Por qué fertilizar a ciegas te está costando plata</h3>
-          <p>
-            El suelo del cafetal que se va cansando de a poquitos. La sombra que quedó mal regulada.
-            El abono que se compra por costumbre y no por cuenta.
-          </p>
+          <h3>Por qué abonar a ciegas cuesta plata</h3>
+          <p class="mb0">El suelo que se va cansando, la sombra mal regulada y el abono que se compra por costumbre y no por cuenta.</p>
+        </li>
+        <li>
+          <h3>Un diagnóstico de abonada en vivo</h3>
           <p class="mb0">
-            Cuando les pones nombre, dejan de ser “así es esto” y pasan a ser
-            <strong>cosas que se pueden arreglar</strong>.
+            Con los datos de un lote de los que estén conectados —variedad, edad, matas, sombra—
+            calculamos qué fórmula, cuántos gramos por mata y cuántos bultos comprar. Usted ve
+            cómo se hace la cuenta, no solo el resultado.
           </p>
         </li>
-
         <li>
-          <h3>Conocer FertiCafé y ver un diagnóstico en vivo</h3>
-          <p>
-            Te muestro cómo funciona paso a paso, y hacemos un diagnóstico real en vivo, con los
-            datos de un cafetal de los que estén conectados: variedad, edad, sombra, estado del
-            lote, y si hay o no análisis de suelo.
-          </p>
-          <p class="mb0">
-            Si ya pediste tu <strong>diagnóstico de fertilización</strong> por WhatsApp antes de la
-            transmisión, también te llega a ese mismo chat — no hay que esperar a la transmisión
-            para tenerlo.
-          </p>
+          <h3>Cuándo abonar según las lluvias de su zona</h3>
+          <p class="mb0">En qué meses conviene aplicar donde está su finca, y cuándo no: suelo seco, encharcado o antes de un aguacero fuerte.</p>
         </li>
-
         <li>
-          <h3>Los 3 niveles de FertiCafé y cuál te conviene</h3>
-          <p>
-            La diferencia entre el diagnóstico general, el que se ajusta con fotos de tu cafetal,
-            y el que usa tu análisis de suelo — para que sepas cuál pedir según lo que tengas a mano.
-          </p>
-          <p class="mb0">
-            Cuáles sirven de verdad para una finca cafetera de 1 a 12 hectáreas y en qué caso conviene
-            cada uno.
-          </p>
+          <h3>Sus preguntas, sin afán</h3>
+          <p class="mb0">Al final escribe su caso en el chat y se responde en vivo.</p>
         </li>
-
-        <li>
-          <h3>Qué hacer con el resultado</h3>
-          <p>
-            Cómo leer tu PDF, cuándo aplicar y cuándo NO (suelo seco, encharcado, antes de un
-            aguacero fuerte), y qué preguntar en la tienda de insumos cuando vayas a comprar.
-          </p>
-          <p class="mb0">
-            Y sobre todo: <strong>acciones chiquitas sostenidas en el tiempo</strong>.
-            Revisar el lote un día fijo, y volver a pedir el diagnóstico cuando cambien las cosas.
-          </p>
-        </li>
-
-        <li>
-          <h3>Cómo pedir tu diagnóstico cuando quieras, no solo hoy</h3>
-          <p class="mb0">
-            FertiCafé no es solo para el día de la transmisión: es un servicio permanente por
-            WhatsApp. Te muestro cómo pedirlo la próxima vez que vayas a fertilizar, sin tener que
-            esperar otra transmisión.
-          </p>
-        </li>
-
-        <li>
-          <h3>Preguntas abiertas, sin afán</h3>
-          <p class="mb0">
-            Al final escribes tu caso en el chat —tu variedad, tu problema— y se responde
-            en vivo. No es un formulario: es una conversación.
-          </p>
-        </li>
-
       </ol>
     </div>
 
-    <div class="cta-bloque">
-      <a class="btn btn-lg" href="#registro">SÍ, QUIERO MI PUESTO</a>
-      <span class="btn-sub">Dura <span data-cfg="cafe_duracion_webinar"></span> · Se ve desde el celular</span>
+    <div class="max-720 mt-l">
+      <form class="form-caja" data-form-registro data-destino="/cafe/gracias/">
+        <h3>Aparte su puesto en la clase</h3>
+        <div class="campo"><label for="nombre2">Su nombre</label><input id="nombre2" name="nombre" type="text" autocomplete="given-name" required></div>
+        <div class="campo"><label for="whatsapp2">Su WhatsApp</label><input id="whatsapp2" name="whatsapp" type="tel" inputmode="tel" placeholder="+57 300 000 0000" autocomplete="tel" required></div>
+        <div class="campo"><label for="correo2">Su correo</label><input id="correo2" name="correo" type="email" autocomplete="email" required></div>
+        <button type="submit" class="btn btn-lg">QUIERO DEJAR DE ABONAR A CIEGAS</button>
+        <p class="form-error"></p>
+        <p class="form-legal">No se pide tarjeta. Le avisamos de la clase por WhatsApp y por correo.</p>
+      </form>
     </div>
 
   </div>
 </section>
 
-<!-- SECCIÓN 11 — LO QUE TE LLEVAS AUNQUE NO COMPRES NADA -->
+<!-- 5 — LAS TRES FALSAS CREENCIAS -->
+<section class="bg-verde sec">
+  <div class="wrap">
+
+    <div class="centro max-820">
+      <span class="pretitular">Lo que se repite en la zona cafetera</span>
+      <h2>Tres cosas que todo el mundo cree sobre el abono</h2>
+    </div>
+
+    <div class="grid grid-3 mt-l">
+      <div class="card">
+        <span class="kicker">Lo que se cree</span>
+        <h3>“El abono ya no rinde igual”</h3>
+        <p class="chico"><strong class="rojo">Lo que pasa de verdad:</strong></p>
+        <p class="mb0">
+          Rinde si es el que ese suelo necesita. Lo que suele pasar es que se aplica la misma
+          fórmula de siempre aunque el cafetal haya cambiado de edad, de sombra o de estado.
+        </p>
+      </div>
+      <div class="card">
+        <span class="kicker">Lo que se cree</span>
+        <h3>“Para que dé más, hay que echarle más”</h3>
+        <p class="chico"><strong class="rojo">Lo que pasa de verdad:</strong></p>
+        <p class="mb0">
+          Más abono sin saber qué falta es plata botada, y el exceso de un nutriente puede
+          bloquear otro. La pregunta no es cuánto, es <strong>si es el que la tierra pide</strong>.
+        </p>
+      </div>
+      <div class="card">
+        <span class="kicker">Lo que se cree</span>
+        <h3>“Eso del análisis es para fincas grandes”</h3>
+        <p class="chico"><strong class="rojo">Lo que pasa de verdad:</strong></p>
+        <p class="mb0">
+          Un análisis de suelo cuesta una fracción de lo que se gasta en abono en un año. Y sin
+          análisis también se puede empezar: con lo que usted responda sobre su lote.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 6 — LO QUE SE LLEVA AUNQUE NO COMPRE NADA -->
 <section class="bg-crema sec-sm">
   <div class="wrap">
 
     <div class="centro max-820">
       <span class="kicker">Sin letra menuda</span>
-      <h2>Lo que te llevas aunque nunca nos compres nada</h2>
+      <h2>Lo que se lleva aunque nunca nos compre nada</h2>
     </div>
 
     <div class="max-820 mt-m">
       <div class="card">
-        <p><strong>Esto es tuyo pase lo que pase, sin pagar nada:</strong></p>
         <ul class="bullets">
-          <li><strong>La transmisión completa</strong>, con las causas y con lo que sí está en tus manos.</li>
-          <li><strong>Cómo funciona FertiCafé</strong>, para que decidas si te sirve o no.</li>
-          <li><strong>Las cosas de costo bajo o costo cero</strong> que ayudan al suelo con lo que ya hay en el lote —empezando por la pulpa del café.</li>
-          <li><strong>La respuesta a tu pregunta</strong> si la escribes en el chat, hayas pedido tu diagnóstico o no.</li>
+          <li><strong>La clase completa</strong>, con las causas y con lo que sí está en sus manos.</li>
+          <li><strong>Su primer diagnóstico de abonada, gratis</strong>, por WhatsApp, con los datos de su lote.</li>
+          <li><strong>Las prácticas de costo cero</strong> que ayudan al suelo con lo que ya hay en la finca, empezando por la pulpa del café.</li>
+          <li><strong>La respuesta a su pregunta</strong> si la escribe en el chat.</li>
         </ul>
-        <p class="mb0">
-          Si pides tu <strong>diagnóstico de fertilización</strong> por WhatsApp (desde
-          <span data-cfg="cafe_precio_nivel1_cop"></span> COP), ese sí tiene costo — te llega en PDF
-          el mismo día, lo puedes llevar a la tienda de insumos tal cual.
-        </p>
       </div>
     </div>
 
     <div class="max-820 mt-m">
       <div class="aviso">
         <p class="mb0">
-          <strong>Para ser justos:</strong> esto no te va a servir si lo que buscas es una fórmula
-          para ganar plata rápido, o una cifra de cuánto vas a cosechar. Eso no existe y no te lo
-          voy a prometer. Aquí se habla de aplicar con criterio, no de adivinar.
+          <strong>Para ser claros:</strong> aquí no se promete cuántas arrobas va a cosechar ni
+          cuánto va a ganar. Eso nadie honesto lo promete. Aquí se habla de abonar con criterio.
         </p>
       </div>
     </div>
@@ -502,263 +259,160 @@
   </div>
 </section>
 
-<!-- SECCIÓN 12 — QUIÉN TE VA A HABLAR -->
+<!-- 7 — QUIÉN LE VA A HABLAR -->
 <section class="bg-crema2 sec">
   <div class="wrap">
 
     <div class="centro max-820">
-      <span class="pretitular">Quién te va a hablar</span>
-      <h2>No es un video de internet: es un ingeniero agrícola de la zona cafetera</h2>
+      <span class="pretitular">Quién le va a hablar</span>
+      <h2>Un ingeniero de la zona cafetera, no un video de internet</h2>
     </div>
 
     <div class="about mt-l">
-
-      <div class="foto">FOTO DE EDUARD EN UN CAFETAL (pendiente)</div>
-
+      <div class="foto"><span class="dato-pendiente">FOTO REAL DE EDUARD EN UN CAFETAL PENDIENTE</span></div>
       <div>
         <h3><span data-cfg="nombre_experto"></span> — <span data-cfg="cargo_experto"></span></h3>
         <p>
-          Es de Popayán, Cauca. Habla como se habla allá porque de allá es. Lleva
-          <strong><span data-cfg="anos_experiencia"></span> años</strong> metido con fincas
-          cafeteras del mismo tamaño que la tuya, de 1 a 12 hectáreas, en el mismo tipo de terreno
-          y con los mismos problemas: la roya, la broca, la sombra, el suelo de ladera, el abono caro.
+          Es de Popayán, Cauca, y habla como se habla allá. Su trabajo es
+          <strong>traducir</strong>: coger lo que se sabe de suelos y nutrición del café y
+          dejarlo en palabras que se puedan usar el lunes en el lote, con lo que hay.
         </p>
         <p>
-          Su trabajo no es impresionarte con títulos ni llenarte de palabras raras.
-          Su trabajo es <strong>traducir</strong>: coger lo que se sabe de suelos, de nutrición del café
-          y de números, y dejártelo en un idioma que puedas usar el lunes por la mañana,
-          en tu lote, con lo que tienes.
-        </p>
-        <p>
-          Y hace dos cosas que un PDF no hace: <strong>te contesta el teléfono</strong> y
-          <strong>se juega su nombre</strong>. En un pueblo cafetero eso pesa. Aquí el que da un mal
+          Y hace algo que un folleto no hace: <strong>da la cara</strong>. Aquí el que da un mal
           consejo se lo encuentra en la plaza el sábado.
         </p>
-
         <ul class="credenciales">
-          <li><span data-cfg="cargo_experto"></span>, de Popayán (Cauca), Colombia.</li>
-          <li><span data-cfg="anos_experiencia"></span> años trabajando con fincas cafeteras de 1 a 12 hectáreas.</li>
-          <li>Titulación y universidad: <span class="dato-pendiente">CONFIRMAR CON EDUARD</span></li>
-          <li>Municipios y veredas cafeteras donde ha trabajado: <span class="dato-pendiente">CONFIRMAR CON EDUARD</span></li>
-          <li>Número de fincas cafeteras acompañadas: <span class="dato-pendiente">CONFIRMAR CON EDUARD</span></li>
+          <li><span data-cfg="cargo_experto"></span>, de Popayán (Cauca).</li>
+          <li>Universidad y título: <span class="dato-pendiente">CONFIRMAR CON EDUARD</span></li>
+          <li>Años de trabajo con cafeteros: <span class="dato-pendiente">CONFIRMAR CON EDUARD</span></li>
+          <li>Municipios y veredas donde ha trabajado: <span class="dato-pendiente">CONFIRMAR CON EDUARD</span></li>
         </ul>
-
-        <p class="chico mt-s">
-          Los datos en amarillo se publican cuando Eduard los confirme. Preferimos dejarlos
-          marcados antes que inventarlos.
-        </p>
       </div>
-
     </div>
 
   </div>
 </section>
 
-<!-- SECCIÓN 13 — PRUEBA SOCIAL (pendiente de testimonios reales) -->
+<!-- 8 — PRUEBA SOCIAL (pendiente de testimonios reales) -->
 <section class="bg-blanco sec-sm">
   <div class="wrap">
 
     <div class="centro max-820">
       <span class="kicker">Cafeteros, no actores</span>
       <h2>Lo que dicen los que ya trabajaron con él</h2>
-      <p class="subtitular">
-        Aquí van testimonios reales, con nombre, vereda y foto, grabados por la propia persona.
-        Mientras no los tengamos, no ponemos nada inventado.
-      </p>
+      <p class="subtitular">Testimonios reales, con nombre, vereda y foto. Mientras no los tengamos, no ponemos nada inventado.</p>
     </div>
 
     <div class="grid grid-3 mt-l">
-
-      <!-- PERFIL 1: cafetero que aplicaba "al ojo" desde hace años y pidio su primer
-           diagnostico FertiCafe (Nivel 1 o 2). Contar: que cambio saber que fertilizaba,
-           como fue el proceso por WhatsApp. SIN cifras de cosecha ni de ganancia. -->
-      <div class="testimonio">
-        <div class="estrellas">★★★★★</div>
-        <p><span class="dato-pendiente">TESTIMONIO REAL PENDIENTE</span></p>
-        <div class="autor"><span class="inicial">?</span> <span class="dato-pendiente">NOMBRE Y VEREDA PENDIENTES</span></div>
-      </div>
-
-      <!-- PERFIL 2: cafetero que tenia un analisis de suelo viejo sin usar y pidio el
-           Nivel 3. Contar: que cambio tener la recomendacion tecnica en la mano en vez
-           del papel del laboratorio sin interpretar. SIN promesas de cosecha. -->
-      <div class="testimonio">
-        <div class="estrellas">★★★★★</div>
-        <p><span class="dato-pendiente">TESTIMONIO REAL PENDIENTE</span></p>
-        <div class="autor"><span class="inicial">?</span> <span class="dato-pendiente">NOMBRE Y VEREDA PENDIENTES</span></div>
-      </div>
-
-      <!-- PERFIL 3: cafetero con finca pequena (menos de 1 ha) que penso que el
-           diagnostico "era para fincas grandes" y se sorprendio de lo simple que fue
-           pedirlo por WhatsApp. SIN cifras. -->
-      <div class="testimonio">
-        <div class="estrellas">★★★★★</div>
-        <p><span class="dato-pendiente">TESTIMONIO REAL PENDIENTE</span></p>
-        <div class="autor"><span class="inicial">?</span> <span class="dato-pendiente">NOMBRE Y VEREDA PENDIENTES</span></div>
-      </div>
-
+      <div class="testimonio"><p><span class="dato-pendiente">TESTIMONIO REAL PENDIENTE (sin cifras de cosecha ni de ganancia)</span></p><div class="autor"><span class="inicial">?</span> <span class="dato-pendiente">NOMBRE Y VEREDA</span></div></div>
+      <div class="testimonio"><p><span class="dato-pendiente">TESTIMONIO REAL PENDIENTE (sin cifras de cosecha ni de ganancia)</span></p><div class="autor"><span class="inicial">?</span> <span class="dato-pendiente">NOMBRE Y VEREDA</span></div></div>
+      <div class="testimonio"><p><span class="dato-pendiente">TESTIMONIO REAL PENDIENTE (sin cifras de cosecha ni de ganancia)</span></p><div class="autor"><span class="inicial">?</span> <span class="dato-pendiente">NOMBRE Y VEREDA</span></div></div>
     </div>
 
   </div>
 </section>
 
-<!-- SECCIÓN 14 — PREGUNTAS FRECUENTES -->
+<!-- 9 — PREGUNTAS FRECUENTES -->
 <section class="bg-crema2 sec">
   <div class="wrap">
 
     <div class="centro max-820">
-      <span class="pretitular">Antes de que preguntes</span>
+      <span class="pretitular">Antes de que pregunte</span>
       <h2>Preguntas que nos hacen siempre</h2>
     </div>
 
     <div class="faq mt-l">
-
       <details>
-        <summary>¿Cuánto cuesta el diagnóstico de fertilización?</summary>
+        <summary>¿La clase tiene costo?</summary>
         <div class="respuesta">
           <p>
-            <span data-cfg="cafe_precio_nivel1_cop"></span> COP. Te hacemos las preguntas de tu
-            lote por WhatsApp y con eso se prepara una recomendación general; te escribimos con
-            los datos para pagar y en cuanto lo confirmamos te llega el PDF. Si más adelante
-            quieres una recomendación técnica con tu análisis de suelo revisado por el ingeniero,
-            eso tiene un costo aparte, y te lo decimos claro cuando llegue el momento.
+            No. La clase es gratis y su primer diagnóstico de abonada también. Al final de la clase
+            le cuento cómo puede seguir acompañado, con el precio claro, y usted decide.
           </p>
         </div>
       </details>
-
       <details>
-        <summary>¿La transmisión es gratis o al final hay que pagar algo?</summary>
+        <summary>¿Sirve si mi cafetal es pequeño?</summary>
         <div class="respuesta">
-          <p>
-            Es gratis. No hay cobro escondido. Lo único que tiene costo es el diagnóstico de
-            fertilización que pidas por WhatsApp, y eso te lo decimos claro antes de que pagues,
-            con el precio de cada nivel.
-          </p>
+          <p>Sí. La cuenta se hace con los datos de su lote (variedad, edad, matas, sombra), no con el tamaño de la finca.</p>
         </div>
       </details>
-
       <details>
-        <summary>¿Sirve si mi cafetal es chiquito, de menos de una hectárea?</summary>
+        <summary>¿Necesito buen internet?</summary>
         <div class="respuesta">
-          <p>
-            Sí. El diagnóstico se hace con los datos de tu lote (variedad, edad, sombra, estado),
-            no con el tamaño de la finca. Todo lo que se muestra está pensado para fincas de 1 a
-            12 hectáreas, y funciona igual en menos de una.
-          </p>
+          <p>Con la señal que le sirve para ver un video en el celular es suficiente. Si se corta, vuelve a entrar con el mismo enlace.</p>
         </div>
       </details>
-
       <details>
-        <summary>¿Necesito internet bueno para verlo?</summary>
+        <summary>¿Por qué me piden el correo?</summary>
         <div class="respuesta">
-          <p>
-            Con la señal que te sirve para ver un video en el celular es suficiente. Si se te corta,
-            vuelves a entrar con el mismo enlace. Mucha gente lo ve desde el pueblo o desde donde
-            tiene mejor señal.
-          </p>
+          <p>Para mandarle el enlace de la clase por dos lados. El aviso principal llega por WhatsApp; el correo es el respaldo si se le pierde el mensaje.</p>
         </div>
       </details>
-
       <details>
-        <summary>¿Qué es exactamente FertiCafé?</summary>
+        <summary>¿Necesito tener análisis de suelo?</summary>
         <div class="respuesta">
-          <p>
-            Un diagnóstico de fertilización que se pide por WhatsApp: respondes unas preguntas de
-            tu lote (o mandas fotos, o tu análisis de suelo) y te dice qué fórmula aplicar, cuánto
-            por planta, y en cuántas veces al año. Se prepara con la metodología de Cenicafé y la
-            Federación Nacional de Cafeteros. No reemplaza una visita técnica, pero te da una base
-            seria en vez de aplicar por costumbre.
-          </p>
+          <p>No. Si lo tiene, aunque sea viejo, téngalo a mano: en la clase se explica cómo leerlo. Si no lo tiene, también se puede empezar.</p>
         </div>
       </details>
-
-      <details>
-        <summary>¿Cómo me llega el enlace y el diagnóstico?</summary>
-        <div class="respuesta">
-          <p>
-            Todo por WhatsApp. Después de registrarte, en la página siguiente tocas un botón que
-            abre WhatsApp: ahí eliges si quieres el diagnóstico general, con fotos de tu cafetal,
-            o con tu análisis de suelo, y te pedimos los datos de tu lote que hagan falta según la
-            opción. El diagnóstico te llega a ese mismo chat, normalmente en unos minutos. El
-            enlace de la transmisión y el recordatorio se mandan al grupo. Si dejas correo, el
-            enlace te llega también por ahí, pero el canal principal es WhatsApp.
-          </p>
-        </div>
-      </details>
-
-      <details>
-        <summary>¿Queda grabada si no puedo entrar a esa hora?</summary>
-        <div class="respuesta">
-          <p>
-            Regístrate de todos modos: por WhatsApp te avisamos qué se puede hacer si no alcanzas a
-            entrar en vivo. Eso sí, las preguntas del final solo se responden en vivo.
-          </p>
-        </div>
-      </details>
-
     </div>
 
   </div>
 </section>
 
-<!-- SECCIÓN 15 — CTA FINAL -->
-<section class="bg-verde textura sec-lg centro">
+<!-- 10 — CIERRE + FORMULARIO -->
+<section class="bg-verde textura sec-lg">
   <div class="wrap">
 
-    <span class="pretitular">Última llamada</span>
-    <h2>Tu cafetal no va a cambiar solo</h2>
-
-    <p class="subtitular">
-      La semana que viene el lote va a seguir igual. Va a entrar el mismo bulto de abono,
-      va a salir la misma cosecha, y el precio lo va a poner el que siempre lo pone.
-      Eso no es culpa tuya. Pero tampoco se arregla solo.
-    </p>
-
-    <div class="contador" data-cfg-cuenta="cafe_fecha_iso_webinar"></div>
-
-    <p class="grande">
-      📅 <strong><span data-cfg="cafe_fecha_webinar"></span></strong>
-      &nbsp;·&nbsp; 🕖 <strong><span data-cfg="cafe_hora_webinar"></span></strong>
-      &nbsp;·&nbsp; ⏱ <strong><span data-cfg="cafe_duracion_webinar"></span></strong>
-    </p>
-
-    <div class="cta-bloque">
-      <a class="btn btn-lg" href="#registro">SÍ, QUIERO MI PUESTO</a>
-      <span class="btn-sub">La transmisión es gratis · El diagnóstico cuesta <span data-cfg="cafe_precio_nivel1_cop"></span> COP · Todo llega por WhatsApp</span>
+    <div class="centro max-720">
+      <span class="pretitular">Última llamada</span>
+      <h2>El cafetal no va a cambiar solo</h2>
+      <p class="subtitular">
+        La próxima abonada va a llegar igual. La diferencia es si la hace adivinando
+        o sabiendo qué le pide la tierra.
+      </p>
+      <p class="chico">
+        📅 <strong><span data-cfg="cafe_fecha_webinar"></span></strong>
+        &nbsp;·&nbsp; 🕖 <strong><span data-cfg="cafe_hora_webinar"></span></strong>
+        &nbsp;·&nbsp; ⏱ <strong><span data-cfg="cafe_duracion_webinar"></span></strong>
+      </p>
     </div>
 
-    <div class="max-720">
-      <div class="divisor-huevo">🌱 ☕ 🌱</div>
-      <p class="grande">
-        Una cosecha más igual no es una tragedia. Es simplemente una cosecha más igual.
-        El asunto es que van sumando, y cada una deja la finca un poquito más justa que la anterior.
-      </p>
-      <p class="grande">
-        <span class="destacado">Lo único que cambia con esta transmisión es que dejas de adivinar.</span>
-        Y eso no te cuesta plata: te cuesta <span data-cfg="cafe_duracion_webinar"></span> de tu tiempo.
-      </p>
-      <p class="firma">Nos vemos en la transmisión ☕</p>
+    <div class="max-720 mt-m">
+      <form class="form-caja" data-form-registro data-destino="/cafe/gracias/">
+        <h3>Aparte su puesto</h3>
+        <div class="campo"><label for="nombre3">Su nombre</label><input id="nombre3" name="nombre" type="text" autocomplete="given-name" required></div>
+        <div class="campo"><label for="whatsapp3">Su WhatsApp</label><input id="whatsapp3" name="whatsapp" type="tel" inputmode="tel" placeholder="+57 300 000 0000" autocomplete="tel" required></div>
+        <div class="campo"><label for="correo3">Su correo</label><input id="correo3" name="correo" type="email" autocomplete="email" required></div>
+        <button type="submit" class="btn btn-lg">QUIERO DEJAR DE ABONAR A CIEGAS</button>
+        <p class="form-error"></p>
+        <p class="form-legal">No se pide tarjeta. Le avisamos de la clase por WhatsApp y por correo.</p>
+      </form>
+    </div>
+
+    <div class="centro max-720">
+      <p class="firma">Nos vemos en la clase ☕</p>
       <p class="chico"><span data-cfg="nombre_experto"></span> — <span data-cfg="cargo_experto"></span></p>
     </div>
 
   </div>
 </section>
 
-<!-- SECCIÓN 16 — PIE -->
+<!-- 11 — PIE -->
 <footer class="footer">
   <div class="wrap">
     <p><strong>Instituto Agropecuario</strong> &mdash; Formación práctica para producir y vender en el campo colombiano.</p>
     <p><a href="/legal/privacidad.html">Política de privacidad</a> &nbsp;·&nbsp; <a href="/legal/terminos.html">Términos y condiciones</a> &nbsp;·&nbsp; <a data-cfg-mailto href="#">escríbenos</a></p>
-    <p class="legal">Este contenido es formación agropecuaria y de gestión. No sustituye asesoría agronómica, veterinaria, sanitaria, contable ni financiera profesional. El diagnóstico de fertilización es una orientación general y no reemplaza un análisis de suelo ni una visita técnica de campo. Los nombres comerciales de productos son de referencia; verifique el registro ICA vigente. Los resultados de cualquier proyecto productivo dependen del trabajo, las condiciones y las decisiones de cada persona. Este sitio no está afiliado a Meta, Facebook, Instagram, Google ni YouTube.</p>
+    <p class="legal">Este contenido es formación agropecuaria. No sustituye asesoría agronómica, contable ni financiera profesional. El diagnóstico de abonada es una orientación y no reemplaza un análisis de suelo ni una visita técnica de campo. Las recomendaciones se dan por fórmula, no por marca comercial. Los resultados de cualquier finca dependen del trabajo, las condiciones y las decisiones de cada persona. Este sitio no está afiliado a Meta, Facebook, Instagram, Google ni YouTube.</p>
     <p class="legal">&copy; 2026 Instituto Agropecuario. Todos los derechos reservados.</p>
   </div>
 </footer>
 
-<!-- SECCIÓN 17 — CTA PEGAJOSO -->
+<!-- 12 — CTA PEGAJOSO -->
 <div class="sticky-cta">
-  <a class="btn" href="#registro">SÍ, QUIERO MI PUESTO ☕</a>
+  <a class="btn" href="#registro">QUIERO MI PUESTO ☕</a>
 </div>
 
-<!-- SECCIÓN 18 — SCRIPTS -->
 <script src="/assets/config.js"></script>
 <script>
   /* Solo en /cafe/: el lead se guarda tambien en el servicio del diagnostico.
