@@ -26,7 +26,7 @@
     Por eso esta pagina no lleva la barra de aviso ni la cabecera con el logo (excepcion
     al CONTRATO-HTML solo en esta landing); la marca queda en el pie.
   - Sin filtro de hectareas: el filtro es ser cafetero con tierra.
-  - Formulario: nombre, WhatsApp y correo obligatorio; repetido en los bloques clave.
+  - Formulario: nombre y WhatsApp obligatorios, correo opcional (decision de Eduard 2026-11-14: no todos los productores tienen correo); repetido en los bloques clave.
   - Nivel 1 gratis; la oferta (membresia) se presenta al final de la clase, no aqui.
 -->
 
@@ -45,10 +45,10 @@
       <form class="form-caja" data-form-registro data-destino="/cafe/gracias/">
         <div class="campo"><label for="nombre">Su nombre</label><input id="nombre" name="nombre" type="text" autocomplete="given-name" required></div>
         <div class="campo"><label for="whatsapp">Su WhatsApp</label><input id="whatsapp" name="whatsapp" type="tel" inputmode="tel" placeholder="+57 300 000 0000" autocomplete="tel" required></div>
-        <div class="campo"><label for="correo">Su correo</label><input id="correo" name="correo" type="email" autocomplete="email" required></div>
+        <div class="campo"><label for="correo">Su correo (opcional)</label><input id="correo" name="correo" type="email" autocomplete="email"></div>
         <button type="submit" class="btn btn-lg">QUIERO DEJAR DE ABONAR A CIEGAS</button>
         <p class="form-error"></p>
-        <p class="form-legal">No se pide tarjeta. Le avisamos de la clase por WhatsApp y por correo. Puede salirse cuando quiera.</p>
+        <p class="form-legal">No se pide tarjeta. Le avisamos de la clase por WhatsApp. Puede salirse cuando quiera.</p>
       </form>
       <p class="chico centro">
         📅 <strong><span data-cfg="cafe_fecha_webinar"></span></strong>
@@ -175,10 +175,10 @@
         <h3>Aparte su puesto en la clase</h3>
         <div class="campo"><label for="nombre2">Su nombre</label><input id="nombre2" name="nombre" type="text" autocomplete="given-name" required></div>
         <div class="campo"><label for="whatsapp2">Su WhatsApp</label><input id="whatsapp2" name="whatsapp" type="tel" inputmode="tel" placeholder="+57 300 000 0000" autocomplete="tel" required></div>
-        <div class="campo"><label for="correo2">Su correo</label><input id="correo2" name="correo" type="email" autocomplete="email" required></div>
+        <div class="campo"><label for="correo2">Su correo (opcional)</label><input id="correo2" name="correo" type="email" autocomplete="email"></div>
         <button type="submit" class="btn btn-lg">QUIERO DEJAR DE ABONAR A CIEGAS</button>
         <p class="form-error"></p>
-        <p class="form-legal">No se pide tarjeta. Le avisamos de la clase por WhatsApp y por correo.</p>
+        <p class="form-legal">No se pide tarjeta. Le avisamos de la clase por WhatsApp.</p>
       </form>
     </div>
 
@@ -344,9 +344,9 @@
         </div>
       </details>
       <details>
-        <summary>¿Por qué me piden el correo?</summary>
+        <summary>¿Tengo que dejar correo?</summary>
         <div class="respuesta">
-          <p>Para mandarle el enlace de la clase por dos lados. El aviso principal llega por WhatsApp; el correo es el respaldo si se le pierde el mensaje.</p>
+          <p>No. El aviso de la clase llega por WhatsApp. Si tiene correo y lo deja, le mandamos también el enlace por ahí, como respaldo.</p>
         </div>
       </details>
       <details>
@@ -383,10 +383,10 @@
         <h3>Aparte su puesto</h3>
         <div class="campo"><label for="nombre3">Su nombre</label><input id="nombre3" name="nombre" type="text" autocomplete="given-name" required></div>
         <div class="campo"><label for="whatsapp3">Su WhatsApp</label><input id="whatsapp3" name="whatsapp" type="tel" inputmode="tel" placeholder="+57 300 000 0000" autocomplete="tel" required></div>
-        <div class="campo"><label for="correo3">Su correo</label><input id="correo3" name="correo" type="email" autocomplete="email" required></div>
+        <div class="campo"><label for="correo3">Su correo (opcional)</label><input id="correo3" name="correo" type="email" autocomplete="email"></div>
         <button type="submit" class="btn btn-lg">QUIERO DEJAR DE ABONAR A CIEGAS</button>
         <p class="form-error"></p>
-        <p class="form-legal">No se pide tarjeta. Le avisamos de la clase por WhatsApp y por correo.</p>
+        <p class="form-legal">No se pide tarjeta. Le avisamos de la clase por WhatsApp.</p>
       </form>
     </div>
 
