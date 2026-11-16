@@ -73,7 +73,7 @@ window.IA_CONFIG = {
   cafe_precio_membresia_cop: "50.000",            // pago mensual
   cafe_clase_horario: "jueves de 7:00 a 8:00 p. m. (hora Colombia)",
   cafe_url_checkout_membresia: "https://checkout.wompi.co/l/jN38Lp", // Wompi, link personalizado creado 2026-11-16 (50.000 COP, redirige a /cafe/bienvenida/)
-  cafe_wa_grupo_miembros: "",                     // https://chat.whatsapp.com/XXXX  (grupo de miembros)
+  cafe_wa_grupo_miembros: "https://chat.whatsapp.com/GwQNYSkaa5g6RbOXtx0xS0", // grupo "Miembros FertiCafe" (WhatsApp Business 311, aprobar participantes ON), 2026-11-16
 
   /* ---- Legal / marca ---- */
   marca: "Instituto Agropecuario",
