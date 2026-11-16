@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bienvenido a la Membresía FertiCafé | Instituto Agropecuario</title>
-<meta name="description" content="Su membresía quedó activa. Entre al grupo de miembros: ahí llega el enlace de la clase de cada jueves.">
+<meta name="description" content="Su membresía quedó activa. Todo le llega por el WhatsApp de FertiCafé: el enlace de la clase de cada jueves, la grabación y el aviso para renovar.">
 <meta name="robots" content="noindex,nofollow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_CO">
 <meta property="og:title" content="Bienvenido a la Membresía FertiCafé">
-<meta property="og:description" content="Entre al grupo de miembros: ahí llega el enlace de la clase de cada jueves.">
+<meta property="og:description" content="Todo le llega por el WhatsApp de FertiCafé: el enlace de la clase de cada jueves y la grabación.">
 <meta property="og:site_name" content="Instituto Agropecuario">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%98%95%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,21 +19,29 @@
 </head>
 <body>
 
+<!--
+  Decision de Eduard 2026-11-16: la membresia va sin grupo de WhatsApp. El bot
+  de FertiCafe manda en privado, solo a los miembros al dia, el enlace de la
+  clase (YouTube en vivo) y la grabacion; recibe las preguntas y avisa la
+  renovacion con un enlace de pago propio de cada miembro.
+-->
+
 <header class="topbar bg-crema">
   <a class="logo" href="/">Instituto <span>Agropecuario</span></a>
 </header>
 
-<!-- 1 — CONFIRMACIÓN + GRUPO -->
+<!-- 1 — CONFIRMACIÓN -->
 <section class="bg-verde textura sec centro">
   <div class="wrap max-720">
     <span class="pretitular">Pago recibido · Membresía activa</span>
     <h1>Bienvenido, <span data-lead="nombre">amigo</span>: ya es miembro de FertiCafé</h1>
     <p class="subtitular">
-      Falta un paso: entre al grupo de miembros. Ahí llega el enlace de la clase de cada jueves.
+      No tiene que hacer nada más. Todo le llega por el WhatsApp de FertiCafé, el mismo número
+      donde pagó: el enlace de la clase de cada jueves, la grabación y el aviso para renovar.
     </p>
     <div class="cta-bloque">
-      <a class="btn btn-lg btn-wa" data-cfg-href="cafe_wa_grupo_miembros" href="#">SÍ, QUIERO ENTRAR AL GRUPO DE MIEMBROS</a>
-      <span class="btn-sub">Solo entran miembros. El enlace es suyo, no lo comparta.</span>
+      <a class="btn btn-lg btn-wa" data-wa-intake data-wa-destino="cafe_wa_diagnostico" href="#">QUIERO ABRIR EL WHATSAPP DE FERTICAFÉ</a>
+      <span class="btn-sub">Guarde el número en sus contactos para que no se le pierdan los mensajes.</span>
     </div>
   </div>
 </section>
@@ -48,15 +56,16 @@
       <li>
         <h3>La clase de cada jueves</h3>
         <p class="mb0">
-          Los <strong><span data-cfg="cafe_clase_horario"></span></strong>. Póngase una alarma en el
-          celular. El enlace se publica en el grupo el mismo día, y la grabación queda después.
+          Los <strong><span data-cfg="cafe_clase_horario"></span></strong>, en vivo por YouTube.
+          El enlace le llega por WhatsApp ese mismo día, y después le llega la grabación por si no
+          alcanzó a conectarse.
         </p>
       </li>
       <li>
         <h3>Sus preguntas</h3>
         <p class="mb0">
-          Mándelas en el grupo con los datos de su lote: variedad, edad, sombra y qué está viendo.
-          Se responden en la clase.
+          Escríbalas en el WhatsApp de FertiCafé cuando le surjan, con los datos de su lote:
+          variedad, edad, sombra y qué está viendo. Se ordenan por tema y se responden en la clase.
         </p>
       </li>
       <li>
@@ -66,27 +75,24 @@
       <li>
         <h3>Sus diagnósticos incluidos</h3>
         <p class="mb0">
-          Se piden por el WhatsApp de FertiCafé. El de fotos (Nivel 2) se habilita desde su segundo
-          mes y el de análisis de suelo (Nivel 3) desde su cuarto mes. Son 3 al año por productor: 2 con fotos
-          y 1 con análisis de suelo. El general (Nivel 1) lo puede pedir cuando quiera.
+          Se piden en el mismo WhatsApp escribiendo MENU. El de fotos (Nivel 2) se habilita desde su
+          segundo mes y el de análisis de suelo (Nivel 3) desde su cuarto mes. Son 3 al año por
+          productor: 2 con fotos y 1 con análisis de suelo. El general (Nivel 1) lo puede pedir
+          cuando quiera.
         </p>
       </li>
     </ol>
-
-    <div class="cta-bloque">
-      <a class="btn btn-wa" data-wa-intake data-wa-destino="cafe_wa_diagnostico" href="#">QUIERO ABRIR EL WHATSAPP DE FERTICAFÉ</a>
-    </div>
   </div>
 </section>
 
-<!-- 3 — REGLAS DEL GRUPO -->
+<!-- 3 — CÓMO PREGUNTAR -->
 <section class="bg-crema sec">
   <div class="wrap max-820">
-    <h2>Las 3 reglas del grupo</h2>
+    <h2>Cómo preguntar para que le respondan bien</h2>
     <ul class="bullets">
-      <li><strong>Se usa para el cafetal.</strong> Dudas, fotos y avances de su lote. Cadenas, saludos masivos y política, no.</li>
-      <li><strong>No se venden cosas.</strong> Ni abono, ni insumos, ni café, ni rifas. Quien llega a vender, sale.</li>
-      <li><strong>Se pregunta con datos.</strong> "Ayúdenme" no se puede responder. "Tengo un lote de Castillo de 5 años, sombra baja, y las hojas de abajo se están poniendo amarillas" sí.</li>
+      <li><strong>Con datos.</strong> "Ayúdenme" no se puede responder. "Tengo un lote de Castillo de 5 años, sombra baja, y las hojas de abajo se están poniendo amarillas" sí.</li>
+      <li><strong>Una pregunta por mensaje.</strong> Así se ordenan mejor por tema para la clase.</li>
+      <li><strong>Si es un problema con su pago o con el enlace de la clase,</strong> dígalo en el mensaje: eso se atiende antes del jueves.</li>
     </ul>
   </div>
 </section>
@@ -97,19 +103,19 @@
     <div class="faq">
       <details>
         <summary>¿Cómo se renueva la membresía?</summary>
-        <div class="respuesta"><p>Se paga mes a mes con un enlace de pago. <span class="dato-pendiente">CÓMO Y CUÁNDO SE ENVÍA EL ENLACE DE RENOVACIÓN — CONFIRMAR CON EDUARD</span></p></div>
+        <div class="respuesta"><p>Se paga mes a mes. Unos días antes de que se le venza, le llega por WhatsApp su enlace para renovar. Mientras esté al día, le sigue llegando la clase.</p></div>
+      </details>
+      <details>
+        <summary>¿Y si no me llega el enlace de la clase?</summary>
+        <div class="respuesta"><p>Revise que tenga guardado el número de FertiCafé y escríbale "no me llegó la clase". Ese mensaje se atiende antes del jueves.</p></div>
       </details>
       <details>
         <summary>¿Y si necesito más diagnósticos?</summary>
         <div class="respuesta"><p>Se pagan a precio normal: Nivel 2 a <span data-cfg="cafe_precio_nivel2_cop"></span> COP y Nivel 3 a <span data-cfg="cafe_precio_nivel3_cop"></span> COP. El análisis de laboratorio siempre va aparte.</p></div>
       </details>
-      <details>
-        <summary>¿El botón del grupo no abre?</summary>
-        <div class="respuesta"><p>Espere unos segundos y vuelva a tocarlo, o ábralo desde el celular. Si no entra, <a data-cfg-mailto href="#">escríbanos</a>.</p></div>
-      </details>
     </div>
     <div class="cta-bloque">
-      <a class="btn btn-lg btn-wa" data-cfg-href="cafe_wa_grupo_miembros" href="#">SÍ, QUIERO ENTRAR AL GRUPO DE MIEMBROS</a>
+      <a class="btn btn-lg btn-wa" data-wa-intake data-wa-destino="cafe_wa_diagnostico" href="#">QUIERO ABRIR EL WHATSAPP DE FERTICAFÉ</a>
     </div>
   </div>
 </section>

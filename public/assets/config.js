@@ -72,8 +72,11 @@ window.IA_CONFIG = {
   /* ---- Cafe: Membresia FertiCafe (decidida 2026-11-14, reemplaza la cohorte y el Plan Cafetal) ---- */
   cafe_precio_membresia_cop: "50.000",            // pago mensual
   cafe_clase_horario: "jueves de 7:00 a 8:00 p. m. (hora Colombia)",
-  cafe_url_checkout_membresia: "https://checkout.wompi.co/l/jN38Lp", // Wompi, link personalizado creado 2026-11-16 (50.000 COP, redirige a /cafe/bienvenida/)
-  cafe_wa_grupo_miembros: "https://chat.whatsapp.com/GwQNYSkaa5g6RbOXtx0xS0", // grupo "Miembros FertiCafe" (WhatsApp Business 311, aprobar participantes ON), 2026-11-16
+  // Botones "QUIERO SER MIEMBRO": abren el WhatsApp del bot (mismo numero que
+  // cafe_wa_diagnostico) para que el pago quede amarrado al productor y la
+  // membresia se active sola (decision de Eduard 2026-11-16, sin grupo).
+  // El link fijo de Wompi https://checkout.wompi.co/l/jN38Lp queda solo de respaldo.
+  cafe_url_checkout_membresia: "https://wa.me/15557389605?text=Hola%2C%20quiero%20la%20membres%C3%ADa%20FertiCaf%C3%A9",
 
   /* ---- Legal / marca ---- */
   marca: "Instituto Agropecuario",
