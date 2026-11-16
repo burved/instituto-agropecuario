@@ -72,7 +72,7 @@ window.IA_CONFIG = {
   /* ---- Cafe: Membresia FertiCafe (decidida 2026-11-14, reemplaza la cohorte y el Plan Cafetal) ---- */
   cafe_precio_membresia_cop: "50.000",            // pago mensual
   cafe_clase_horario: "jueves de 7:00 a 8:00 p. m. (hora Colombia)",
-  cafe_url_checkout_membresia: "",                // link de pago de Wompi (pendiente: cuenta Wompi de Eduard)
+  cafe_url_checkout_membresia: "https://checkout.wompi.co/l/jN38Lp", // Wompi, link personalizado creado 2026-11-16 (50.000 COP, redirige a /cafe/bienvenida/)
   cafe_wa_grupo_miembros: "",                     // https://chat.whatsapp.com/XXXX  (grupo de miembros)
 
   /* ---- Legal / marca ---- */
