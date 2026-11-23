@@ -8,8 +8,8 @@
 window.IA_CONFIG = {
 
   /* ---- El experto ---- */
-  nombre_experto: "",              // ej: "Ing. Carlos Restrepo"
-  cargo_experto: "Ingeniero Agricola",
+  nombre_experto: "Eduard Burbano",
+  cargo_experto: "Ingeniero Agropecuario",
   anos_experiencia: "",            // ej: "14"
 
   /* ---- El webinar ---- */
@@ -41,14 +41,14 @@ window.IA_CONFIG = {
   /* ---- Cafe: webinar ----
      Si Eduard hace UN solo webinar "Finca con Cobertura" para cafe y gallinas,
      deja estos vacios y reutiliza fecha_webinar / hora_webinar / fecha_iso_webinar. */
-  cafe_fecha_webinar: "",
-  cafe_hora_webinar: "",
+  cafe_fecha_webinar: "Fecha por anunciar",   // 2026-11-23: sin fecha aun; poner la real cuando se defina
+  cafe_hora_webinar: "Le avisamos por WhatsApp",
   cafe_duracion_webinar: "90 minutos",
   cafe_fecha_iso_webinar: "",       // "2026-09-11T19:00:00-05:00" (cuenta regresiva)
   cafe_url_sala: "",
 
   /* ---- Cafe: WhatsApp ---- */
-  cafe_wa_grupo_webinar: "",         // https://chat.whatsapp.com/XXXX
+  cafe_wa_grupo_webinar: "https://wa.me/15557389605?text=Hola%2C%20me%20inscrib%C3%AD%20a%20la%20clase%20para%20cafeteros", // 2026-11-23: sin grupo; abre el WhatsApp del bot
   cafe_wa_grupo_cohorte: "",         // https://chat.whatsapp.com/XXXX
   cafe_wa_diagnostico: "15557389605", // SOLO DIGITOS del numero de WhatsApp Cloud API que da Meta,
                                      // con indicativo y sin +  (ej: "573001234567").
