@@ -322,9 +322,24 @@
     }
   }
 
+  /* ---------- Comprobante de Wompi en el WhatsApp ----------
+     Wompi vuelve a /cafe/bienvenida/?id=<transaccion>. El boton [data-wa-comprobante]
+     lo agrega al mensaje para que el bot reconozca el pago aunque la persona tenga
+     nombre de usuario en WhatsApp (sin numero visible). */
+  function comprobanteWompi() {
+    var id = new URLSearchParams(window.location.search).get("id") || "";
+    if (!/^[A-Za-z0-9-]{6,80}$/.test(id)) return;
+    document.querySelectorAll("[data-wa-comprobante]").forEach(function (a) {
+      var href = a.getAttribute("href") || "";
+      if (href.indexOf("wa.me") === -1) return;
+      a.setAttribute("href", href + encodeURIComponent(". Comprobante: " + id));
+    });
+  }
+
   /* ---------- Arranque ---------- */
   function iniciar() {
     configurar();
+    comprobanteWompi();
     guardarUtms();
     propagarUtms();
     pintarLead();
