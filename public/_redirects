@@ -1,6 +1,9 @@
 # Rutas amigables del embudo (Cloudflare Pages)
 # Sirven para acortar enlaces en anuncios, WhatsApp y correos.
 
+# S101 (2026-11-27): la raiz muestra el embudo activo (cafe). El anterior ("finca cada año deja menos") sigue en /finca/.
+/               /cafe/       302
+
 /webinar        /            302
 /registro       /            302
 /evento         /            302

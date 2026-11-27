@@ -28,24 +28,30 @@
   - Sin filtro de hectareas: el filtro es ser cafetero con tierra.
   - Formulario: nombre y WhatsApp obligatorios, correo opcional (decision de Eduard 2026-11-14: no todos los productores tienen correo); repetido en los bloques clave.
   - Nivel 1 gratis; la oferta (membresia) se presenta al final de la clase, no aqui.
+  Correcciones del mentor (Sesion 101, 2026-11-26) aplicadas 2026-11-27:
+  - Pre-titular con las 3 preguntas; "finca chica o grande" baja bajo el formulario.
+  - Puente arriba del formulario ("100 % gratis, por internet") y una razon por cada campo.
+  - "Quien le va a hablar" reescrito en primera persona (StoryBrand: el productor es el heroe).
 -->
 
 <!-- 1 — PRIMERA PANTALLA: TITULAR + FORMULARIO -->
 <section class="bg-verde textura sec-sm">
   <div class="wrap">
     <div class="centro max-720">
-      <span class="pretitular">Para cafeteros con finca chica o grande</span>
+      <span class="pretitular">¿Qué abono comprar, cuánto echarle a cada mata y cuándo aplicarlo?</span>
       <h1>Cafetero: deje de abonar a ciegas</h1>
       <p class="subtitular">
-        Clase en vivo: <strong>qué abono necesita su cafetal, cuánto por mata y cuándo</strong>.
+        Descúbralo en esta <strong>clase gratuita por internet</strong>, en vivo y desde su celular.
       </p>
     </div>
 
     <div class="max-720" id="registro">
       <form class="form-caja" data-form-registro data-destino="/cafe/gracias/">
-        <div class="campo"><label for="nombre">Su nombre</label><input id="nombre" name="nombre" type="text" autocomplete="given-name" required></div>
-        <div class="campo"><label for="whatsapp">Su WhatsApp</label><input id="whatsapp" name="whatsapp" type="tel" inputmode="tel" placeholder="+57 300 000 0000" autocomplete="tel" required></div>
-        <div class="campo"><label for="correo">Su correo (opcional)</label><input id="correo" name="correo" type="email" autocomplete="email"></div>
+        <h3>Aparte su puesto en la clase</h3>
+        <p class="chico centro">Regístrese <strong>100 % gratis</strong>. Déjeme sus datos para avisarle cuándo y por dónde es la clase, y para que pueda participar y hacerme preguntas.</p>
+        <div class="campo"><label for="nombre">Su nombre</label><input id="nombre" name="nombre" type="text" placeholder="Ej.: Juan Pérez" autocomplete="name" required><p class="mini mb0">Para saludarlo por su nombre y llevar la ficha de su cafetal.</p></div>
+        <div class="campo"><label for="whatsapp">Su WhatsApp</label><input id="whatsapp" name="whatsapp" type="tel" inputmode="tel" placeholder="+57 300 000 0000" autocomplete="tel" required><p class="mini mb0">Por aquí le mandamos la invitación, el enlace de la clase y cualquier cambio.</p></div>
+        <div class="campo"><label for="correo">Su correo (opcional)</label><input id="correo" name="correo" type="email" autocomplete="email"><p class="mini mb0">Si no tiene, ponga el de un hijo o un familiar que le avise. Por ahí le mandamos materiales, y es el respaldo si falla el WhatsApp.</p></div>
         <button type="submit" class="btn btn-lg">QUIERO DEJAR DE ABONAR A CIEGAS</button>
         <p class="form-error"></p>
         <p class="form-legal">No se pide tarjeta. Le avisamos de la clase por WhatsApp. Puede salirse cuando quiera.</p>
@@ -55,6 +61,7 @@
         &nbsp;·&nbsp; 🕖 <strong><span data-cfg="cafe_hora_webinar"></span></strong>
         &nbsp;·&nbsp; 📱 Desde el celular
       </p>
+      <p class="chico centro">Para cafeteros con finca chica o grande.</p>
     </div>
   </div>
 </section>
@@ -173,9 +180,9 @@
     <div class="max-720 mt-l">
       <form class="form-caja" data-form-registro data-destino="/cafe/gracias/">
         <h3>Aparte su puesto en la clase</h3>
-        <div class="campo"><label for="nombre2">Su nombre</label><input id="nombre2" name="nombre" type="text" autocomplete="given-name" required></div>
-        <div class="campo"><label for="whatsapp2">Su WhatsApp</label><input id="whatsapp2" name="whatsapp" type="tel" inputmode="tel" placeholder="+57 300 000 0000" autocomplete="tel" required></div>
-        <div class="campo"><label for="correo2">Su correo (opcional)</label><input id="correo2" name="correo" type="email" autocomplete="email"></div>
+        <div class="campo"><label for="nombre2">Su nombre</label><input id="nombre2" name="nombre" type="text" placeholder="Ej.: Juan Pérez" autocomplete="name" required><p class="mini mb0">Para saludarlo por su nombre y llevar la ficha de su cafetal.</p></div>
+        <div class="campo"><label for="whatsapp2">Su WhatsApp</label><input id="whatsapp2" name="whatsapp" type="tel" inputmode="tel" placeholder="+57 300 000 0000" autocomplete="tel" required><p class="mini mb0">Por aquí le mandamos la invitación, el enlace de la clase y cualquier cambio.</p></div>
+        <div class="campo"><label for="correo2">Su correo (opcional)</label><input id="correo2" name="correo" type="email" autocomplete="email"><p class="mini mb0">Si no tiene, ponga el de un hijo o un familiar que le avise. Por ahí le mandamos materiales, y es el respaldo si falla el WhatsApp.</p></div>
         <button type="submit" class="btn btn-lg">QUIERO DEJAR DE ABONAR A CIEGAS</button>
         <p class="form-error"></p>
         <p class="form-legal">No se pide tarjeta. Le avisamos de la clase por WhatsApp.</p>
@@ -273,13 +280,22 @@
       <div>
         <h3><span data-cfg="nombre_experto"></span> — <span data-cfg="cargo_experto"></span></h3>
         <p>
-          Es de Popayán, Cauca, y habla como se habla allá. Su trabajo es
-          <strong>traducir</strong>: coger lo que se sabe de suelos y nutrición del café y
-          dejarlo en palabras que se puedan usar el lunes en el lote, con lo que hay.
+          Cuando usted abre un bulto de abono está poniendo en juego mucho más que el precio del
+          bulto: <strong>meses de trabajo, parte de sus ahorros y su próxima cosecha</strong>. Por eso,
+          antes de recomendarle qué comprar, quiero conocer su finca: dónde está, cómo están las
+          matas, cuándo llueve y qué le ha aplicado.
         </p>
         <p>
-          Y hace algo que un folleto no hace: <strong>da la cara</strong>. Aquí el que da un mal
-          consejo se lo encuentra en la plaza el sábado.
+          Soy <span data-cfg="nombre_experto"></span>, ingeniero agropecuario de la Universidad del
+          Cauca, y llevo 18 años trabajando en el campo con productores del Cauca, Nariño y el
+          Tolima. Creé FertiCafé para que usted tenga <strong>a quién acudir antes de tomar una
+          decisión importante sobre su cafetal</strong>, desde el mismo WhatsApp que ya usa, sin
+          aprender aplicaciones.
+        </p>
+        <p>
+          Yo también soy de esta tierra. Aquí uno no puede dar un mal consejo el viernes y
+          desaparecer el sábado, <strong>porque el sábado nos volvemos a encontrar en la plaza de
+          Popayán</strong>.
         </p>
         <ul class="credenciales">
           <li><span data-cfg="cargo_experto"></span> de la Universidad del Cauca.</li>
@@ -326,7 +342,7 @@
       <details>
         <summary>¿Tengo que dejar correo?</summary>
         <div class="respuesta">
-          <p>No. El aviso de la clase llega por WhatsApp. Si tiene correo y lo deja, le mandamos también el enlace por ahí, como respaldo.</p>
+          <p>No es obligatorio. El aviso de la clase llega por WhatsApp. Si tiene correo, o el de un hijo o un familiar que le avise, déjelo: por ahí le mandamos también el enlace y materiales, como respaldo.</p>
         </div>
       </details>
       <details>
@@ -361,9 +377,9 @@
     <div class="max-720 mt-m">
       <form class="form-caja" data-form-registro data-destino="/cafe/gracias/">
         <h3>Aparte su puesto</h3>
-        <div class="campo"><label for="nombre3">Su nombre</label><input id="nombre3" name="nombre" type="text" autocomplete="given-name" required></div>
-        <div class="campo"><label for="whatsapp3">Su WhatsApp</label><input id="whatsapp3" name="whatsapp" type="tel" inputmode="tel" placeholder="+57 300 000 0000" autocomplete="tel" required></div>
-        <div class="campo"><label for="correo3">Su correo (opcional)</label><input id="correo3" name="correo" type="email" autocomplete="email"></div>
+        <div class="campo"><label for="nombre3">Su nombre</label><input id="nombre3" name="nombre" type="text" placeholder="Ej.: Juan Pérez" autocomplete="name" required><p class="mini mb0">Para saludarlo por su nombre y llevar la ficha de su cafetal.</p></div>
+        <div class="campo"><label for="whatsapp3">Su WhatsApp</label><input id="whatsapp3" name="whatsapp" type="tel" inputmode="tel" placeholder="+57 300 000 0000" autocomplete="tel" required><p class="mini mb0">Por aquí le mandamos la invitación, el enlace de la clase y cualquier cambio.</p></div>
+        <div class="campo"><label for="correo3">Su correo (opcional)</label><input id="correo3" name="correo" type="email" autocomplete="email"><p class="mini mb0">Si no tiene, ponga el de un hijo o un familiar que le avise. Por ahí le mandamos materiales, y es el respaldo si falla el WhatsApp.</p></div>
         <button type="submit" class="btn btn-lg">QUIERO DEJAR DE ABONAR A CIEGAS</button>
         <p class="form-error"></p>
         <p class="form-legal">No se pide tarjeta. Le avisamos de la clase por WhatsApp.</p>

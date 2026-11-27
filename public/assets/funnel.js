@@ -295,6 +295,19 @@
       }
     });
 
+    /* <form data-cfg-action="cafe_url_pago_membresia_web">: el destino del formulario sale de config.
+       Si el lead ya se registro en este celular, se le llena el WhatsApp y el nombre. */
+    document.querySelectorAll("form[data-cfg-action]").forEach(function (form) {
+      var valor = cfg[form.getAttribute("data-cfg-action")];
+      if (valor) form.setAttribute("action", valor);
+      else form.querySelectorAll("button").forEach(function (b) { b.disabled = true; });
+      var lead = leerLead() || {};
+      [["tel", lead.whatsapp], ["nombre", lead.nombre], ["correo", lead.correo]].forEach(function (par) {
+        var campo = form.querySelector('[name="' + par[0] + '"]');
+        if (campo && !campo.value && par[1]) campo.value = par[1];
+      });
+    });
+
     document.querySelectorAll("[data-cfg-cuenta]").forEach(function (el) {
       var valor = cfg[el.getAttribute("data-cfg-cuenta")];
       if (valor) el.setAttribute("data-cuenta-regresiva", valor);

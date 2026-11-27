@@ -77,6 +77,12 @@ window.IA_CONFIG = {
   // membresia se active sola (decision de Eduard 2026-11-16, sin grupo).
   // El link fijo de Wompi https://checkout.wompi.co/l/jN38Lp queda solo de respaldo.
   cafe_url_checkout_membresia: "https://wa.me/15557389605?text=Hola%2C%20quiero%20la%20membres%C3%ADa%20FertiCaf%C3%A9",
+  // S101 (2026-11-27): pago directo desde /cafe/oferta/. El formulario manda el WhatsApp a este
+  // endpoint del servicio, que arma el checkout de Wompi amarrado a ese numero; el webhook activa
+  // la membresia y Wompi devuelve al productor a /cafe/bienvenida/. El boton de arriba (WhatsApp)
+  // queda como "tengo dudas".
+  cafe_url_pago_membresia_web: "https://ferticafe.onrender.com/membresia/pagar",
+  cafe_wa_membresia_pagada: "https://wa.me/15557389605?text=Hola%2C%20ya%20pagu%C3%A9%20mi%20membres%C3%ADa", // boton de /cafe/bienvenida/
 
   /* ---- Legal / marca ---- */
   marca: "Instituto Agropecuario",
